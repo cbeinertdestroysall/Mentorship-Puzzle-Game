@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+[CreateAssetMenu(menuName = "Inventory Item Data")]
+public class InventoryItemData : ScriptableObject
 {
-    public GameObject slot1;
+    /*public GameObject slot1;
     public GameObject slot2;
     public GameObject slot3;
+    */
+
+    public string id;
+    public string displayName;
+    public Sprite icon;
+    public GameObject prefab;
 
     // Start is called before the first frame update
     void Start()

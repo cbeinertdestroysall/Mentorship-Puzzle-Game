@@ -1325,7 +1325,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1766838211}
   - component: {fileID: 1766838212}
-  - component: {fileID: 1766838213}
   m_Layer: 0
   m_Name: MainFunctionality
   m_TagString: Untagged
@@ -1365,21 +1364,6 @@ MonoBehaviour:
   background3: {fileID: 951973876}
   background4: {fileID: 1706812932}
   currentBackgroundView: 0
---- !u!114 &1766838213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766838210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9399a5b5cbcc63e4d9e132b4ab43f5a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slot1: {fileID: 124910831}
-  slot2: {fileID: 1274103672}
-  slot3: {fileID: 322978227}
 --- !u!1 &1913674019
 GameObject:
   m_ObjectHideFlags: 0
