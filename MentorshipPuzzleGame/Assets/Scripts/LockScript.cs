@@ -5,7 +5,7 @@ using UnityEngine;
 public class LockScript : MonoBehaviour
 {
     public GameObject[] lockNumbers;
-    public int currentLockNumber = 1;
+    public int currentLockNumber = 0;
    
 
     // Start is called before the first frame update
@@ -17,10 +17,9 @@ public class LockScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //attempting to make the object in the array that shares the number in array as currentLockNumber set active
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < lockNumbers.Length; i++)
         {
-            if (lockNumbers[i].GetComponent<float>() == currentLockNumber)
+            if (i == currentLockNumber)
             {
                 lockNumbers[i].SetActive(true);
             }
@@ -29,19 +28,15 @@ public class LockScript : MonoBehaviour
                 lockNumbers[i].SetActive(false);
             }
         }
-
-
-        lockNumbers[currentLockNumber].SetActive(true);
-        lockNumbers[currentLockNumber].SetActive(false);
     }
 
     public void IncreaseLockNumber()
     {
-        if (currentLockNumber < 9)
+        if (currentLockNumber < 8)
         {
             currentLockNumber+= 1;
         }
-        else if (currentLockNumber >= 9)
+        else if (currentLockNumber >= 8)
         {
             currentLockNumber = 0;
         }
@@ -55,7 +50,7 @@ public class LockScript : MonoBehaviour
         }
         else if (currentLockNumber <= 0)
         {
-            currentLockNumber = 9;
+            currentLockNumber = 8;
         }
     }
 }
