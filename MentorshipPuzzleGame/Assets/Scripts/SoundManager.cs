@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public AudioSource switchSound;
+    public AudioSource grabSound;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,11 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySwitch()
     {
-        audioSource.Play();  
+        switchSound.Play();  
+    }
+
+    public void PlayGrab()
+    {
+        grabSound.Play();
     }
 }
