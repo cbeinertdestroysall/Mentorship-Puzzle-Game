@@ -18,7 +18,7 @@ public class LockScript : MonoBehaviour
     void Update()
     {
         //attempting to make the object in the array that shares the number in array as currentLockNumber set active
-        /*for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 8; i++)
         {
             if (lockNumbers[i].GetComponent<float>() == currentLockNumber)
             {
@@ -28,7 +28,7 @@ public class LockScript : MonoBehaviour
             {
                 lockNumbers[i].SetActive(false);
             }
-        }*/
+        }
 
 
         lockNumbers[currentLockNumber].SetActive(true);
