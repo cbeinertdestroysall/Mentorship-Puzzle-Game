@@ -4,23 +4,46 @@ using UnityEngine;
 
 public class ItemScript : MonoBehaviour
 {
+    public bool draggable = false;
+
+    public GameObject selectedObject;
+    Vector3 offset;
+    
+
     // Start is called before the first frame update
     void Start()
     {
         
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 mousePos = Input.mousePosition;
+        /*Vector3 mousePos = Input.mousePosition;
 
         if (mousePos == this.gameObject.transform.position)
         {
             Debug.Log("mouse is on gameobject");
         }
 
-        //Debug.Log("MouseX " + mousePos.x);
-        //Debug.Log("MouseY " + mousePos.y);
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (Input.GetMouseButtonDown(0))
+        {
+            Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
+            if (targetObject)
+            {
+                selectedObject = targetObject.transform.gameObject;
+                offset = selectedObject.transform.position - mousePosition;
+            }
+        }
+        if (selectedObject && draggable)
+        {
+            selectedObject.transform.position = mousePosition + offset;
+        }
+        if (Input.GetMouseButtonUp(0) && selectedObject)
+        {
+            selectedObject = null;
+        }*/
     }
 }
