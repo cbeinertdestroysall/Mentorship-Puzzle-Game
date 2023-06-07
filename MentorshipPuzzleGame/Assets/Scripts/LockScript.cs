@@ -11,19 +11,13 @@ public class LockScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         for (int i = 0; i < lockNumbers.Length; i++)
         {
             if (i == currentLockNumber)
             {
                 lockNumbers[i].SetActive(true);
             }
-            else 
+            else
             {
                 lockNumbers[i].SetActive(false);
             }
@@ -40,6 +34,18 @@ public class LockScript : MonoBehaviour
         {
             currentLockNumber = 0;
         }
+
+        for (int i = 0; i < lockNumbers.Length; i++)
+        {
+            if (i == currentLockNumber)
+            {
+                lockNumbers[i].SetActive(true);
+            }
+            else
+            {
+                lockNumbers[i].SetActive(false);
+            }
+        }
     }
 
     public void DecreaseLockNumber()
@@ -51,6 +57,18 @@ public class LockScript : MonoBehaviour
         else if (currentLockNumber <= 0)
         {
             currentLockNumber = 8;
+        }
+
+        for (int i = 0; i < lockNumbers.Length; i++)
+        {
+            if (i == currentLockNumber)
+            {
+                lockNumbers[i].SetActive(true);
+            }
+            else
+            {
+                lockNumbers[i].SetActive(false);
+            }
         }
     }
 }
