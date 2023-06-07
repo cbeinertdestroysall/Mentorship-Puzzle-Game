@@ -44,7 +44,8 @@ public class UiDrag : MonoBehaviour
             DetectUi();
         }
 
-        if (Mouse.current.leftButton.isPressed && dragging)
+        //main dragging functionality
+        if (Mouse.current.leftButton.isPressed && dragging && dragElement.gameObject.GetComponent<ItemScript>().draggable)
         {
             DragElement();
         }
