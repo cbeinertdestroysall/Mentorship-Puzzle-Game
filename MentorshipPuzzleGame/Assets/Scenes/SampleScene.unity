@@ -4413,9 +4413,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1766838213}
-        m_TargetAssemblyTypeName: InventoryReSystem, Assembly-CSharp
-        m_MethodName: IncreaseSlotNumber
+      - m_Target: {fileID: 1487614377}
+        m_TargetAssemblyTypeName: ItemReScript, Assembly-CSharp
+        m_MethodName: AddItemToSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4425,9 +4425,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1487614377}
-        m_TargetAssemblyTypeName: ItemReScript, Assembly-CSharp
-        m_MethodName: AddItemToSlot
+      - m_Target: {fileID: 1766838213}
+        m_TargetAssemblyTypeName: InventoryReSystem, Assembly-CSharp
+        m_MethodName: IncreaseSlotNumber
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4516,6 +4516,10 @@ MonoBehaviour:
   slot1: {fileID: 124910831}
   slot2: {fileID: 1274103672}
   slot3: {fileID: 322978227}
+  slots:
+  - {fileID: 124910831}
+  - {fileID: 1274103672}
+  - {fileID: 322978227}
 --- !u!1 &1540282056
 GameObject:
   m_ObjectHideFlags: 0

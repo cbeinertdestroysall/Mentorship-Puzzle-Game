@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InventoryReSystem : MonoBehaviour
 {
-    public int slotNumber = 1;
+    public int slotNumber = 0;
     
 
     // Start is called before the first frame update
