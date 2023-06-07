@@ -6,6 +6,7 @@ public class SoundManager : MonoBehaviour
 {
     public AudioSource switchSound;
     public AudioSource grabSound;
+    public AudioSource lockSwitch;
 
     // Start is called before the first frame update
     void Start()
@@ -27,5 +28,10 @@ public class SoundManager : MonoBehaviour
     public void PlayGrab()
     {
         grabSound.Play();
+    }
+
+    public void PlayLockSwitch()
+    {
+        lockSwitch.Play();
     }
 }
