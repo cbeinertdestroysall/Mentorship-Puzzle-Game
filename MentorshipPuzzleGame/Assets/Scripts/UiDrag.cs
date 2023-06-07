@@ -52,10 +52,11 @@ public class UiDrag : MonoBehaviour
         else 
         {
             dragging = false;
-            //dragElement.transform.position = dragElement.gameObject.GetComponent<ItemScript>().inventoryPos;
+          
         }
 
-        if (Mouse.current.leftButton.isPressed && dragging && dragElement.gameObject.GetComponent<ItemScript>().draggable)
+        //attempt at making draggable item return to inventory when mouse is released
+        if (Mouse.current.leftButton.wasReleasedThisFrame && dragging && dragElement.gameObject.GetComponent<ItemScript>().draggable)
         {
             dragElement.transform.position = dragElement.gameObject.GetComponent<ItemScript>().inventoryPos;
         }
