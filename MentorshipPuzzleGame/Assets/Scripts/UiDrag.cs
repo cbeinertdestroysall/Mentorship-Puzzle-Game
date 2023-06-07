@@ -73,6 +73,7 @@ public class UiDrag : MonoBehaviour
         clickResults.Clear();
         uiRaycaster.Raycast(clickData, clickResults);
 
+        clickedElements.Clear();
         foreach (RaycastResult result in clickResults)
         {
             clickedElements.Add(result.gameObject);
