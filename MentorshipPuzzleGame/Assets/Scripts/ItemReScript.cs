@@ -37,8 +37,6 @@ public class ItemReScript : MonoBehaviour
                 item.transform.position = slots[i].transform.position;
                 item.transform.SetParent(slots[i].transform.parent, true);
                 item.GetComponent<ItemScript>().draggable = true;
-                //Debug.Log("draggable = " + item.GetComponent<ItemScript>().draggable);
-               
             }
         }
      

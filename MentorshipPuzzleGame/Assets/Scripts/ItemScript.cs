@@ -7,7 +7,7 @@ public class ItemScript : MonoBehaviour
     public bool draggable = false;
 
     public GameObject selectedObject;
-    Vector3 offset;
+    public Vector3 inventoryPos;
     
 
     // Start is called before the first frame update
@@ -20,30 +20,11 @@ public class ItemScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*Vector3 mousePos = Input.mousePosition;
+        
+    }
 
-        if (mousePos == this.gameObject.transform.position)
-        {
-            Debug.Log("mouse is on gameobject");
-        }
-
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetMouseButtonDown(0))
-        {
-            Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
-            if (targetObject)
-            {
-                selectedObject = targetObject.transform.gameObject;
-                offset = selectedObject.transform.position - mousePosition;
-            }
-        }
-        if (selectedObject && draggable)
-        {
-            selectedObject.transform.position = mousePosition + offset;
-        }
-        if (Input.GetMouseButtonUp(0) && selectedObject)
-        {
-            selectedObject = null;
-        }*/
+    public void RecordInventoryPos()
+    {
+        inventoryPos = this.transform.position;
     }
 }
