@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 257599559}
   - component: {fileID: 257599561}
   - component: {fileID: 257599562}
+  - component: {fileID: 257599563}
   m_Layer: 5
   m_Name: LockImage
   m_TagString: Lock
@@ -507,6 +508,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlight: {fileID: 821986412}
+  unlocked: {fileID: 21300000, guid: 1c64382a177821a4ba326d57e4df184f, type: 3}
+--- !u!114 &257599563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257599557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1127c920f6a87a64296e54d728f361ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: {fileID: 1123715502}
+  unlocked: {fileID: 21300000, guid: 1c64382a177821a4ba326d57e4df184f, type: 3}
 --- !u!1 &282058305
 GameObject:
   m_ObjectHideFlags: 0
