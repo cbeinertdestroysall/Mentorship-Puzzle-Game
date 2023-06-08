@@ -56,6 +56,7 @@ public class UiDrag : MonoBehaviour
                 if (dragElement.gameObject.GetComponent<ItemScript>().draggable)
                 {
                     DragElement();
+                    //Debug.Log("item pos: " + dragElement.transform.position);
                 }
                 else
                 {
@@ -69,12 +70,9 @@ public class UiDrag : MonoBehaviour
         {
             dragging = false;
             //Debug.Log("dragging = " + dragging);
-            if (dragElement.gameObject.GetComponent<ItemScript>() != null)
+            if (dragElement.gameObject.GetComponent<ItemScript>() != null && dragElement.gameObject.GetComponent<ItemScript>().inventoryPos != null)
             {
-                if (dragElement.gameObject.GetComponent<ItemScript>().inventoryPos != null)
-                {
-                    dragElement.transform.position = dragElement.gameObject.GetComponent<ItemScript>().inventoryPos;
-                }
+                dragElement.transform.position = dragElement.gameObject.GetComponent<ItemScript>().inventoryPos;
             }
 
         }
