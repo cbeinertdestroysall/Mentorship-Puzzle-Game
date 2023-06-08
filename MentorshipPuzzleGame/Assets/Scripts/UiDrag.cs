@@ -45,14 +45,37 @@ public class UiDrag : MonoBehaviour
         }
 
         //main dragging functionality
-        if (Mouse.current.leftButton.isPressed && dragging && dragElement.gameObject.GetComponent<ItemScript>().draggable)
+        if (Mouse.current.leftButton.isPressed && dragging /*&& dragElement.gameObject.GetComponent<ItemScript>().draggable*/)
         {
-            DragElement();
+            if (dragElement.gameObject.GetComponent<ItemScript>() == null)
+            {
+                dragging = false;
+            }
+            else
+            {
+                if (dragElement.gameObject.GetComponent<ItemScript>().draggable)
+                {
+                    DragElement();
+                }
+                else
+                {
+                    dragging = false;
+                    
+                    dragElement = null;
+                }
+            }
+            //Debug.Log("item position: " + dragElement.transform.position);
         }
-        else 
+        else
         {
             dragging = false;
-          
+            //Debug.Log("dragging = " + dragging);
+            /*if (dragElement.gameObject.GetComponent<ItemScript>() != null)
+            {
+                if (dragElement.gameObject.GetComponent<ItemScript>().inventoryPos != null)
+                dragElement.transform.position = dragElement.gameObject.GetComponent<ItemScript>().inventoryPos;
+            }*/
+
         }
 
         //attempt at making draggable item return to inventory when mouse is released
