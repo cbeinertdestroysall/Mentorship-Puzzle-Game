@@ -14,7 +14,7 @@ public class UiDrag : MonoBehaviour
 
     List<GameObject> clickedElements;
 
-    bool dragging = false;
+    public bool dragging = false;
     GameObject dragElement;
 
     Vector3 mousePosition;
@@ -33,6 +33,7 @@ public class UiDrag : MonoBehaviour
     void Update()
     {
         MouseDragUI();
+        //Debug.Log("Dragging = " + dragging);
     }
 
     void MouseDragUI()
@@ -61,21 +62,31 @@ public class UiDrag : MonoBehaviour
                 else
                 {
                     dragging = false;
-                    
+
                     dragElement = null;
                 }
             }
+        }
+        else if (Mouse.current.leftButton.isPressed && dragElement == null)
+        {
+            dragging = false;
         }
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
             dragging = false;
             //Debug.Log("dragging = " + dragging);
+
             if (dragElement.gameObject.GetComponent<ItemScript>() != null && dragElement.gameObject.GetComponent<ItemScript>().inventoryPos != null)
             {
                 dragElement.transform.position = dragElement.gameObject.GetComponent<ItemScript>().inventoryPos;
             }
+            /*else if (dragElement.gameObject.GetComponent<ItemScript>().canBeUsed)
+            {
+                return;
+            }*/
 
         }
+        
 
         previousMousePosition = mousePosition;
     }

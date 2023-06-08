@@ -479,7 +479,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -5.5616455, y: -36.171677}
+  m_Offset: {x: -4.7136536, y: -20.638962}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -490,7 +490,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 53.999023, y: 84.19504}
+  m_Size: {x: 62.479065, y: 115.26047}
   m_EdgeRadius: 0
 --- !u!1 &282058305
 GameObject:
@@ -3722,6 +3722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   draggable: 0
+  used: 0
   selectedObject: {fileID: 1123715502}
   inventoryPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1123715507
@@ -3736,6 +3737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9503da3bcc30c84fa4155c8d16a4ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiDrag: {fileID: 1766838214}
 --- !u!61 &1123715508
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5906,6 +5908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCanvas: {fileID: 964268177}
+  dragging: 0
 --- !u!1 &1810535253
 GameObject:
   m_ObjectHideFlags: 0

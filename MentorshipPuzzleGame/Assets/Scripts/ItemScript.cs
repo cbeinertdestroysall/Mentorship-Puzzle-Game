@@ -5,6 +5,8 @@ using UnityEngine;
 public class ItemScript : MonoBehaviour
 {
     public bool draggable = false;
+    public bool canBeUsed = false;
+    public bool used = false;
 
     public GameObject selectedObject;
     public Vector3 inventoryPos;
