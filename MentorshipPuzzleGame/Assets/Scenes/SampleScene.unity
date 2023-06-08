@@ -3846,6 +3846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiDrag: {fileID: 1766838214}
+  audioClip: {fileID: 8300000, guid: 3a530134a178df54aa868fb8e8eeb370, type: 3}
 --- !u!61 &1123715508
 BoxCollider2D:
   m_ObjectHideFlags: 0

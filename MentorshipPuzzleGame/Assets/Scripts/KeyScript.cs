@@ -5,6 +5,9 @@ using UnityEngine;
 public class KeyScript : MonoBehaviour
 {
     public UiDrag uiDrag;
+    //public AudioSource aus;
+    public AudioClip audioClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,7 @@ public class KeyScript : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Lock" && uiDrag.dragging == false)
         {
+            AudioSource.PlayClipAtPoint(audioClip, transform.position);
             Destroy(this.gameObject);
         }
     }
