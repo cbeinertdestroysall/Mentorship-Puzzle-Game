@@ -45,7 +45,7 @@ public class UiDrag : MonoBehaviour
         }
 
         //main dragging functionality
-        if (Mouse.current.leftButton.isPressed && dragging /*&& dragElement.gameObject.GetComponent<ItemScript>().draggable*/)
+        if (Mouse.current.leftButton.isPressed && dragging)
         {
             if (dragElement.gameObject.GetComponent<ItemScript>() == null)
             {
@@ -64,24 +64,19 @@ public class UiDrag : MonoBehaviour
                     dragElement = null;
                 }
             }
-            //Debug.Log("item position: " + dragElement.transform.position);
         }
-        else
+        else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
             dragging = false;
             //Debug.Log("dragging = " + dragging);
-            /*if (dragElement.gameObject.GetComponent<ItemScript>() != null)
+            if (dragElement.gameObject.GetComponent<ItemScript>() != null)
             {
                 if (dragElement.gameObject.GetComponent<ItemScript>().inventoryPos != null)
-                dragElement.transform.position = dragElement.gameObject.GetComponent<ItemScript>().inventoryPos;
-            }*/
+                {
+                    dragElement.transform.position = dragElement.gameObject.GetComponent<ItemScript>().inventoryPos;
+                }
+            }
 
-        }
-
-        //attempt at making draggable item return to inventory when mouse is released
-        if (Mouse.current.leftButton.wasReleasedThisFrame && dragging && dragElement.gameObject.GetComponent<ItemScript>().draggable)
-        {
-            dragElement.transform.position = dragElement.gameObject.GetComponent<ItemScript>().inventoryPos;
         }
 
         previousMousePosition = mousePosition;
