@@ -14,34 +14,23 @@ public class KeyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.GetComponent<ItemScript>().canBeUsed)
-        {
-            this.GetComponent<ItemScript>().inventoryPos = this.transform.position;
-        }
-
-        if (this.GetComponent<ItemScript>().canBeUsed && uiDrag.dragging == false)
-        {
-            Destroy(this.gameObject);
-        }
+        
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+   
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Lock" && uiDrag.dragging)
         {
-            
-                Debug.Log("Key can enter lock");
-                this.GetComponent<ItemScript>().canBeUsed = true;
-                
-            
-            
+            Debug.Log("Key can enter lock");
+            this.GetComponent<ItemScript>().canBeUsed = true;
+            this.GetComponent<ItemScript>().inventoryPos = this.transform.position;
         }
         else if (collision.gameObject.tag == "Lock" && uiDrag.dragging == false)
         {
-            this.GetComponent<ItemScript>().used = true;
             Destroy(this.gameObject);
         }
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)
