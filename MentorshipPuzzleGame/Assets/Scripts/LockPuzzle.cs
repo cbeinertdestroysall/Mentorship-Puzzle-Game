@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LockPuzzle : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class LockPuzzle : MonoBehaviour
     public float correctLockNumberBottom;
 
     public AudioSource audioSource;
+
+    public GameObject youDidItText;
 
     // Start is called before the first frame update
     void Start()
@@ -35,10 +38,12 @@ public class LockPuzzle : MonoBehaviour
             Debug.Log("you entered the correct code");
             key.GetComponent<ItemScript>().canBeUsed = true;
             audioSource.Play();
+            youDidItText.SetActive(true);
         }
         else 
         {
             key.GetComponent<ItemScript>().canBeUsed = false;
+            youDidItText.SetActive(false);
         }
     }
 
