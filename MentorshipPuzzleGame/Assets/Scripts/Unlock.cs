@@ -35,7 +35,7 @@ public class Unlock : MonoBehaviour
             //audioS.PlayOneShot(audioC);
         }
 
-        if (soundCanPlay)
+        /*if (soundCanPlay)
         {
             audioS.PlayOneShot(audioC);
             soundCanPlay = false;
@@ -43,7 +43,7 @@ public class Unlock : MonoBehaviour
         else 
         {
             audioS.Stop();
-        }
+        }*/
     }
 
    

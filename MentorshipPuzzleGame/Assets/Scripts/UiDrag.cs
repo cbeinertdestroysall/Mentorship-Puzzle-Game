@@ -57,12 +57,13 @@ public class UiDrag : MonoBehaviour
                 if (dragElement.gameObject.GetComponent<ItemScript>().draggable)
                 {
                     DragElement();
+                    dragElement.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                     //Debug.Log("item pos: " + dragElement.transform.position);
                 }
                 else
                 {
                     dragging = false;
-
+                    
                     dragElement = null;
                 }
             }
@@ -74,6 +75,7 @@ public class UiDrag : MonoBehaviour
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
             dragging = false;
+            dragElement.gameObject.GetComponent<BoxCollider2D>().enabled = true;
             //Debug.Log("dragging = " + dragging);
 
             if (dragElement.gameObject.GetComponent<ItemScript>() != null && dragElement.gameObject.GetComponent<ItemScript>().inventoryPos != null)
