@@ -50,7 +50,7 @@ public class KeyScript : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Lock" && uiDrag.dragging == false && this.GetComponent<ItemScript>().canBeUsed)
         {
-            Debug.Log("key has disappeared");
+            //Debug.Log("key has disappeared");
             anim.SetBool("Used", true);
             AudioSource.PlayClipAtPoint(audioClip, transform.position, 1f);
             StartCoroutine(Destroy());
