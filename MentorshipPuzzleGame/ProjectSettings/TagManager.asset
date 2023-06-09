@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Lock
   - Item
+  - Key
   layers:
   - Default
   - TransparentFX

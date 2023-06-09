@@ -30,6 +30,14 @@ public class ObjectUIHighlight : MonoBehaviour
         }
     }
 
+    /*private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Item")
+        {
+            highlight.gameObject.SetActive(true);
+        }
+    }*/
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Item")
@@ -37,4 +45,13 @@ public class ObjectUIHighlight : MonoBehaviour
             highlight.gameObject.SetActive(false);
         }
     }
+
+    /*private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Item")
+        {
+            highlight.gameObject.SetActive(false);
+        }
+    }*/
+
 }

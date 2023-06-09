@@ -12,6 +12,8 @@ public class LockPuzzle : MonoBehaviour
 
     public float correctLockNumber;
 
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,11 @@ public class LockPuzzle : MonoBehaviour
         {
             Debug.Log("you entered the correct code");
             key.GetComponent<ItemScript>().canBeUsed = true;
+            audioSource.Play();
+        }
+        else 
+        {
+            key.GetComponent<ItemScript>().canBeUsed = false;
         }
     }
 
