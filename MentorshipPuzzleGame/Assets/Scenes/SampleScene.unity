@@ -3736,7 +3736,9 @@ MonoBehaviour:
   lockMiddle: {fileID: 344394118}
   lockBottom: {fileID: 701642475}
   key: {fileID: 1123715502}
-  correctLockNumber: 3
+  correctLockNumberTop: 3
+  correctLockNumberMiddle: 6
+  correctLockNumberBottom: 1
   audioSource: {fileID: 1006317575}
 --- !u!82 &1006317575
 AudioSource:

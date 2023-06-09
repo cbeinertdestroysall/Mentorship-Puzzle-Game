@@ -10,7 +10,9 @@ public class LockPuzzle : MonoBehaviour
 
     public GameObject key;
 
-    public float correctLockNumber;
+    public float correctLockNumberTop;
+    public float correctLockNumberMiddle;
+    public float correctLockNumberBottom;
 
     public AudioSource audioSource;
 
@@ -28,7 +30,7 @@ public class LockPuzzle : MonoBehaviour
 
     public void SolvePuzzle()
     {
-        if (lockTop.GetComponent<LockScript>().currentLockNumber == correctLockNumber && lockMiddle.GetComponent<LockScript>().currentLockNumber == correctLockNumber && lockBottom.GetComponent<LockScript>().currentLockNumber == correctLockNumber)
+        if (lockTop.GetComponent<LockScript>().currentLockNumber == correctLockNumberTop && lockMiddle.GetComponent<LockScript>().currentLockNumber == correctLockNumberMiddle && lockBottom.GetComponent<LockScript>().currentLockNumber == correctLockNumberBottom)
         {
             Debug.Log("you entered the correct code");
             key.GetComponent<ItemScript>().canBeUsed = true;
