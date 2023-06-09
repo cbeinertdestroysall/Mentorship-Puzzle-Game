@@ -8,6 +8,8 @@ public class KeyScript : MonoBehaviour
     //public AudioSource aus;
     public AudioClip audioClip;
 
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,11 @@ public class KeyScript : MonoBehaviour
         
     }
 
-   
+    IEnumerator Destroy()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(this.gameObject);
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -32,8 +38,10 @@ public class KeyScript : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Lock" && uiDrag.dragging == false)
         {
-            AudioSource.PlayClipAtPoint(audioClip, transform.position);
-            Destroy(this.gameObject);
+            Debug.Log("key has disappeared");
+            anim.SetBool("Used", true);
+            AudioSource.PlayClipAtPoint(audioClip, transform.position, 1f);
+            StartCoroutine(Destroy());
         }
     }
 

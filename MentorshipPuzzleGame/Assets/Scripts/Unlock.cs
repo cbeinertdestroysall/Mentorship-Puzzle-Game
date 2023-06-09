@@ -31,10 +31,22 @@ public class Unlock : MonoBehaviour
         if (key == null)
         {
             this.GetComponent<Image>().sprite = unlocked;
+            soundCanPlay = true;
+            //audioS.PlayOneShot(audioC);
+        }
+
+        if (soundCanPlay)
+        {
             audioS.PlayOneShot(audioC);
+            soundCanPlay = false;
+        }
+        else 
+        {
+            audioS.Stop();
         }
     }
 
+   
 
 
 
