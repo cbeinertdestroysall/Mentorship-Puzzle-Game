@@ -30,11 +30,11 @@ public class KeyScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Lock")
+        if (collision.gameObject.tag == "Lock" && this.GetComponent<ItemScript>().canBeUsed)
         {
             Debug.Log("key entered lock");
             this.GetComponent<ItemScript>().inventoryPos = this.transform.position;
-            this.GetComponent<ItemScript>().canBeUsed = true;
+            this.GetComponent<ItemScript>().isUsed = true;
             aus.clip = audioClip;
             aus.Play();
         }
@@ -45,10 +45,10 @@ public class KeyScript : MonoBehaviour
         if (collision.gameObject.tag == "Lock" && uiDrag.dragging)
         {
             //Debug.Log("Key can enter lock");
-            this.GetComponent<ItemScript>().canBeUsed = true;
+            this.GetComponent<ItemScript>().isUsed = true;
             this.GetComponent<ItemScript>().inventoryPos = this.transform.position;
         }
-        else if (collision.gameObject.tag == "Lock" && uiDrag.dragging == false)
+        else if (collision.gameObject.tag == "Lock" && uiDrag.dragging == false && this.GetComponent<ItemScript>().canBeUsed)
         {
             Debug.Log("key has disappeared");
             anim.SetBool("Used", true);
@@ -61,7 +61,7 @@ public class KeyScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Lock")
         {
-            this.GetComponent<ItemScript>().canBeUsed = false;
+            this.GetComponent<ItemScript>().isUsed = false;
         }
     }
 }

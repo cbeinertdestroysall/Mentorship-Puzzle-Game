@@ -3655,7 +3655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1006317571
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3733,6 +3733,7 @@ MonoBehaviour:
   lockTop: {fileID: 380554377}
   lockMiddle: {fileID: 344394118}
   lockBottom: {fileID: 701642475}
+  key: {fileID: 1123715502}
   correctLockNumber: 3
 --- !u!1 &1010070027
 GameObject:
@@ -3982,8 +3983,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   draggable: 0
+  isUsed: 0
   canBeUsed: 0
-  used: 0
   selectedObject: {fileID: 1123715502}
   inventoryPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1123715507
@@ -6866,7 +6867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1915861252
 RectTransform:
   m_ObjectHideFlags: 0

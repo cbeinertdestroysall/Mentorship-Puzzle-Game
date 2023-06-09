@@ -8,6 +8,8 @@ public class LockPuzzle : MonoBehaviour
     public GameObject lockMiddle;
     public GameObject lockBottom;
 
+    public GameObject key;
+
     public float correctLockNumber;
 
     // Start is called before the first frame update
@@ -27,6 +29,7 @@ public class LockPuzzle : MonoBehaviour
         if (lockTop.GetComponent<LockScript>().currentLockNumber == correctLockNumber && lockMiddle.GetComponent<LockScript>().currentLockNumber == correctLockNumber && lockBottom.GetComponent<LockScript>().currentLockNumber == correctLockNumber)
         {
             Debug.Log("you entered the correct code");
+            key.GetComponent<ItemScript>().canBeUsed = true;
         }
     }
 

@@ -30,7 +30,7 @@ public class Unlock : MonoBehaviour
     {
         if (key != null)
         {
-            if (key.GetComponent<ItemScript>().canBeUsed)
+            if (key.GetComponent<ItemScript>().isUsed)
             {
                 this.GetComponent<Image>().sprite = unlocked;
                 soundCanPlay = true;
