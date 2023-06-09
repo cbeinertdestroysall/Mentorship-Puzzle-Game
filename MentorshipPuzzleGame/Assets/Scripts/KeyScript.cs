@@ -5,7 +5,7 @@ using UnityEngine;
 public class KeyScript : MonoBehaviour
 {
     public UiDrag uiDrag;
-    //public AudioSource aus;
+    public AudioSource aus;
     public AudioClip audioClip;
 
     public Animator anim;
@@ -28,11 +28,23 @@ public class KeyScript : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Lock")
+        {
+            Debug.Log("key entered lock");
+            this.GetComponent<ItemScript>().inventoryPos = this.transform.position;
+            this.GetComponent<ItemScript>().canBeUsed = true;
+            aus.clip = audioClip;
+            aus.Play();
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Lock" && uiDrag.dragging)
         {
-            Debug.Log("Key can enter lock");
+            //Debug.Log("Key can enter lock");
             this.GetComponent<ItemScript>().canBeUsed = true;
             this.GetComponent<ItemScript>().inventoryPos = this.transform.position;
         }

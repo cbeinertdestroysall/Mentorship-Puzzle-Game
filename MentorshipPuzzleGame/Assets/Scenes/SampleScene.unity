@@ -3999,6 +3999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiDrag: {fileID: 1766838214}
+  aus: {fileID: 1123715510}
   audioClip: {fileID: 8300000, guid: 3a530134a178df54aa868fb8e8eeb370, type: 3}
   anim: {fileID: 1123715511}
 --- !u!61 &1123715508

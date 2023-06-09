@@ -28,11 +28,18 @@ public class Unlock : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (key == null)
+        if (key != null)
         {
-            this.GetComponent<Image>().sprite = unlocked;
-            soundCanPlay = true;
-            //audioS.PlayOneShot(audioC);
+            if (key.GetComponent<ItemScript>().canBeUsed)
+            {
+                this.GetComponent<Image>().sprite = unlocked;
+                soundCanPlay = true;
+                //audioS.PlayOneShot(audioC);
+            }
+        }
+        else 
+        {
+            return;
         }
 
         /*if (soundCanPlay)

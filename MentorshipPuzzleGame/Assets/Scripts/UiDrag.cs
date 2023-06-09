@@ -20,6 +20,12 @@ public class UiDrag : MonoBehaviour
     Vector3 mousePosition;
     Vector3 previousMousePosition;
 
+    IEnumerator ReturnToInventory()
+    {
+        yield return new WaitForSeconds(0.1f);
+        dragElement.transform.position = dragElement.gameObject.GetComponent<ItemScript>().inventoryPos;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,12 +81,14 @@ public class UiDrag : MonoBehaviour
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
             dragging = false;
-            dragElement.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            
             //Debug.Log("dragging = " + dragging);
 
             if (dragElement.gameObject.GetComponent<ItemScript>() != null && dragElement.gameObject.GetComponent<ItemScript>().inventoryPos != null)
             {
-                dragElement.transform.position = dragElement.gameObject.GetComponent<ItemScript>().inventoryPos;
+                
+                dragElement.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                StartCoroutine(ReturnToInventory());
             }
             /*else if (dragElement.gameObject.GetComponent<ItemScript>().canBeUsed)
             {
