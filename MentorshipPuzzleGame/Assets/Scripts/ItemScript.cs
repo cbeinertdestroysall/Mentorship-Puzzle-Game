@@ -10,13 +10,13 @@ public class ItemScript : MonoBehaviour
    
 
     public GameObject selectedObject;
-    public Vector3 inventoryPos;
+    //public Vector3 inventoryPos;
 
-    public void RecordInventoryPos()
+    /*public void RecordInventoryPos()
     {
         inventoryPos = this.transform.position;
         Debug.Log("key position: " + inventoryPos);
-    }
+    }*/
 
     // Start is called before the first frame update
     void Start()

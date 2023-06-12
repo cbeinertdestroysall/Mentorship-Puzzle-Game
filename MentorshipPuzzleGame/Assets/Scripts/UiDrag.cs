@@ -23,7 +23,7 @@ public class UiDrag : MonoBehaviour
     IEnumerator ReturnToInventory()
     {
         yield return new WaitForSeconds(0.1f);
-        dragElement.transform.position = dragElement.gameObject.GetComponent<ItemScript>().inventoryPos;
+        dragElement.transform.position = dragElement.gameObject.GetComponent<InventoryPosition>().inventoryPos;
     }
 
     // Start is called before the first frame update
@@ -93,7 +93,7 @@ public class UiDrag : MonoBehaviour
 
             //Debug.Log("dragging = " + dragging);
 
-            if (dragElement.gameObject.GetComponent<ItemScript>() != null && dragElement.gameObject.GetComponent<ItemScript>().inventoryPos != null)
+            if (dragElement.gameObject.GetComponent<ItemScript>() != null && dragElement.gameObject.GetComponent<InventoryPosition>() != null)
             {
                 dragElement.gameObject.GetComponent<BoxCollider2D>().enabled = true;
                 StartCoroutine(ReturnToInventory());

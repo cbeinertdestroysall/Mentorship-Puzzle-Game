@@ -69,7 +69,7 @@ public class Unlock : MonoBehaviour
             if (key != null)
             {
                 Debug.Log("key entered lock");
-                key.GetComponent<ItemScript>().inventoryPos = key.transform.position;
+                key.GetComponent<InventoryPosition>().inventoryPos = key.transform.position;
                 key.GetComponent<ItemScript>().isUsed = true;
                 this.GetComponent<Image>().sprite = unlocked;
 

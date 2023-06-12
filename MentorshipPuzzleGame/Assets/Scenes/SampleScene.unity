@@ -2911,7 +2911,6 @@ MonoBehaviour:
   isUsed: 0
   canBeUsed: 0
   selectedObject: {fileID: 0}
-  inventoryPos: {x: 0, y: 0, z: 0}
 --- !u!114 &706651830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4409,7 +4408,6 @@ MonoBehaviour:
   isUsed: 0
   canBeUsed: 0
   selectedObject: {fileID: 1123715502}
-  inventoryPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1123715507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5895,8 +5893,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1123715506}
-        m_TargetAssemblyTypeName: ItemScript, Assembly-CSharp
+      - m_Target: {fileID: 1123715512}
+        m_TargetAssemblyTypeName: InventoryPosition, Assembly-CSharp
         m_MethodName: RecordInventoryPos
         m_Mode: 1
         m_Arguments:

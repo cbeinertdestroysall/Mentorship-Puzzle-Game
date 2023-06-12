@@ -33,7 +33,7 @@ public class KeyScript : MonoBehaviour
         if (collision.gameObject.tag == "Lock" && this.GetComponent<ItemScript>().canBeUsed)
         {
            // Debug.Log("key entered lock");
-            this.GetComponent<ItemScript>().inventoryPos = this.transform.position;
+            this.GetComponent<InventoryPosition>().inventoryPos = this.transform.position;
             //this.GetComponent<ItemScript>().isUsed = true;
             //aus.clip = audioClip;
             //aus.Play();
