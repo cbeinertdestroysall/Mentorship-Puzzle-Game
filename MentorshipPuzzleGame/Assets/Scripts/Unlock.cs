@@ -12,6 +12,9 @@ public class Unlock : MonoBehaviour
     public AudioClip audioC;
 
     public UiDrag uiDrag;
+
+    public float gravity;
+
     //public SoundManager sound;
 
     // Start is called before the first frame update
@@ -57,22 +60,7 @@ public class Unlock : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Key")
-        {
-            if (key != null)
-            {
-                Debug.Log("key entered lock");
-                key.GetComponent<ItemScript>().inventoryPos = key.transform.position;
-                key.GetComponent<ItemScript>().isUsed = true;
-                this.GetComponent<Image>().sprite = unlocked;
-
-                audioS.clip = audioC;
-                audioS.Play();
-            }
-        }
-    }
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -84,6 +72,9 @@ public class Unlock : MonoBehaviour
                 key.GetComponent<ItemScript>().inventoryPos = key.transform.position;
                 key.GetComponent<ItemScript>().isUsed = true;
                 this.GetComponent<Image>().sprite = unlocked;
+
+                this.GetComponent<Rigidbody2D>().gravityScale = gravity;
+                this.GetComponent<BoxCollider2D>().isTrigger = false;
 
                 audioS.clip = audioC;
                 audioS.Play();
