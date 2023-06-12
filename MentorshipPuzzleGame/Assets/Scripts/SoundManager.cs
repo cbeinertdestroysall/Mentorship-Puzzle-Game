@@ -34,4 +34,6 @@ public class SoundManager : MonoBehaviour
     {
         lockSwitch.Play();
     }
+
+    
 }

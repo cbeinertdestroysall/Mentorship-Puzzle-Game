@@ -9,7 +9,8 @@ public class Unlock : MonoBehaviour
     public Sprite unlocked;
 
     public AudioSource audioS;
-    public AudioClip audioC;
+    public AudioClip audioUnlock;
+    public AudioClip audioClank;
 
     public UiDrag uiDrag;
 
@@ -88,9 +89,20 @@ public class Unlock : MonoBehaviour
 
                 
 
-                audioS.clip = audioC;
+                audioS.clip = audioUnlock;
                 audioS.Play();
             }
+        }
+
+        
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            Debug.Log("lock has hit the ground");
+            audioS.clip = audioClank;
+            audioS.Play();
         }
     }
 
