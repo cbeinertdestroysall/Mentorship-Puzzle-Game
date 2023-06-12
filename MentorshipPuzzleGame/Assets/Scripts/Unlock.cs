@@ -13,6 +13,11 @@ public class Unlock : MonoBehaviour
 
     public UiDrag uiDrag;
 
+    public GameObject lockButton;
+    public GameObject doorButton;
+
+    public GameObject highlight;
+
     public float gravity;
 
     //public SoundManager sound;
@@ -73,8 +78,15 @@ public class Unlock : MonoBehaviour
                 key.GetComponent<ItemScript>().isUsed = true;
                 this.GetComponent<Image>().sprite = unlocked;
 
+                lockButton.gameObject.SetActive(false);
+                doorButton.gameObject.SetActive(true);
+
+                Destroy(highlight.gameObject);
+
                 this.GetComponent<Rigidbody2D>().gravityScale = gravity;
                 this.GetComponent<BoxCollider2D>().isTrigger = false;
+
+                
 
                 audioS.clip = audioC;
                 audioS.Play();

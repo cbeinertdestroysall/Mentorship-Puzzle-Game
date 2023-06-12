@@ -24,7 +24,7 @@ public class ObjectUIHighlight : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Item")
+        if (collision.gameObject.tag == "Item" && highlight != null)
         {
             highlight.gameObject.SetActive(true);
         }
@@ -40,7 +40,7 @@ public class ObjectUIHighlight : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Item")
+        if (collision.gameObject.tag == "Item" && highlight != null)
         {
             highlight.gameObject.SetActive(false);
         }
