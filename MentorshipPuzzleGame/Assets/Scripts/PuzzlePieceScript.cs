@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PuzzlePieceScript : MonoBehaviour
 {
-    public InventoryReSystem inventory;
+    //public InventoryReSystem inventory;
 
-    public UiDrag ui;
+    //public UiDrag ui;
+
+    public GameObject mainFunctionality;
 
     // Start is called before the first frame update
     void Start()
@@ -24,16 +26,23 @@ public class PuzzlePieceScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Slot")
         {
+
             this.GetComponent<InventoryPosition>().inventoryPos = collision.gameObject.GetComponent<BoxCollider2D>().transform.position;
 
-            //this.transform.SetParent(collision.transform.parent, true);
+            this.transform.SetParent(collision.transform.parent, true);
             //inventory.DecreaseSlotNumber();
+        }
+        else if (collision.gameObject.tag == "Inventory")
+        {
+            this.GetComponent<InventoryPosition>().inventoryPos = collision.gameObject.GetComponent<BoxCollider2D>().transform.position;
+
+            this.transform.SetParent(collision.transform.parent, true);
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Slot" && ui.dragging == false)
+        if (collision.gameObject.tag == "Slot" && mainFunctionality.GetComponent<UiDrag>().dragging == false)
         {
             this.transform.SetParent(collision.transform.parent, true);
         }
@@ -43,7 +52,7 @@ public class PuzzlePieceScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Inventory")
         {
-            inventory.DecreaseSlotNumber();
+            mainFunctionality.GetComponent<InventoryReSystem>().DecreaseSlotNumber();
         }
     }
 

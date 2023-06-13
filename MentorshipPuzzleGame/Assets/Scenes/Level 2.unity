@@ -1027,12 +1027,12 @@ GameObject:
   - component: {fileID: 255158520}
   - component: {fileID: 255158519}
   - component: {fileID: 255158518}
-  - component: {fileID: 255158517}
   - component: {fileID: 255158516}
   - component: {fileID: 255158515}
   - component: {fileID: 255158514}
   - component: {fileID: 255158513}
   - component: {fileID: 255158512}
+  - component: {fileID: 255158521}
   m_Layer: 5
   m_Name: PuzzlePiece2
   m_TagString: Puzzle Piece
@@ -1238,22 +1238,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 42.73206, y: 85.02692}
   m_EdgeRadius: 0
---- !u!114 &255158517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255158510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9503da3bcc30c84fa4155c8d16a4ff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiDrag: {fileID: 1766838214}
-  aus: {fileID: 255158514}
-  audioClip: {fileID: 8300000, guid: 3a530134a178df54aa868fb8e8eeb370, type: 3}
-  anim: {fileID: 255158513}
 --- !u!114 &255158518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1308,6 +1292,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255158510}
   m_CullTransparentMesh: 1
+--- !u!114 &255158521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255158510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af8443a2740eaa41b3160f0dceb4e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainFunctionality: {fileID: 1766838210}
+  itemButton: {fileID: 1800478845}
 --- !u!1 &266351112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,12 +2899,12 @@ GameObject:
   - component: {fileID: 644882855}
   - component: {fileID: 644882854}
   - component: {fileID: 644882853}
-  - component: {fileID: 644882852}
   - component: {fileID: 644882851}
   - component: {fileID: 644882850}
   - component: {fileID: 644882849}
   - component: {fileID: 644882848}
   - component: {fileID: 644882847}
+  - component: {fileID: 644882856}
   m_Layer: 5
   m_Name: PuzzlePiece4
   m_TagString: Puzzle Piece
@@ -3112,22 +3110,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 42.73206, y: 85.02692}
   m_EdgeRadius: 0
---- !u!114 &644882852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644882845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9503da3bcc30c84fa4155c8d16a4ff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiDrag: {fileID: 1766838214}
-  aus: {fileID: 644882849}
-  audioClip: {fileID: 8300000, guid: 3a530134a178df54aa868fb8e8eeb370, type: 3}
-  anim: {fileID: 644882848}
 --- !u!114 &644882853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3182,6 +3164,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644882845}
   m_CullTransparentMesh: 1
+--- !u!114 &644882856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644882845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af8443a2740eaa41b3160f0dceb4e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainFunctionality: {fileID: 1766838210}
+  itemButton: {fileID: 709644222}
 --- !u!1 &649715638
 GameObject:
   m_ObjectHideFlags: 0
@@ -4361,6 +4357,7 @@ GameObject:
   - component: {fileID: 975576634}
   - component: {fileID: 975576636}
   - component: {fileID: 975576635}
+  - component: {fileID: 975576637}
   m_Layer: 5
   m_Name: Window
   m_TagString: Untagged
@@ -4430,6 +4427,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975576633}
   m_CullTransparentMesh: 1
+--- !u!114 &975576637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975576633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e962daa985966064e8c9084df98436cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &980476773
 GameObject:
   m_ObjectHideFlags: 0
@@ -4886,12 +4895,12 @@ GameObject:
   - component: {fileID: 1082651403}
   - component: {fileID: 1082651402}
   - component: {fileID: 1082651401}
-  - component: {fileID: 1082651400}
   - component: {fileID: 1082651399}
   - component: {fileID: 1082651398}
   - component: {fileID: 1082651397}
   - component: {fileID: 1082651396}
   - component: {fileID: 1082651395}
+  - component: {fileID: 1082651404}
   m_Layer: 5
   m_Name: PuzzlePiece3
   m_TagString: Puzzle Piece
@@ -5097,22 +5106,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 42.73206, y: 85.02692}
   m_EdgeRadius: 0
---- !u!114 &1082651400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082651393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9503da3bcc30c84fa4155c8d16a4ff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiDrag: {fileID: 1766838214}
-  aus: {fileID: 1082651397}
-  audioClip: {fileID: 8300000, guid: 3a530134a178df54aa868fb8e8eeb370, type: 3}
-  anim: {fileID: 1082651396}
 --- !u!114 &1082651401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5167,6 +5160,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082651393}
   m_CullTransparentMesh: 1
+--- !u!114 &1082651404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082651393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af8443a2740eaa41b3160f0dceb4e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainFunctionality: {fileID: 1766838210}
+  itemButton: {fileID: 1714246577}
 --- !u!1 &1092122159
 GameObject:
   m_ObjectHideFlags: 0
@@ -8400,8 +8407,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2af8443a2740eaa41b3160f0dceb4e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 1766838213}
-  ui: {fileID: 1766838214}
+  mainFunctionality: {fileID: 1766838210}
+  itemButton: {fileID: 1371525939}
 --- !u!1 &1915861251
 GameObject:
   m_ObjectHideFlags: 0

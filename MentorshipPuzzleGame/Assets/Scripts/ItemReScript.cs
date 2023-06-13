@@ -11,9 +11,7 @@ public class ItemReScript : MonoBehaviour
     public GameObject slot3;
 
     public GameObject[] slots;
-
-
-
+-
     // Start is called before the first frame update
     void Start()
     {
@@ -35,9 +33,11 @@ public class ItemReScript : MonoBehaviour
             {
                 Debug.Log("item added " + mainFunctionality.GetComponent<InventoryReSystem>().slotNumber);
                 item.transform.position = slots[i].transform.position;
+                slots[i].GetComponent<FillSlot>().slotIsFilled = true;
                 item.transform.SetParent(slots[i].transform.parent, true);
                 item.GetComponent<ItemScript>().draggable = true;
             }
+            
         }
      
     }
