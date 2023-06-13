@@ -8,6 +8,9 @@ TagManager:
   - Item
   - Key
   - Ground
+  - Puzzle Piece
+  - Slot
+  - Inventory
   layers:
   - Default
   - TransparentFX

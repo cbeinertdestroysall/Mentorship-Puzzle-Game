@@ -31,4 +31,13 @@ public class InventoryReSystem : MonoBehaviour
             Debug.Log("You have too many items in your inventory");
         }
     }
+
+    public void DecreaseSlotNumber()
+    {
+        if (slotNumber > 0)
+        {
+            Debug.Log("item has left inventory");
+            slotNumber--;
+        }
+    }
 }

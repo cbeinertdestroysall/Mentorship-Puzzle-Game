@@ -6,7 +6,7 @@ public class ObjectUIHighlight : MonoBehaviour
 {
     public GameObject highlight;
 
-    public Sprite unlocked;
+    //public Sprite unlocked;
 
     
 
