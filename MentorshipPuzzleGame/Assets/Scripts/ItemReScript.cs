@@ -11,7 +11,7 @@ public class ItemReScript : MonoBehaviour
     public GameObject slot3;
 
     public GameObject[] slots;
--
+
     // Start is called before the first frame update
     void Start()
     {

@@ -727,6 +727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 124910832}
   - component: {fileID: 124910833}
+  - component: {fileID: 124910834}
   m_Layer: 5
   m_Name: Slot1
   m_TagString: Inventory
@@ -781,6 +782,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 77, y: 77}
   m_EdgeRadius: 0
+--- !u!114 &124910834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124910831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea280b548ad7bc4fb513335d2298c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slotIsFilled: 0
 --- !u!1 &246619911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,7 +1319,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainFunctionality: {fileID: 1766838210}
-  itemButton: {fileID: 1800478845}
 --- !u!1 &266351112
 GameObject:
   m_ObjectHideFlags: 0
@@ -3177,7 +3190,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainFunctionality: {fileID: 1766838210}
-  itemButton: {fileID: 709644222}
 --- !u!1 &649715638
 GameObject:
   m_ObjectHideFlags: 0
@@ -5173,7 +5185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainFunctionality: {fileID: 1766838210}
-  itemButton: {fileID: 1714246577}
 --- !u!1 &1092122159
 GameObject:
   m_ObjectHideFlags: 0
@@ -5554,6 +5565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1274103673}
   - component: {fileID: 1274103674}
+  - component: {fileID: 1274103675}
   m_Layer: 5
   m_Name: Slot2
   m_TagString: Inventory
@@ -5608,6 +5620,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 77, y: 77}
   m_EdgeRadius: 0
+--- !u!114 &1274103675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274103672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea280b548ad7bc4fb513335d2298c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slotIsFilled: 0
 --- !u!1 &1275687606
 GameObject:
   m_ObjectHideFlags: 0
@@ -8408,7 +8433,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainFunctionality: {fileID: 1766838210}
-  itemButton: {fileID: 1371525939}
 --- !u!1 &1915861251
 GameObject:
   m_ObjectHideFlags: 0
