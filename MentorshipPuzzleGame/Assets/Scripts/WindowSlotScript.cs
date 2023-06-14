@@ -8,6 +8,8 @@ public class WindowSlotScript : MonoBehaviour
 
     public bool pieceInCorrectSlot = false;
 
+    public bool pieceInSlot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class WindowSlotScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Puzzle Piece")
         {
+            pieceInSlot = true;
             if (collision.GetComponent<PuzzlePieceScript>().puzzleNumber == slotNumber)
             {
                 pieceInCorrectSlot = true;
@@ -35,11 +38,20 @@ public class WindowSlotScript : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Puzzle Piece")
+        {
+            pieceInSlot = true;
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Puzzle Piece")
         {
             pieceInCorrectSlot = false;
+            pieceInSlot = false;
         }
     }
 }
