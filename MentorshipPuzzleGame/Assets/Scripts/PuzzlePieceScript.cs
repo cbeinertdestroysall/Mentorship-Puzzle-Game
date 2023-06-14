@@ -34,9 +34,12 @@ public class PuzzlePieceScript : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Inventory")
         {
-            this.GetComponent<InventoryPosition>().inventoryPos = collision.gameObject.GetComponent<BoxCollider2D>().transform.position;
-
-            this.transform.SetParent(collision.transform.parent, true);
+            if (collision.GetComponent<FillSlot>().slotIsFilled == false)
+            {
+                this.GetComponent<InventoryPosition>().inventoryPos = collision.gameObject.GetComponent<BoxCollider2D>().transform.position;
+                collision.GetComponent<FillSlot>().slotIsFilled = true;
+                this.transform.SetParent(collision.transform.parent, true);
+            }
         }
     }
 
@@ -53,6 +56,7 @@ public class PuzzlePieceScript : MonoBehaviour
         if (collision.gameObject.tag == "Inventory")
         {
             mainFunctionality.GetComponent<InventoryReSystem>().DecreaseSlotNumber();
+            collision.GetComponent<FillSlot>().slotIsFilled = false;
         }
     }
 
