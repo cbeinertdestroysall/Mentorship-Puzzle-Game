@@ -66,8 +66,6 @@ public class Unlock : MonoBehaviour
         
     }
 
-    
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Key" && key.GetComponent<ItemScript>().canBeUsed)
@@ -87,7 +85,6 @@ public class Unlock : MonoBehaviour
                 this.GetComponent<Rigidbody2D>().gravityScale = gravity;
                 this.GetComponent<BoxCollider2D>().isTrigger = false;
 
-                
 
                 audioS.clip = audioUnlock;
                 audioS.Play();

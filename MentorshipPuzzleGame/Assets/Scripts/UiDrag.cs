@@ -17,6 +17,8 @@ public class UiDrag : MonoBehaviour
     public bool dragging = false;
     GameObject dragElement;
 
+    public SoundManager soundManager;
+
     Vector3 mousePosition;
     Vector3 previousMousePosition;
 
@@ -71,6 +73,7 @@ public class UiDrag : MonoBehaviour
                     else 
                     {
                         DragElement();
+                        //soundManager.PlayDraggingSound();
                     }
                     
                     Debug.Log("item pos: " + dragElement.transform.position);
@@ -79,7 +82,7 @@ public class UiDrag : MonoBehaviour
                 else
                 {
                     dragging = false;
-                    
+                    //soundManager.StopDraggingSound();
                     dragElement = null;
                 }
             }

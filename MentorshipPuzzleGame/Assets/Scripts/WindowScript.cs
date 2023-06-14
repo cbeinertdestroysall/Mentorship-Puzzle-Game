@@ -8,6 +8,8 @@ public class WindowScript : MonoBehaviour
 
     public GameObject[] slots;
 
+    public AudioSource audioS;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class WindowScript : MonoBehaviour
             if (slot.GetComponent<WindowSlotScript>().pieceInCorrectSlot == true)
             {
                 puzzleSolved = true;
+                audioS.Play();
             }
             else 
             {
