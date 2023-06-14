@@ -8,6 +8,8 @@ public class PuzzlePieceScript : MonoBehaviour
 
     //public UiDrag ui;
 
+    public float puzzleNumber;
+
     public GameObject mainFunctionality;
 
     // Start is called before the first frame update
