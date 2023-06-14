@@ -62,7 +62,7 @@ public class UiDrag : MonoBehaviour
             {
                 if (dragElement.gameObject.GetComponent<ItemScript>().draggable)
                 {
-                    //DragElement();
+                    
                     if (dragElement.gameObject.GetComponent<BoxCollider2D>() != null)
                     {
                         DragElement();
@@ -73,7 +73,8 @@ public class UiDrag : MonoBehaviour
                         DragElement();
                     }
                     
-                    //Debug.Log("item pos: " + dragElement.transform.position);
+                    Debug.Log("item pos: " + dragElement.transform.position);
+                    Debug.Log("mouse pos: " + mousePosition);
                 }
                 else
                 {
@@ -102,10 +103,7 @@ public class UiDrag : MonoBehaviour
             {
                 return;
             }
-            /*else if (dragElement.gameObject.GetComponent<ItemScript>().canBeUsed)
-            {
-                return;
-            }*/
+           
 
         }
         
