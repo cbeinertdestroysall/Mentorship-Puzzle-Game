@@ -138,6 +138,7 @@ public class UiDrag : MonoBehaviour
         }
     }
 
+    //where the dragging game object magic is supposed to happen
     void DragElement()
     {
         RectTransform elementRect = dragElement.GetComponent<RectTransform>();

@@ -15,7 +15,7 @@ public class PuzzlePieceScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryReSystem>();
+        
     }
 
     // Update is called once per frame
@@ -49,6 +49,7 @@ public class PuzzlePieceScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Slot" && mainFunctionality.GetComponent<UiDrag>().dragging == false)
         {
+            //where the problem seems to be happening
             this.transform.SetParent(collision.transform.parent, true);
         }
     }
