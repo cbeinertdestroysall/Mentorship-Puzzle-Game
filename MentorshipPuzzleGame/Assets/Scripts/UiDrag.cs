@@ -145,6 +145,6 @@ public class UiDrag : MonoBehaviour
 
         Vector2 dragMovement = mousePosition - previousMousePosition;
 
-        elementRect.anchoredPosition = elementRect.anchoredPosition + dragMovement;
+        elementRect.anchoredPosition = elementRect.anchoredPosition + (dragMovement/elementRect.parent.lossyScale);
     }
 }

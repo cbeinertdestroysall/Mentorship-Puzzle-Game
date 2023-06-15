@@ -10,6 +10,8 @@ public class WindowSlotScript : MonoBehaviour
 
     public bool pieceInSlot;
 
+    public WindowScript windowScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,11 @@ public class WindowSlotScript : MonoBehaviour
             if (collision.GetComponent<PuzzlePieceScript>().puzzleNumber == slotNumber)
             {
                 pieceInCorrectSlot = true;
+
+                if (windowScript.puzzleSolved)
+                { 
+                    
+                }
             }
             else 
             {

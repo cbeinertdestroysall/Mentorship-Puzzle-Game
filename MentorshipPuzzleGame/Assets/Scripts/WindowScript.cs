@@ -19,17 +19,19 @@ public class WindowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        puzzleSolved = true;
         foreach (GameObject slot in slots)
         {
             if (slot.GetComponent<WindowSlotScript>().pieceInCorrectSlot == true)
             {
-                puzzleSolved = true;
-                audioS.Play();
+                puzzleSolved = puzzleSolved & true;
+                //audioS.Play();
             }
             else 
             {
                 puzzleSolved = false;
             }
         }
+        
     }
 }
