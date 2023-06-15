@@ -59,6 +59,11 @@ public class PuzzlePieceScript : MonoBehaviour
         {
             mainFunctionality.GetComponent<InventoryReSystem>().DecreaseSlotNumber();
             collision.GetComponent<FillSlot>().slotIsFilled = false;
+            this.transform.SetParent(collision.transform.parent, false);
+        }
+        else if (collision.gameObject.tag == "Slot")
+        {
+            this.transform.SetParent(collision.transform.parent, false);
         }
     }
 
