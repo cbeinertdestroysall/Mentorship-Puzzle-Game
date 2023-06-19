@@ -10,7 +10,7 @@ public class NextScene : MonoBehaviour
     IEnumerator NextSceneTransition()
     {
         yield return new WaitForSeconds(0.9f);
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     // Start is called before the first frame update
