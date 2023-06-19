@@ -76,8 +76,8 @@ public class UiDrag : MonoBehaviour
                         //soundManager.PlayDraggingSound();
                     }
                     
-                    Debug.Log("item pos: " + dragElement.transform.position);
-                    Debug.Log("mouse pos: " + mousePosition);
+                    //Debug.Log("item pos: " + dragElement.transform.position);
+                    //Debug.Log("mouse pos: " + mousePosition);
                 }
                 else
                 {

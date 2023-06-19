@@ -33,10 +33,10 @@ public class WindowSlotScript : MonoBehaviour
             {
                 pieceInCorrectSlot = true;
 
-                if (windowScript.puzzleSolved)
-                { 
-                    
-                }
+                /*if (windowScript.puzzleSolved)
+                {
+                    Debug.Log("You solved the window puzzle");
+                }*/
             }
             else 
             {
@@ -51,6 +51,9 @@ public class WindowSlotScript : MonoBehaviour
         {
             pieceInSlot = true;
         }
+
+        
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)

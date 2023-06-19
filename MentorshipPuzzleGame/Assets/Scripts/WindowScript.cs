@@ -10,6 +10,20 @@ public class WindowScript : MonoBehaviour
 
     public AudioSource audioS;
 
+    public GameObject window;
+
+    public GameObject door;
+
+    public GameObject wrongCode;
+
+    public GameObject rightCode;
+
+    IEnumerator WrongCode()
+    {
+        yield return new WaitForSeconds(1f);
+        wrongCode.SetActive(false);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +46,21 @@ public class WindowScript : MonoBehaviour
                 puzzleSolved = false;
             }
         }
-        
+    }
+
+    public void ActivateDoor()
+    {
+        if (puzzleSolved)
+        {
+            window.SetActive(false);
+            door.SetActive(true);
+            wrongCode.SetActive(false);
+            rightCode.SetActive(true);
+        }
+        else
+        {
+            wrongCode.SetActive(true);
+            StartCoroutine(WrongCode());
+        }
     }
 }
