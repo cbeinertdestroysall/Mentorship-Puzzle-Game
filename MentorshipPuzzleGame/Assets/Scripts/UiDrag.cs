@@ -107,10 +107,8 @@ public class UiDrag : MonoBehaviour
                 return;
             }
            
-
         }
         
-
         previousMousePosition = mousePosition;
     }
 
