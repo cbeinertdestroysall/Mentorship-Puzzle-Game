@@ -18,6 +18,8 @@ public class WindowScript : MonoBehaviour
 
     public GameObject rightCode;
 
+    //public AudioSource audioSource;
+
     IEnumerator WrongCode()
     {
         yield return new WaitForSeconds(1f);
@@ -39,7 +41,7 @@ public class WindowScript : MonoBehaviour
             if (slot.GetComponent<WindowSlotScript>().pieceInCorrectSlot == true)
             {
                 puzzleSolved = puzzleSolved & true;
-                //audioS.Play();
+                
             }
             else 
             {
@@ -62,5 +64,11 @@ public class WindowScript : MonoBehaviour
             wrongCode.SetActive(true);
             StartCoroutine(WrongCode());
         }
+    }
+
+    public void PlayPuzzleSolve()
+    {
+        if (puzzleSolved)
+        audioS.Play();
     }
 }
