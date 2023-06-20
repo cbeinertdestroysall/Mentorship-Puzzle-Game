@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class MaskFollowingMouse : MonoBehaviour
 {
     Vector2 mousePos;
-    Vector3 previousMousePos;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +18,11 @@ public class MaskFollowingMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePos = Mouse.current.position.ReadValue();
+        mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
-        //Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         this.GetComponent<RectTransform>().anchoredPosition = mousePos;
+
+        //Debug.Log("mouse Pos = " + mousePos);
+        //Debug.Log("mask position = " + this.GetComponent<RectTransform>().anchoredPosition);
     }
 }
