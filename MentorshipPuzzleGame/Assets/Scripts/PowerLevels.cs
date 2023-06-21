@@ -9,12 +9,14 @@ public class PowerLevels : MonoBehaviour
 
     public GameObject[] backgrounds;
 
-    public float health;
+    public float currentHealth;
+
+    public HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //healthBar.SetHealth(health);
     }
 
     // Update is called once per frame
@@ -48,28 +50,33 @@ public class PowerLevels : MonoBehaviour
                 background.GetComponent<Image>().color = new Color32(255, 0, 0, 255);
             }
         }
+        healthBar.SetHealth(currentHealth);
     }
 
     private void FixedUpdate()
     {
         if (powerLevel == 1)
         {
-            health += 1;
+            currentHealth += 1;
+            healthBar.SetHealth(currentHealth);
         }
         else if (powerLevel == 2)
         {
-            health -= 0.5f;
+            currentHealth -= 0.5f;
+            healthBar.SetHealth(currentHealth);
         }
         else if (powerLevel == 3)
         {
-            health -= 1;
+            currentHealth -= 1;
+            healthBar.SetHealth(currentHealth);
         }
 
-        if (health >= 100)
+        if (currentHealth >= 100)
         {
-            health = 100;
+            currentHealth = 100;
+            healthBar.SetHealth(currentHealth);
         } 
-        else if (health <= 0)
+        else if (currentHealth <= 0)
         {
             powerLevel = 1;
         }

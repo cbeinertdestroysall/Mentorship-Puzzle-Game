@@ -28,10 +28,30 @@ public class MeltableObject : MonoBehaviour
     {
         if (collision.gameObject.tag == "Flashlight")
         {
-            anim.SetBool("CanMelt", true);
+            if (collision.GetComponent<PowerLevels>().powerLevel > 1)
+            {
+                anim.SetBool("CanMelt", true);
+                StartCoroutine(DestroyAfterAnimation());
+            }
+            
             //anim.speed = -1;
         }
-        StartCoroutine(DestroyAfterAnimation());
+        //StartCoroutine(DestroyAfterAnimation());
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Flashlight")
+        {
+            if (collision.GetComponent<PowerLevels>().powerLevel > 1)
+            {
+                anim.SetBool("CanMelt", true);
+                StartCoroutine(DestroyAfterAnimation());
+            }
+
+            //anim.speed = -1;
+        }
+    }
+
 
 }
