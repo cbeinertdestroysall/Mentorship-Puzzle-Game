@@ -9,6 +9,8 @@ public class PowerLevels : MonoBehaviour
 
     public GameObject[] backgrounds;
 
+    public float health;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,31 @@ public class PowerLevels : MonoBehaviour
             {
                 background.GetComponent<Image>().color = new Color32(255, 0, 0, 255);
             }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (powerLevel == 1)
+        {
+            health += 1;
+        }
+        else if (powerLevel == 2)
+        {
+            health -= 0.5f;
+        }
+        else if (powerLevel == 3)
+        {
+            health -= 1;
+        }
+
+        if (health >= 100)
+        {
+            health = 100;
+        } 
+        else if (health <= 0)
+        {
+            powerLevel = 1;
         }
     }
 }

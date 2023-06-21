@@ -29,6 +29,7 @@ public class MeltableObject : MonoBehaviour
         if (collision.gameObject.tag == "Flashlight")
         {
             anim.SetBool("CanMelt", true);
+            //anim.speed = -1;
         }
         StartCoroutine(DestroyAfterAnimation());
     }
