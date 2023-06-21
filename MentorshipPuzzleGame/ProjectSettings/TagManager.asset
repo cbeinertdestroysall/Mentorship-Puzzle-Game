@@ -11,6 +11,7 @@ TagManager:
   - Puzzle Piece
   - Slot
   - Inventory
+  - Flashlight
   layers:
   - Default
   - TransparentFX
