@@ -3711,9 +3711,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 1476364422}
   mainFunctionality: {fileID: 1766838210}
-  slot1: {fileID: 0}
-  slot2: {fileID: 0}
-  slot3: {fileID: 0}
   slots:
   - {fileID: 124910831}
   - {fileID: 1274103672}
@@ -6517,9 +6514,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 1914061064}
   mainFunctionality: {fileID: 1766838210}
-  slot1: {fileID: 0}
-  slot2: {fileID: 0}
-  slot3: {fileID: 0}
   slots:
   - {fileID: 124910831}
   - {fileID: 1274103672}
@@ -6721,9 +6715,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 1301322826}
   mainFunctionality: {fileID: 1766838210}
-  slot1: {fileID: 0}
-  slot2: {fileID: 0}
-  slot3: {fileID: 0}
   slots:
   - {fileID: 124910831}
   - {fileID: 1274103672}
@@ -8239,6 +8230,7 @@ MonoBehaviour:
   - {fileID: 951973876}
   - {fileID: 1706812932}
   currentBackgroundView: 0
+  flashlight: {fileID: 0}
 --- !u!114 &1766838213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8265,8 +8257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCanvas: {fileID: 964268177}
+  noiseMaker: {fileID: 0}
   dragging: 0
-  soundManager: {fileID: 0}
 --- !u!114 &1766838215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8334,9 +8326,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 255158510}
   mainFunctionality: {fileID: 1766838210}
-  slot1: {fileID: 0}
-  slot2: {fileID: 0}
-  slot3: {fileID: 0}
   slots:
   - {fileID: 124910831}
   - {fileID: 1274103672}
@@ -9291,7 +9280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1915861252
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9876,7 +9865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2137488685
 RectTransform:
   m_ObjectHideFlags: 0

@@ -61,13 +61,16 @@ public class Navigation : MonoBehaviour
             }
         }
 
-        if (currentBackgroundView == 2 && flashlight != null)
+        if (flashlight != null)
         {
-            flashlight.SetActive(false);
-        }
-        else 
-        {
-            flashlight.SetActive(true);
+            if (currentBackgroundView == 2)
+            {
+                flashlight.SetActive(false);
+            }
+            else
+            {
+                flashlight.SetActive(true);
+            }
         }
     }
 
@@ -94,13 +97,16 @@ public class Navigation : MonoBehaviour
             }
         }
 
-        if (currentBackgroundView == 2 && flashlight != null)
+        if (flashlight != null)
         {
-            flashlight.SetActive(false);
-        }
-        else
-        {
-            flashlight.SetActive(true);
+            if (currentBackgroundView == 2)
+            {
+                flashlight.SetActive(false);
+            }
+            else
+            {
+                flashlight.SetActive(true);
+            }
         }
     }
 }
