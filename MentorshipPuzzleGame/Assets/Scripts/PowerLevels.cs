@@ -15,6 +15,8 @@ public class PowerLevels : MonoBehaviour
 
     public GameObject noiseMaker;
 
+    //public GameObject meltCollider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +30,13 @@ public class PowerLevels : MonoBehaviour
         {
             powerLevel = 1;
             noiseMaker.SetActive(false);
+            
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             powerLevel = 2;
             noiseMaker.SetActive(true);
+           
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -63,11 +67,13 @@ public class PowerLevels : MonoBehaviour
         {
             currentHealth += 1;
             healthBar.SetHealth(currentHealth);
+            this.GetComponent<CircleCollider2D>().enabled = false;
         }
         else if (powerLevel == 2)
         {
             currentHealth -= 0.5f;
             healthBar.SetHealth(currentHealth);
+            this.GetComponent<CircleCollider2D>().enabled = true;
         }
         else if (powerLevel == 3)
         {
