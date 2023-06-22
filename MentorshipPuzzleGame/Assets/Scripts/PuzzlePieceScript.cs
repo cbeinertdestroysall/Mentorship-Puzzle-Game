@@ -32,7 +32,10 @@ public class PuzzlePieceScript : MonoBehaviour
             this.GetComponent<InventoryPosition>().inventoryPos = collision.gameObject.GetComponent<BoxCollider2D>().transform.position;
 
             this.transform.SetParent(collision.transform.parent, true);
-            //inventory.DecreaseSlotNumber();
+
+            this.transform.localScale = new Vector3(0.51057f, 0.51057f, 0.51057f);
+            
+            
         }
         else if (collision.gameObject.tag == "Inventory")
         {
@@ -41,6 +44,7 @@ public class PuzzlePieceScript : MonoBehaviour
                 this.GetComponent<InventoryPosition>().inventoryPos = collision.gameObject.GetComponent<BoxCollider2D>().transform.position;
                 collision.GetComponent<FillSlot>().slotIsFilled = true;
                 this.transform.SetParent(collision.transform.parent, true);
+                this.transform.localScale = new Vector3(0.51057f, 0.51057f, 0.51057f);
             }
         }
     }
@@ -51,6 +55,7 @@ public class PuzzlePieceScript : MonoBehaviour
         {
             //where the problem seems to be happening
             this.transform.SetParent(collision.transform.parent, true);
+            this.transform.localScale = new Vector3(0.51057f, 0.51057f, 0.51057f);
         }
     }
 
@@ -61,10 +66,12 @@ public class PuzzlePieceScript : MonoBehaviour
             mainFunctionality.GetComponent<InventoryReSystem>().DecreaseSlotNumber();
             collision.GetComponent<FillSlot>().slotIsFilled = false;
             this.transform.SetParent(collision.transform.parent, false);
+            this.transform.localScale = new Vector3(0.51057f, 0.51057f, 0.51057f);
         }
         else if (collision.gameObject.tag == "Slot")
         {
             this.transform.SetParent(collision.transform.parent, false);
+            this.transform.localScale = new Vector3(0.51057f, 0.51057f, 0.51057f);
         }
     }
 
