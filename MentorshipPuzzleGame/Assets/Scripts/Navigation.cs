@@ -13,6 +13,8 @@ public class Navigation : MonoBehaviour
 
     public int currentBackgroundView;
 
+    public GameObject flashlight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -95,6 +97,15 @@ public class Navigation : MonoBehaviour
                 backgrounds[i].SetActive(false);
             }
         }
+
+        if (currentBackgroundView == 2 && flashlight != null)
+        {
+            flashlight.SetActive(false);
+        }
+        else 
+        {
+            flashlight.SetActive(true);
+        }
     }
 
     public void ShiftRight()
@@ -118,6 +129,15 @@ public class Navigation : MonoBehaviour
             {
                 backgrounds[i].SetActive(false);
             }
+        }
+
+        if (currentBackgroundView == 2 && flashlight != null)
+        {
+            flashlight.SetActive(false);
+        }
+        else
+        {
+            flashlight.SetActive(true);
         }
     }
 }

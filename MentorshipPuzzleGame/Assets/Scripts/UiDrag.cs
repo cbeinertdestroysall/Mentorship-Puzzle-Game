@@ -19,7 +19,7 @@ public class UiDrag : MonoBehaviour
     public bool dragging = false;
     GameObject dragElement;
 
-    public SoundManager soundManager;
+    //public SoundManager soundManager;
 
     Vector3 mousePosition;
     Vector3 previousMousePosition;
