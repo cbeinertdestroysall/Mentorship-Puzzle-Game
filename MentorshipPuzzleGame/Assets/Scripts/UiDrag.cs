@@ -12,6 +12,8 @@ public class UiDrag : MonoBehaviour
     PointerEventData clickData;
     List<RaycastResult> clickResults;
 
+    public GameObject noiseMaker;
+
     List<GameObject> clickedElements;
 
     public bool dragging = false;
@@ -73,6 +75,7 @@ public class UiDrag : MonoBehaviour
                     else 
                     {
                         DragElement();
+                        noiseMaker.gameObject.SetActive(true);
                         //soundManager.PlayDraggingSound();
                     }
                     
@@ -94,6 +97,9 @@ public class UiDrag : MonoBehaviour
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
             dragging = false;
+
+            if (dragElement.gameObject.GetComponent<InventoryPosition>() == null && noiseMaker != null)
+                noiseMaker.gameObject.SetActive(false);
 
             //Debug.Log("dragging = " + dragging);
 

@@ -13,6 +13,8 @@ public class PowerLevels : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public GameObject noiseMaker;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +27,12 @@ public class PowerLevels : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             powerLevel = 1;
+            noiseMaker.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             powerLevel = 2;
+            noiseMaker.SetActive(true);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
