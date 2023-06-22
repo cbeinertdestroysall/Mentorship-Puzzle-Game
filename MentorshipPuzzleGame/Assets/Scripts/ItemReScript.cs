@@ -6,9 +6,9 @@ public class ItemReScript : MonoBehaviour
 {
     public GameObject item;
     public GameObject mainFunctionality;
-    public GameObject slot1;
-    public GameObject slot2;
-    public GameObject slot3;
+    //public GameObject slot1;
+    //public GameObject slot2;
+    //public GameObject slot3;
 
     public GameObject[] slots;
 

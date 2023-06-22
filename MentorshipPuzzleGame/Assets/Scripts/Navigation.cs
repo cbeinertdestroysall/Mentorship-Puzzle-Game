@@ -34,44 +34,7 @@ public class Navigation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //backgrounds[currentBackgroundView];
-
-        /*foreach (GameObject background in backgrounds)
-        { 
-            
-        }*/
-
-        /*if (currentBackgroundView == 0)
-        {
-            background1.SetActive(true);
-            background2.SetActive(false);
-            background3.SetActive(false);
-            background4.SetActive(false);
-        }
-        else if (currentBackgroundView == 1)
-        {
-            background1.SetActive(false);
-            background2.SetActive(true);
-            background3.SetActive(false);
-            background4.SetActive(false);
-        }
-        else if (currentBackgroundView == 2)
-        {
-            background1.SetActive(false);
-            background2.SetActive(false);
-            background3.SetActive(true);
-            background4.SetActive(false);
-        }
-        else if (currentBackgroundView == 3)
-        {
-            background1.SetActive(false);
-            background2.SetActive(false);
-            background3.SetActive(false);
-            background4.SetActive(true);
-        }*/
-
-        
-
+       
 
     }
 
