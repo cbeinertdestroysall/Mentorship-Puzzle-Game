@@ -3133,6 +3133,7 @@ MonoBehaviour:
   - {fileID: 951973876}
   - {fileID: 1706812932}
   currentBackgroundView: 0
+  flashlight: {fileID: 1383379684}
 --- !u!114 &1766838213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3161,7 +3162,6 @@ MonoBehaviour:
   uiCanvas: {fileID: 964268177}
   noiseMaker: {fileID: 0}
   dragging: 0
-  soundManager: {fileID: 0}
 --- !u!114 &1766838215
 MonoBehaviour:
   m_ObjectHideFlags: 0
