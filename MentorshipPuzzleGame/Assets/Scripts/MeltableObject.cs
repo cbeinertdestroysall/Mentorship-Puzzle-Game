@@ -6,6 +6,8 @@ public class MeltableObject : MonoBehaviour
 {
     public Animator anim;
 
+    public AudioSource audioS;
+
     IEnumerator DestroyAfterAnimation()
     {
         yield return new WaitForSeconds(1);
@@ -32,6 +34,7 @@ public class MeltableObject : MonoBehaviour
             {
                 anim.SetBool("CanMelt", true);
                 StartCoroutine(DestroyAfterAnimation());
+                audioS.Play();
             }
             
             //anim.speed = -1;
@@ -39,7 +42,7 @@ public class MeltableObject : MonoBehaviour
         //StartCoroutine(DestroyAfterAnimation());
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    /*private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Flashlight")
         {
@@ -51,7 +54,7 @@ public class MeltableObject : MonoBehaviour
 
             //anim.speed = -1;
         }
-    }
+    }*/
 
 
 }
