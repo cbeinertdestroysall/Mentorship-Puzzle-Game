@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Navigation : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class Navigation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+
         for (int i = 0; i < backgrounds.Length; i++)
         {
             if (i == currentBackgroundView)
@@ -31,11 +34,16 @@ public class Navigation : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
     // Update is called once per frame
     void Update()
     {
-       
 
+        
     }
 
     public void ShiftLeft()
