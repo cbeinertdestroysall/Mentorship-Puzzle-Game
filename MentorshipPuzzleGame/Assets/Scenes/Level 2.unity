@@ -1489,6 +1489,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleNumber: 2
   mainFunctionality: {fileID: 1766838210}
+  inventoryScale: 0.51057
+  slotScale: 0.51057
 --- !u!1 &266351112
 GameObject:
   m_ObjectHideFlags: 0
@@ -5875,6 +5877,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleNumber: 3
   mainFunctionality: {fileID: 1766838210}
+  inventoryScale: 0.51057
+  slotScale: 0.51057
 --- !u!95 &1301322830
 Animator:
   serializedVersion: 5
@@ -7605,6 +7609,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleNumber: 4
   mainFunctionality: {fileID: 1766838210}
+  inventoryScale: 0.51057
+  slotScale: 0.51057
 --- !u!95 &1476364426
 Animator:
   serializedVersion: 5
@@ -9265,6 +9271,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleNumber: 1
   mainFunctionality: {fileID: 1766838210}
+  inventoryScale: 0.51057
+  slotScale: 0.51057
 --- !u!1 &1915861251
 GameObject:
   m_ObjectHideFlags: 0

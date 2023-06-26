@@ -12,6 +12,10 @@ public class PuzzlePieceScript : MonoBehaviour
 
     public GameObject mainFunctionality;
 
+    public float inventoryScale;
+
+    public float slotScale;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +37,7 @@ public class PuzzlePieceScript : MonoBehaviour
 
             this.transform.SetParent(collision.transform.parent, true);
 
-            this.transform.localScale = new Vector3(0.51057f, 0.51057f, 0.51057f);
+            this.transform.localScale = new Vector3(slotScale, slotScale, slotScale);
             
             
         }
@@ -44,7 +48,7 @@ public class PuzzlePieceScript : MonoBehaviour
                 this.GetComponent<InventoryPosition>().inventoryPos = collision.gameObject.GetComponent<BoxCollider2D>().transform.position;
                 collision.GetComponent<FillSlot>().slotIsFilled = true;
                 this.transform.SetParent(collision.transform.parent, true);
-                this.transform.localScale = new Vector3(0.51057f, 0.51057f, 0.51057f);
+                this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
             }
         }
     }
@@ -55,7 +59,7 @@ public class PuzzlePieceScript : MonoBehaviour
         {
             //where the problem seems to be happening
             this.transform.SetParent(collision.transform.parent, true);
-            this.transform.localScale = new Vector3(0.51057f, 0.51057f, 0.51057f);
+            this.transform.localScale = new Vector3(slotScale, slotScale, slotScale);
         }
     }
 
@@ -66,12 +70,12 @@ public class PuzzlePieceScript : MonoBehaviour
             mainFunctionality.GetComponent<InventoryReSystem>().DecreaseSlotNumber();
             collision.GetComponent<FillSlot>().slotIsFilled = false;
             this.transform.SetParent(collision.transform.parent, false);
-            this.transform.localScale = new Vector3(0.51057f, 0.51057f, 0.51057f);
+            this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
         }
         else if (collision.gameObject.tag == "Slot")
         {
             this.transform.SetParent(collision.transform.parent, false);
-            this.transform.localScale = new Vector3(0.51057f, 0.51057f, 0.51057f);
+            this.transform.localScale = new Vector3(slotScale, slotScale, slotScale);
         }
     }
 
