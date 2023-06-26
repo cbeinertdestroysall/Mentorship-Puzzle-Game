@@ -1558,6 +1558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   testObject: {fileID: 0}
   audioS: {fileID: 339511200}
+  puzzlePieces: []
 --- !u!82 &339511200
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2350,6 +2351,7 @@ MonoBehaviour:
   door: {fileID: 729940507}
   wrongCode: {fileID: 2054213161}
   rightCode: {fileID: 1319393893}
+  flashlight: {fileID: 1383379684}
 --- !u!82 &487035736
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4159,6 +4161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   testObject: {fileID: 0}
   audioS: {fileID: 809660014}
+  puzzlePieces: []
 --- !u!1 &854996614
 GameObject:
   m_ObjectHideFlags: 0
@@ -5650,6 +5653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   testObject: {fileID: 0}
   audioS: {fileID: 1119557653}
+  puzzlePieces: []
 --- !u!1 &1147361922
 GameObject:
   m_ObjectHideFlags: 0
@@ -6234,7 +6238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1361949739
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6666,6 +6670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   testObject: {fileID: 1720753108}
   audioS: {fileID: 1563860273}
+  puzzlePieces: []
 --- !u!82 &1563860273
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8438,7 +8443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1915861252
 RectTransform:
   m_ObjectHideFlags: 0

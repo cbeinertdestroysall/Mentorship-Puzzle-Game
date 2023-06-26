@@ -10,6 +10,11 @@ public class WindowSlotScript : MonoBehaviour
 
     public bool pieceInSlot;
 
+    public bool correctRotation;
+
+    public int rotationMin;
+    public int rotationMax;
+
     public WindowScript windowScript;
 
     // Start is called before the first frame update

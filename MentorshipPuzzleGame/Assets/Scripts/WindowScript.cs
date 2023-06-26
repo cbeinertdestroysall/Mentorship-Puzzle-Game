@@ -18,6 +18,8 @@ public class WindowScript : MonoBehaviour
 
     public GameObject rightCode;
 
+    public GameObject flashlight;
+
     //public AudioSource audioSource;
 
     IEnumerator WrongCode()
@@ -40,7 +42,15 @@ public class WindowScript : MonoBehaviour
         {
             if (slot.GetComponent<WindowSlotScript>().pieceInCorrectSlot == true)
             {
-                puzzleSolved = puzzleSolved & true;
+                if (flashlight == null)
+                {
+                    puzzleSolved = puzzleSolved & true;
+                }
+
+                if (flashlight != null)
+                { 
+                    
+                }
                 
             }
             else 

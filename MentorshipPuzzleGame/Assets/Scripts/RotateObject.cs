@@ -7,7 +7,7 @@ public class RotateObject : MonoBehaviour
     public GameObject testObject;
     public AudioSource audioS;
 
-
+    public GameObject[] puzzlePieces;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +26,7 @@ public class RotateObject : MonoBehaviour
         if (this.GetComponent<WindowSlotScript>().pieceInSlot)
         {
             testObject.transform.Rotate(0, 0, 90f);
+            Debug.Log("rotation of object:" + testObject.transform.rotation.z);
             audioS.Play();
         }
     }
