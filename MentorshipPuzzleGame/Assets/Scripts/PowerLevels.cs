@@ -61,11 +61,17 @@ public class PowerLevels : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
+    public void RegenerateHealth()
+    {
+        currentHealth = 100;
+        healthBar.SetHealth(currentHealth);
+    }
+
     private void FixedUpdate()
     {
         if (powerLevel == 1)
         {
-            currentHealth += 1;
+            currentHealth += 0;
             healthBar.SetHealth(currentHealth);
             this.GetComponent<CircleCollider2D>().enabled = false;
         }
@@ -75,11 +81,7 @@ public class PowerLevels : MonoBehaviour
             healthBar.SetHealth(currentHealth);
             this.GetComponent<CircleCollider2D>().enabled = true;
         }
-        else if (powerLevel == 3)
-        {
-            currentHealth -= 1;
-            healthBar.SetHealth(currentHealth);
-        }
+       
 
         if (currentHealth >= 100)
         {

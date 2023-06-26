@@ -8,11 +8,7 @@ public class MeltableObject : MonoBehaviour
 
     public AudioSource audioS;
 
-    IEnumerator DestroyAfterAnimation()
-    {
-        yield return new WaitForSeconds(1);
-        Destroy(this.gameObject);
-    }
+    public float countdownToDestruction;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +19,19 @@ public class MeltableObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            anim.speed = 0;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            anim.speed = 1;
+        }
+
+        if (countdownToDestruction >= 0.9f)
+        {
+            Destroy(this.gameObject);
+        }
         
     }
 
@@ -33,28 +42,42 @@ public class MeltableObject : MonoBehaviour
             if (collision.GetComponent<PowerLevels>().powerLevel > 1)
             {
                 anim.SetBool("CanMelt", true);
-                StartCoroutine(DestroyAfterAnimation());
+                
                 audioS.Play();
             }
-            
-            //anim.speed = -1;
+
         }
-        //StartCoroutine(DestroyAfterAnimation());
+        
     }
 
-    /*private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Flashlight")
         {
             if (collision.GetComponent<PowerLevels>().powerLevel > 1)
             {
-                anim.SetBool("CanMelt", true);
-                StartCoroutine(DestroyAfterAnimation());
+                countdownToDestruction += 1 * Time.deltaTime;
             }
-
-            //anim.speed = -1;
+            else if (collision.GetComponent<PowerLevels>().powerLevel == 1)
+            {
+                countdownToDestruction -= 1 * Time.deltaTime;
+                if (countdownToDestruction <= 0)
+                {
+                    countdownToDestruction = 0;
+                }
+            }
         }
-    }*/
+    }
 
+    public void ResetAnimation()
+    {
+        anim.SetBool("CanMelt", false);
+        countdownToDestruction = 0;
+    }
+
+    public void Destruction()
+    {
+        Destroy(this.gameObject);
+    }
 
 }
