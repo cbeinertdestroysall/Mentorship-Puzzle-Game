@@ -7,6 +7,8 @@ public class RotateObject : MonoBehaviour
     public GameObject testObject;
     public AudioSource audioS;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,18 @@ public class RotateObject : MonoBehaviour
 
     public void RotateObject90Degrees()
     {
-        testObject.transform.Rotate(0, 0, 90f);
-        audioS.Play();
+        if (this.GetComponent<WindowSlotScript>().pieceInSlot)
+        {
+            testObject.transform.Rotate(0, 0, 90f);
+            audioS.Play();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Puzzle Piece")
+        {
+            testObject = collision.gameObject;
+        }
     }
 }
