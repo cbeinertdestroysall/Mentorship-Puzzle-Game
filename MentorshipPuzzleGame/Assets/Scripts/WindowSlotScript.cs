@@ -8,9 +8,9 @@ public class WindowSlotScript : MonoBehaviour
 
     public bool pieceInCorrectSlot = false;
 
-    public bool pieceInSlot;
+    public bool pieceInSlot = false;
 
-    public bool correctRotation;
+    public bool correctRotation = false;
 
     public int rotationMin;
     public int rotationMax;
@@ -38,6 +38,8 @@ public class WindowSlotScript : MonoBehaviour
             {
                 pieceInCorrectSlot = true;
 
+                
+
                 /*if (windowScript.puzzleSolved)
                 {
                     Debug.Log("You solved the window puzzle");
@@ -55,9 +57,23 @@ public class WindowSlotScript : MonoBehaviour
         if (collision.gameObject.tag == "Puzzle Piece")
         {
             pieceInSlot = true;
-        }
 
-        
+            if (this.GetComponent<RotateObject>() != null)
+            {
+                if (collision.transform.rotation.z >= rotationMin && collision.transform.rotation.z <= rotationMax)
+                {
+                    correctRotation = true;
+                }
+                else if (collision.transform.rotation.z < rotationMin || collision.transform.rotation.z > rotationMax)
+                {
+                    correctRotation = false;
+                }
+           }
+           else
+            {
+                return;
+            }
+        }
 
     }
 
@@ -67,6 +83,7 @@ public class WindowSlotScript : MonoBehaviour
         {
             pieceInCorrectSlot = false;
             pieceInSlot = false;
+            correctRotation = false;
         }
     }
 }
