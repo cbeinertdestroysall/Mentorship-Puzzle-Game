@@ -62,7 +62,19 @@ public class MeltableObject : MonoBehaviour
             }
             else if (collision.GetComponent<PowerLevels>().powerLevel == 1)
             {
-                countdownToDestruction = 0;
+                countdownToDestruction += 0;
+                anim.speed = 0;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Flashlight")
+        {
+            if (collision.GetComponent<PowerLevels>().powerLevel > 1)
+            {
+                countdownToDestruction += 0;
                 anim.speed = 0;
             }
         }

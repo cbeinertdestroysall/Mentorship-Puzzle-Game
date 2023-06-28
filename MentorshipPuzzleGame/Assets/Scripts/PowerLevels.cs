@@ -50,7 +50,6 @@ public class PowerLevels : MonoBehaviour
                 powerLevel = 2;
                 //noiseMaker.SetActive(true);
             }
-
         }
         
 
