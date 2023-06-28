@@ -12,8 +12,12 @@ public class WindowSlotScript : MonoBehaviour
 
     public bool correctRotation = false;
 
-    public int rotationMin;
-    public int rotationMax;
+    public float rotationMin;
+    public float rotationMax;
+
+    public float altRotationMin;
+
+    GameObject puzzlePiece;
 
     public WindowScript windowScript;
 
@@ -34,6 +38,7 @@ public class WindowSlotScript : MonoBehaviour
         if (collision.gameObject.tag == "Puzzle Piece")
         {
             pieceInSlot = true;
+            puzzlePiece = collision.gameObject;
             if (collision.GetComponent<PuzzlePieceScript>().puzzleNumber == slotNumber)
             {
                 pieceInCorrectSlot = true;
@@ -60,14 +65,15 @@ public class WindowSlotScript : MonoBehaviour
 
             if (this.GetComponent<RotateObject>() != null)
             {
-                if (collision.transform.rotation.z >= rotationMin && collision.transform.rotation.z <= rotationMax)
+                /*if (collision.transform.rotation.z >= rotationMin && collision.transform.rotation.z <= rotationMax)
                 {
                     correctRotation = true;
                 }
                 else if (collision.transform.rotation.z < rotationMin || collision.transform.rotation.z > rotationMax)
                 {
                     correctRotation = false;
-                }
+                }*/
+                UpdateRotationData();
            }
            else
             {
@@ -83,6 +89,25 @@ public class WindowSlotScript : MonoBehaviour
         {
             pieceInCorrectSlot = false;
             pieceInSlot = false;
+            correctRotation = false;
+
+            puzzlePiece = null;
+        }
+    }
+
+    public void UpdateRotationData()
+    {
+        if (puzzlePiece == null)
+        {
+            Debug.Log("puzzle piece is null!!!!!!");
+            return;
+        }
+        else if (puzzlePiece.transform.rotation.eulerAngles.z >= rotationMin && puzzlePiece.transform.rotation.eulerAngles.z <= rotationMax || puzzlePiece.transform.rotation.eulerAngles.z > altRotationMin)
+        {
+            correctRotation = true;
+        }
+        else if (puzzlePiece.transform.rotation.eulerAngles.z < rotationMin || puzzlePiece.transform.rotation.eulerAngles.z > rotationMax || puzzlePiece.transform.rotation.eulerAngles.z < altRotationMin)
+        {
             correctRotation = false;
         }
     }
