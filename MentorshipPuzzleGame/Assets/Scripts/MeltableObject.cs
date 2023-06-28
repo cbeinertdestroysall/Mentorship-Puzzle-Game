@@ -32,6 +32,7 @@ public class MeltableObject : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
         
     }
 
@@ -71,8 +72,9 @@ public class MeltableObject : MonoBehaviour
 
     public void ResetAnimation()
     {
-        anim.SetBool("CanMelt", false);
         countdownToDestruction = 0;
+        anim.SetBool("CanMelt", false);
+        
     }
 
     public void Destruction()

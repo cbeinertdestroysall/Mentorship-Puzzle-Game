@@ -9,6 +9,8 @@ public class PowerLevels : MonoBehaviour
 
     public GameObject[] backgrounds;
 
+    public GameObject[] meltables;
+
     public float currentHealth;
 
     public HealthBar healthBar;
@@ -91,6 +93,17 @@ public class PowerLevels : MonoBehaviour
         else if (currentHealth <= 0)
         {
             powerLevel = 1;
+        }
+    }
+
+    public void ResetMeltableAnimation()
+    {
+        foreach (GameObject meltable in meltables)
+        {
+            if (meltable != null)
+            {
+                meltable.GetComponent<MeltableObject>().ResetAnimation();
+            }
         }
     }
 }
