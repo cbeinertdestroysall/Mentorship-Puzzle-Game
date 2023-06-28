@@ -36,14 +36,23 @@ public class PowerLevels : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            powerLevel = 2;
-            noiseMaker.SetActive(true);
-           
+            if (currentHealth <= 0)
+            {
+                foreach (GameObject meltable in meltables)
+                {
+                    meltable.GetComponent<Animator>().speed = 0;
+                }
+                powerLevel = 1;
+                //noiseMaker.SetActive(false);
+            }
+            else
+            {
+                powerLevel = 2;
+                //noiseMaker.SetActive(true);
+            }
+
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            powerLevel = 3;
-        }
+        
 
         foreach (GameObject background in backgrounds)
         {
@@ -55,10 +64,7 @@ public class PowerLevels : MonoBehaviour
             {
                 background.GetComponent<Image>().color = new Color32(255, 112, 112, 255);
             }
-            else if (powerLevel == 3)
-            {
-                background.GetComponent<Image>().color = new Color32(255, 0, 0, 255);
-            }
+          
         }
         healthBar.SetHealth(currentHealth);
     }
@@ -76,12 +82,14 @@ public class PowerLevels : MonoBehaviour
             currentHealth += 0;
             healthBar.SetHealth(currentHealth);
             this.GetComponent<CircleCollider2D>().enabled = false;
+            noiseMaker.SetActive(false);
         }
         else if (powerLevel == 2)
         {
             currentHealth -= 0.5f;
             healthBar.SetHealth(currentHealth);
             this.GetComponent<CircleCollider2D>().enabled = true;
+            noiseMaker.SetActive(true);
         }
        
 

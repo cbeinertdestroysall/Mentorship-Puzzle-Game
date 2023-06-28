@@ -58,14 +58,12 @@ public class MeltableObject : MonoBehaviour
             if (collision.GetComponent<PowerLevels>().powerLevel > 1)
             {
                 countdownToDestruction += 1 * Time.deltaTime;
+                anim.speed = 1;
             }
             else if (collision.GetComponent<PowerLevels>().powerLevel == 1)
             {
-                countdownToDestruction -= 1 * Time.deltaTime;
-                if (countdownToDestruction <= 0)
-                {
-                    countdownToDestruction = 0;
-                }
+                countdownToDestruction = 0;
+                anim.speed = 0;
             }
         }
     }
