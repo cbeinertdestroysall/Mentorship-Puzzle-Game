@@ -69,12 +69,12 @@ public class PuzzlePieceScript : MonoBehaviour
         {
             mainFunctionality.GetComponent<InventoryReSystem>().DecreaseSlotNumber();
             collision.GetComponent<FillSlot>().slotIsFilled = false;
-            this.transform.SetParent(collision.transform.parent, false);
+            this.transform.SetParent(collision.transform.parent, true);
             this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
         }
         else if (collision.gameObject.tag == "Slot")
         {
-            this.transform.SetParent(collision.transform.parent, false);
+            this.transform.SetParent(collision.transform.parent, true);
             this.transform.localScale = new Vector3(slotScale, slotScale, slotScale);
         }
     }
