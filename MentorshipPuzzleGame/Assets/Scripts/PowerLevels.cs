@@ -17,6 +17,25 @@ public class PowerLevels : MonoBehaviour
 
     public GameObject noiseMaker;
 
+    public GameObject signifier1;
+
+    public GameObject signifier2;
+
+    public bool mode1Activated = false;
+
+    public bool mode2Activated = false;
+
+    public GameObject press1;
+    public GameObject press2;
+
+    IEnumerator DestroyTutorial()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(press1);
+        Destroy(press2);
+        //Debug.Log("tutorial is destroyed");
+    }
+
     //public GameObject meltCollider;
 
     // Start is called before the first frame update
@@ -32,6 +51,12 @@ public class PowerLevels : MonoBehaviour
         {
             powerLevel = 1;
             noiseMaker.SetActive(false);
+            mode1Activated = true;
+
+            if (mode1Activated && mode2Activated && press1 != null && press2 != null)
+            {
+                StartCoroutine(DestroyTutorial());
+            }
             
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -51,6 +76,12 @@ public class PowerLevels : MonoBehaviour
                 powerLevel = 2;
                 //noiseMaker.SetActive(true);
             }
+            mode2Activated = true;
+
+            if (mode1Activated && mode2Activated && press1 != null && press2 != null)
+            {
+                StartCoroutine(DestroyTutorial());
+            }
         }
         
 
@@ -64,9 +95,9 @@ public class PowerLevels : MonoBehaviour
             {
                 background.GetComponent<Image>().color = new Color32(255, 112, 112, 255);
             }
-          
         }
         healthBar.SetHealth(currentHealth);
+
     }
 
     public void RegenerateHealth()
@@ -83,6 +114,9 @@ public class PowerLevels : MonoBehaviour
             healthBar.SetHealth(currentHealth);
             this.GetComponent<CircleCollider2D>().enabled = false;
             noiseMaker.SetActive(false);
+
+            signifier1.GetComponent<Image>().color = new Color(255, 0, 0);
+            signifier2.GetComponent<Image>().color = new Color(255, 255, 255);
         }
         else if (powerLevel == 2)
         {
@@ -90,6 +124,9 @@ public class PowerLevels : MonoBehaviour
             healthBar.SetHealth(currentHealth);
             this.GetComponent<CircleCollider2D>().enabled = true;
             noiseMaker.SetActive(true);
+
+            signifier1.GetComponent<Image>().color = new Color(255, 255, 255);
+            signifier2.GetComponent<Image>().color = new Color(255, 0, 0);
         }
        
 

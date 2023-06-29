@@ -749,6 +749,10 @@ MonoBehaviour:
   slotNumber: 4
   pieceInCorrectSlot: 0
   pieceInSlot: 0
+  correctRotation: 0
+  rotationMin: 0
+  rotationMax: 0
+  altRotationMin: 0
   windowScript: {fileID: 975576637}
 --- !u!1 &108395940
 GameObject:
@@ -885,6 +889,10 @@ MonoBehaviour:
   slotNumber: 3
   pieceInCorrectSlot: 0
   pieceInSlot: 0
+  correctRotation: 0
+  rotationMin: 0
+  rotationMax: 0
+  altRotationMin: 0
   windowScript: {fileID: 975576637}
 --- !u!1 &124910831
 GameObject:
@@ -2326,6 +2334,7 @@ MonoBehaviour:
   grabSound: {fileID: 371544071}
   lockSwitch: {fileID: 371544072}
   draggingSound: {fileID: 0}
+  charge: {fileID: 0}
 --- !u!82 &371544071
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4386,6 +4395,7 @@ MonoBehaviour:
   door: {fileID: 392290862}
   wrongCode: {fileID: 1214945436}
   rightCode: {fileID: 29812749}
+  flashlight: {fileID: 0}
 --- !u!82 &975576638
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5802,6 +5812,10 @@ MonoBehaviour:
   slotNumber: 2
   pieceInCorrectSlot: 0
   pieceInSlot: 0
+  correctRotation: 0
+  rotationMin: 0
+  rotationMax: 0
+  altRotationMin: 0
   windowScript: {fileID: 975576637}
 --- !u!1 &1301322826
 GameObject:
@@ -7456,6 +7470,10 @@ MonoBehaviour:
   slotNumber: 1
   pieceInCorrectSlot: 0
   pieceInSlot: 0
+  correctRotation: 0
+  rotationMin: 0
+  rotationMax: 0
+  altRotationMin: 0
   windowScript: {fileID: 975576637}
 --- !u!1 &1449357911
 GameObject:
@@ -9288,7 +9306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1915861252
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9873,7 +9891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2137488685
 RectTransform:
   m_ObjectHideFlags: 0
