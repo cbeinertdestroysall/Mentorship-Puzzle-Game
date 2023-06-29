@@ -40,6 +40,7 @@ public class PowerLevels : MonoBehaviour
             {
                 foreach (GameObject meltable in meltables)
                 {
+                    if (meltable != null)
                     meltable.GetComponent<Animator>().speed = 0;
                 }
                 powerLevel = 1;
