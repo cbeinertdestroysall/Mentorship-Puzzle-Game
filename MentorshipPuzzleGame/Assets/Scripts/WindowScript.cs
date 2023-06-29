@@ -40,23 +40,32 @@ public class WindowScript : MonoBehaviour
         puzzleSolved = true;
         foreach (GameObject slot in slots)
         {
-            if (slot.GetComponent<WindowSlotScript>().pieceInCorrectSlot == true)
+            if (flashlight == null)
             {
-                if (flashlight == null)
+                if (slot.GetComponent<WindowSlotScript>().pieceInCorrectSlot == true)
                 {
+
                     puzzleSolved = puzzleSolved & true;
+
+                }
+                else
+                {
+                    puzzleSolved = false;
                 }
 
+            }
                 if (flashlight != null)
-                { 
-                    
+                {
+                    if (slot.GetComponent<WindowSlotScript>().pieceInCorrectSlot == true && slot.GetComponent<WindowSlotScript>().correctRotation == true)
+                    {
+                        puzzleSolved = puzzleSolved & true;
+                    }
+                    else
+                    {
+                        puzzleSolved = false;
+                    }
                 }
                 
-            }
-            else 
-            {
-                puzzleSolved = false;
-            }
         }
     }
 
