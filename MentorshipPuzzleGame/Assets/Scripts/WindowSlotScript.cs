@@ -37,22 +37,23 @@ public class WindowSlotScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Puzzle Piece")
         {
+            if (pieceInSlot == true)
+            {
+                return;
+            }
+            else 
+            { 
             pieceInSlot = true;
             puzzlePiece = collision.gameObject;
             if (collision.GetComponent<PuzzlePieceScript>().puzzleNumber == slotNumber)
             {
                 pieceInCorrectSlot = true;
 
-                
-
-                /*if (windowScript.puzzleSolved)
-                {
-                    Debug.Log("You solved the window puzzle");
-                }*/
             }
-            else 
+            else
             {
                 pieceInCorrectSlot = false;
+            }
             }
         }
     }
@@ -61,26 +62,24 @@ public class WindowSlotScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Puzzle Piece")
         {
-            pieceInSlot = true;
-
-            if (this.GetComponent<RotateObject>() != null)
-            {
-                /*if (collision.transform.rotation.z >= rotationMin && collision.transform.rotation.z <= rotationMax)
-                {
-                    correctRotation = true;
-                }
-                else if (collision.transform.rotation.z < rotationMin || collision.transform.rotation.z > rotationMax)
-                {
-                    correctRotation = false;
-                }*/
-                UpdateRotationData();
-           }
-           else
+            if (pieceInSlot == true)
             {
                 return;
             }
-        }
+            else
+            {
+                pieceInSlot = true;
 
+                if (this.GetComponent<RotateObject>() != null)
+                {
+                    UpdateRotationData();
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
