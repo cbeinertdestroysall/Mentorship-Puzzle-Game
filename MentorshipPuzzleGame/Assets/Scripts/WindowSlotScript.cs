@@ -75,9 +75,7 @@ public class WindowSlotScript : MonoBehaviour
             }
             else 
             {
-                
                 pieceAlreadyInSlot = false;
-                
             }
         
         }
@@ -131,7 +129,6 @@ public class WindowSlotScript : MonoBehaviour
                 pieceAlreadyInSlot = false;
 
             }
-
         }
         else if (collision.gameObject.tag == "Puzzle Piece")
         {
@@ -140,14 +137,15 @@ public class WindowSlotScript : MonoBehaviour
             {
                 return;
             }
-            
+            else
+            {
                 pieceInCorrectSlot = false;
                 pieceInSlot = false;
                 correctRotation = false;
 
                 puzzlePiece = null;
                 pieceAlreadyInSlot = false;
-
+            }
         }
 
         
