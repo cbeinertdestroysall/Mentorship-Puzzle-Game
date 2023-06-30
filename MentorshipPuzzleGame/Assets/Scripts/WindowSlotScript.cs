@@ -17,9 +17,17 @@ public class WindowSlotScript : MonoBehaviour
 
     public float altRotationMin;
 
+    public bool pieceAlreadyInSlot;
+
     GameObject puzzlePiece;
 
     public WindowScript windowScript;
+
+    /*IEnumerator SetToFalse()
+    {
+        yield return new WaitForSeconds(0.5f);
+        pieceAlreadyInSlot = false;
+    }*/
 
     // Start is called before the first frame update
     void Start()
@@ -37,39 +45,53 @@ public class WindowSlotScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Puzzle Piece")
         {
-            if (pieceInSlot == true)
+            if (pieceInSlot == false)
+            {
+                pieceInSlot = true;
+                pieceAlreadyInSlot = false;
+                puzzlePiece = collision.gameObject;
+                if (collision.GetComponent<PuzzlePieceScript>().puzzleNumber == slotNumber)
+                {
+                    pieceInCorrectSlot = true;
+
+                }
+                else
+                {
+                    pieceInCorrectSlot = false;
+                }
+            }
+            else 
             {
                 return;
             }
-            else 
-            { 
-            pieceInSlot = true;
-            puzzlePiece = collision.gameObject;
-            if (collision.GetComponent<PuzzlePieceScript>().puzzleNumber == slotNumber)
+        }
+
+        if (collision.gameObject.tag == "Item")
+        {
+            if (pieceInSlot == true)
             {
-                pieceInCorrectSlot = true;
+                pieceAlreadyInSlot = true;
 
             }
-            else
+            else 
             {
-                pieceInCorrectSlot = false;
+                
+                pieceAlreadyInSlot = false;
+                
             }
-            }
+        
         }
+                
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Puzzle Piece")
         {
-            if (pieceInSlot == true)
-            {
-                return;
-            }
-            else
+            if (pieceInSlot == false)
             {
                 pieceInSlot = true;
-
+                pieceAlreadyInSlot = false;
                 if (this.GetComponent<RotateObject>() != null)
                 {
                     UpdateRotationData();
@@ -79,19 +101,56 @@ public class WindowSlotScript : MonoBehaviour
                     return;
                 }
             }
+            else 
+            {
+                return;
+            }
         }
+        /*if (collision.gameObject.tag == "Item")
+        {
+            if (pieceInSlot == true)
+            {
+                pieceAlreadyInSlot = true;
+
+
+            }
+            else 
+            {
+                pieceAlreadyInSlot = false;
+            }
+        }*/
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Puzzle Piece")
+        if (collision.gameObject.tag == "Item")
         {
-            pieceInCorrectSlot = false;
-            pieceInSlot = false;
-            correctRotation = false;
+            if (pieceAlreadyInSlot == true)
+            {
+                pieceAlreadyInSlot = false;
 
-            puzzlePiece = null;
+            }
+
         }
+        else if (collision.gameObject.tag == "Puzzle Piece")
+        {
+
+            if (pieceAlreadyInSlot == true)
+            {
+                return;
+            }
+            
+                pieceInCorrectSlot = false;
+                pieceInSlot = false;
+                correctRotation = false;
+
+                puzzlePiece = null;
+                pieceAlreadyInSlot = false;
+
+        }
+
+        
     }
 
     public void UpdateRotationData()
