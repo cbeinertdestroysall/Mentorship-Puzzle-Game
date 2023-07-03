@@ -126,25 +126,33 @@ public class WindowSlotScript : MonoBehaviour
         {
             if (pieceAlreadyInSlot == true)
             {
+                pieceInSlot = true;
                 pieceAlreadyInSlot = false;
-
+                return;
+                
             }
         }
-        else if (collision.gameObject.tag == "Puzzle Piece")
+        
+        if (collision.gameObject.tag == "Puzzle Piece")
         {
 
             if (pieceAlreadyInSlot == true)
             {
+                //pieceInCorrectSlot = true;
+                pieceInSlot = true;
+                //correctRotation = true;
+                pieceAlreadyInSlot = false;
+
                 return;
             }
-            else
+            else if (pieceAlreadyInSlot == false)
             {
                 pieceInCorrectSlot = false;
                 pieceInSlot = false;
                 correctRotation = false;
 
                 puzzlePiece = null;
-                pieceAlreadyInSlot = false;
+                
             }
         }
 
