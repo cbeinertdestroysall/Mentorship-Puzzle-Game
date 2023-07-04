@@ -51,15 +51,6 @@ public class WindowSlotScript : MonoBehaviour
                 pieceAlreadyInSlot = false;
                 puzzlePiece = collision.gameObject;
 
-                if (this.GetComponent<RotateObject>() != null)
-                {
-                    UpdateRotationData();
-                }
-                else
-                {
-                    return;
-                }
-
                 if (collision.GetComponent<PuzzlePieceScript>().puzzleNumber == slotNumber)
                 {
                     pieceInCorrectSlot = true;
@@ -69,6 +60,17 @@ public class WindowSlotScript : MonoBehaviour
                 {
                     pieceInCorrectSlot = false;
                 }
+
+                if (this.GetComponent<RotateObject>() != null)
+                {
+                    UpdateRotationData();
+                }
+                else
+                {
+                    return;
+                }
+
+
             }
             else 
             {

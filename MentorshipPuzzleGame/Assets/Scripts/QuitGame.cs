@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class QuitGame : MonoBehaviour
 {
+    public GameObject quitMenu;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,10 +15,14 @@ public class QuitGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("game has quit");
-            Application.Quit();
+            quitMenu.SetActive(true);
         }
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
