@@ -1373,6 +1373,7 @@ MonoBehaviour:
   grabSound: {fileID: 371544071}
   lockSwitch: {fileID: 371544072}
   draggingSound: {fileID: 371544073}
+  charge: {fileID: 0}
 --- !u!82 &371544071
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6418,9 +6419,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 1123715502}
   mainFunctionality: {fileID: 1766838210}
-  slot1: {fileID: 0}
-  slot2: {fileID: 0}
-  slot3: {fileID: 0}
   slots:
   - {fileID: 2030278176}
   - {fileID: 930320942}
@@ -7609,6 +7607,7 @@ GameObject:
   - component: {fileID: 1766838213}
   - component: {fileID: 1766838214}
   - component: {fileID: 1766838215}
+  - component: {fileID: 1766838216}
   m_Layer: 0
   m_Name: MainFunctionality
   m_TagString: Untagged
@@ -7653,6 +7652,7 @@ MonoBehaviour:
   - {fileID: 951973876}
   - {fileID: 1706812932}
   currentBackgroundView: 0
+  flashlight: {fileID: 0}
 --- !u!114 &1766838213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7681,7 +7681,6 @@ MonoBehaviour:
   uiCanvas: {fileID: 964268177}
   noiseMaker: {fileID: 397303092}
   dragging: 0
-  soundManager: {fileID: 371544070}
 --- !u!114 &1766838215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7695,6 +7694,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionColor: {fileID: 1903861376}
+--- !u!114 &1766838216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766838210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba8c151e70a27f1489c5a06b93697199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1810535253
 GameObject:
   m_ObjectHideFlags: 0

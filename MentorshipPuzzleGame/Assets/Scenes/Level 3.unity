@@ -1682,6 +1682,7 @@ MonoBehaviour:
   rotationMin: 269
   rotationMax: 271
   altRotationMin: 45098
+  pieceAlreadyInSlot: 0
   windowScript: {fileID: 487035735}
 --- !u!114 &339511199
 MonoBehaviour:
@@ -4563,6 +4564,7 @@ MonoBehaviour:
   rotationMin: 179
   rotationMax: 181
   altRotationMin: 45098
+  pieceAlreadyInSlot: 0
   windowScript: {fileID: 487035735}
 --- !u!114 &809660013
 MonoBehaviour:
@@ -6364,6 +6366,7 @@ MonoBehaviour:
   rotationMin: -1
   rotationMax: 1
   altRotationMin: 359
+  pieceAlreadyInSlot: 0
   windowScript: {fileID: 487035735}
 --- !u!82 &1119557653
 AudioSource:
@@ -7762,6 +7765,7 @@ MonoBehaviour:
   rotationMin: 89
   rotationMax: 91
   altRotationMin: 45098
+  pieceAlreadyInSlot: 0
   windowScript: {fileID: 487035735}
 --- !u!114 &1563860271
 MonoBehaviour:
@@ -9242,6 +9246,7 @@ GameObject:
   - component: {fileID: 1766838213}
   - component: {fileID: 1766838214}
   - component: {fileID: 1766838215}
+  - component: {fileID: 1766838216}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -9328,6 +9333,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionColor: {fileID: 1903861376}
+--- !u!114 &1766838216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766838210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba8c151e70a27f1489c5a06b93697199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1794812102
 GameObject:
   m_ObjectHideFlags: 0
