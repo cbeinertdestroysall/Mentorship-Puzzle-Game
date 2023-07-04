@@ -50,6 +50,16 @@ public class WindowSlotScript : MonoBehaviour
                 pieceInSlot = true;
                 pieceAlreadyInSlot = false;
                 puzzlePiece = collision.gameObject;
+
+                if (this.GetComponent<RotateObject>() != null)
+                {
+                    UpdateRotationData();
+                }
+                else
+                {
+                    return;
+                }
+
                 if (collision.GetComponent<PuzzlePieceScript>().puzzleNumber == slotNumber)
                 {
                     pieceInCorrectSlot = true;
@@ -132,31 +142,27 @@ public class WindowSlotScript : MonoBehaviour
                 
             }
         }
-        
+
         if (collision.gameObject.tag == "Puzzle Piece")
         {
-
             if (pieceAlreadyInSlot == true)
             {
-                //pieceInCorrectSlot = true;
                 pieceInSlot = true;
-                //correctRotation = true;
+               
                 pieceAlreadyInSlot = false;
 
                 return;
             }
-            else if (pieceAlreadyInSlot == false)
+            
+            if (pieceAlreadyInSlot == false)
             {
                 pieceInCorrectSlot = false;
                 pieceInSlot = false;
                 correctRotation = false;
 
                 puzzlePiece = null;
-                
             }
         }
-
-        
     }
 
     public void UpdateRotationData()
