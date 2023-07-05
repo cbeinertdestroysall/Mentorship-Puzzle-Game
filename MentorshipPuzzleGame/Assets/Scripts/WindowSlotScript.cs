@@ -43,13 +43,13 @@ public class WindowSlotScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Puzzle Piece")
+        if (collision.gameObject.tag == "Puzzle Piece") //if an object tagged puzzle piece enters a slot
         {
-            if (pieceInSlot == false)
+            if (pieceInSlot == false) //and if a piece isn't already in the slot
             {
-                pieceInSlot = true;
-                pieceAlreadyInSlot = false;
-                puzzlePiece = collision.gameObject;
+                pieceInSlot = true; //then a piece is in the slot
+                pieceAlreadyInSlot = false; //but a piece isn't "already" in the slot
+                puzzlePiece = collision.gameObject; 
 
                 if (collision.GetComponent<PuzzlePieceScript>().puzzleNumber == slotNumber)
                 {
@@ -65,29 +65,31 @@ public class WindowSlotScript : MonoBehaviour
                 {
                     UpdateRotationData();
                 }
-                else
+                else 
                 {
                     return;
                 }
 
 
             }
-            else 
+            else //if a puzzle piece is in a slot then a piece is "already" in the slot
             {
+                pieceAlreadyInSlot = true;
                 return;
             }
         }
 
-        if (collision.gameObject.tag == "Item")
+        if (collision.gameObject.tag == "Item") //if an object tagged "item" enters a slot 
         {
-            if (pieceInSlot == true)
+            if (pieceInSlot == true) //an a piece can be found in that slot 
             {
-                pieceAlreadyInSlot = true;
+                pieceAlreadyInSlot = true; //then a piece is already in the slot and end the method early
+                return;
 
             }
-            else 
+            else //but if a piece isn't in a slot
             {
-                pieceAlreadyInSlot = false;
+                pieceAlreadyInSlot = false; //then a piece isn't already in the slot
             }
         
         }
@@ -116,32 +118,17 @@ public class WindowSlotScript : MonoBehaviour
                 return;
             }
         }
-        /*if (collision.gameObject.tag == "Item")
-        {
-            if (pieceInSlot == true)
-            {
-                pieceAlreadyInSlot = true;
-
-
-            }
-            else 
-            {
-                pieceAlreadyInSlot = false;
-            }
-        }*/
-        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Item")
+        if (collision.gameObject.tag == "Item") //if an object tagged "item" has exited
         {
-            if (pieceAlreadyInSlot == true)
+            if (pieceAlreadyInSlot == true) //and if a piece is already in the slot
             {
-                pieceInSlot = true;
-                pieceAlreadyInSlot = false;
+                pieceInSlot = true; //a piece is still in the slot
+                pieceAlreadyInSlot = false; //but a piece isn't "already" in the slot (which is meant to prevent objects from being unable to enter slots when they're empty)
                 return;
-                
             }
         }
 
@@ -153,6 +140,8 @@ public class WindowSlotScript : MonoBehaviour
                
                 pieceAlreadyInSlot = false;
 
+                Debug.Log("piece is already in the slot!");
+
                 return;
             }
             
@@ -163,6 +152,8 @@ public class WindowSlotScript : MonoBehaviour
                 correctRotation = false;
 
                 puzzlePiece = null;
+
+                Debug.Log("piece isn't in a slot");
             }
         }
     }
