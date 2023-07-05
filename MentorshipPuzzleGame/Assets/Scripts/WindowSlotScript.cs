@@ -23,11 +23,11 @@ public class WindowSlotScript : MonoBehaviour
 
     public WindowScript windowScript;
 
-    /*IEnumerator SetToFalse()
+    IEnumerator SetToFalse()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         pieceAlreadyInSlot = false;
-    }*/
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -130,6 +130,16 @@ public class WindowSlotScript : MonoBehaviour
                 pieceAlreadyInSlot = false; //but a piece isn't "already" in the slot (which is meant to prevent objects from being unable to enter slots when they're empty)
                 return;
             }
+            else if (pieceAlreadyInSlot == false)
+            {
+                pieceInCorrectSlot = false;
+                pieceInSlot = false;
+                correctRotation = false;
+
+                puzzlePiece = null;
+
+                Debug.Log("piece isn't in a slot");
+            }
         }
 
         if (collision.gameObject.tag == "Puzzle Piece")
@@ -137,15 +147,14 @@ public class WindowSlotScript : MonoBehaviour
             if (pieceAlreadyInSlot == true)
             {
                 pieceInSlot = true;
-               
-                pieceAlreadyInSlot = false;
+
+                StartCoroutine(SetToFalse());
 
                 Debug.Log("piece is already in the slot!");
 
                 return;
             }
-            
-            if (pieceAlreadyInSlot == false)
+            else if (pieceAlreadyInSlot == false)
             {
                 pieceInCorrectSlot = false;
                 pieceInSlot = false;

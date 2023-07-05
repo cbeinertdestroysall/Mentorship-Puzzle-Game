@@ -24,6 +24,8 @@ public class UiDrag : MonoBehaviour
     Vector3 mousePosition;
     Vector3 previousMousePosition;
 
+    public SoundManager soundM;
+
     IEnumerator ReturnToInventory()
     {
         yield return new WaitForSeconds(0.1f);
@@ -106,6 +108,7 @@ public class UiDrag : MonoBehaviour
             if (dragElement.gameObject.GetComponent<ItemScript>() != null && dragElement.gameObject.GetComponent<InventoryPosition>() != null)
             {
                 dragElement.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                //soundM.PlayError();
                 StartCoroutine(ReturnToInventory());
             }
             else 

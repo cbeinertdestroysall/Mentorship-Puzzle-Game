@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource lockSwitch;
     public AudioSource draggingSound;
     public AudioSource charge;
+    public AudioSource error;
 
     // Start is called before the first frame update
     void Start()
@@ -51,5 +52,9 @@ public class SoundManager : MonoBehaviour
     {
         charge.Play();
     }
-    
+
+    public void PlayError()
+    {
+        error.Play();
+    }
 }

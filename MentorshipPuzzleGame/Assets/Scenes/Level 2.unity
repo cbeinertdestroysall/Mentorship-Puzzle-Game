@@ -2471,6 +2471,7 @@ MonoBehaviour:
   lockSwitch: {fileID: 371544072}
   draggingSound: {fileID: 0}
   charge: {fileID: 0}
+  error: {fileID: 0}
 --- !u!82 &371544071
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8848,6 +8849,7 @@ MonoBehaviour:
   uiCanvas: {fileID: 964268177}
   noiseMaker: {fileID: 0}
   dragging: 0
+  soundM: {fileID: 0}
 --- !u!114 &1766838215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10019,7 +10021,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1915861252
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10739,7 +10741,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2137488685
 RectTransform:
   m_ObjectHideFlags: 0
