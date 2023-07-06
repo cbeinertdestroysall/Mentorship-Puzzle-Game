@@ -33,11 +33,11 @@ public class WindowSlotScript : MonoBehaviour
         pieceAlreadyInSlot = false;
     }
 
-    IEnumerator ActivateAudio()
+    /*IEnumerator ActivateAudio()
     {
         yield return new WaitForSeconds(0.5f);
         //click.gameObject.SetActive(true);
-    }
+    }*/
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +60,7 @@ public class WindowSlotScript : MonoBehaviour
                 pieceInSlot = true; //then a piece is in the slot
                 pieceAlreadyInSlot = false; //but a piece isn't "already" in the slot
                 puzzlePiece = collision.gameObject;
+                
 
                 noiseMaker.GetComponent<AudioSource>().Play();
 
@@ -93,6 +94,7 @@ public class WindowSlotScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Item") //if an object tagged "item" enters a slot 
         {
+            collision.gameObject.GetComponent<ItemScript>().canBeUsed = true;
             if (pieceInSlot == true) //an a piece can be found in that slot 
             {
                 pieceAlreadyInSlot = true; //then a piece is already in the slot and end the method early
@@ -116,6 +118,8 @@ public class WindowSlotScript : MonoBehaviour
             {
                 pieceInSlot = true;
                 pieceAlreadyInSlot = false;
+
+
                 if (this.GetComponent<RotateObject>() != null)
                 {
                     UpdateRotationData();
@@ -171,6 +175,7 @@ public class WindowSlotScript : MonoBehaviour
                 pieceInCorrectSlot = false;
                 pieceInSlot = false;
                 correctRotation = false;
+                collision.gameObject.GetComponent<ItemScript>().canBeUsed = false;
 
                 puzzlePiece = null;
 

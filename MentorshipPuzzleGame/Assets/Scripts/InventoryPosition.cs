@@ -9,7 +9,7 @@ public class InventoryPosition : MonoBehaviour
     public void RecordInventoryPos()
     {
         inventoryPos = this.transform.position;
-        Debug.Log("key position: " + inventoryPos);
+        //Debug.Log("key position: " + inventoryPos);
     }
 
     // Start is called before the first frame update

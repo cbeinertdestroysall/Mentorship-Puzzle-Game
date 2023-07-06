@@ -46,6 +46,7 @@ public class KeyScript : MonoBehaviour
         {
             //Debug.Log("key has disappeared");
             anim.SetBool("Used", true);
+            //this.GetComponent<InventoryPosition>().inventoryPos = this.transform.position;
             //AudioSource.PlayClipAtPoint(audioClip, transform.position, 1f);
             StartCoroutine(Destroy());
         }

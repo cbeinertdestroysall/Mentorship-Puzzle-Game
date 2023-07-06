@@ -19,8 +19,6 @@ public class UiDrag : MonoBehaviour
     public bool dragging = false;
     GameObject dragElement;
 
-    //public SoundManager soundManager;
-
     Vector3 mousePosition;
     Vector3 previousMousePosition;
 
@@ -45,7 +43,6 @@ public class UiDrag : MonoBehaviour
     void Update()
     {
         MouseDragUI();
-        //Debug.Log("Dragging = " + dragging);
     }
 
     void MouseDragUI()
@@ -78,11 +75,8 @@ public class UiDrag : MonoBehaviour
                     {
                         DragElement();
                         noiseMaker.gameObject.SetActive(true);
-                        //soundManager.PlayDraggingSound();
+                       
                     }
-                    
-                    //Debug.Log("item pos: " + dragElement.transform.position);
-                    //Debug.Log("mouse pos: " + mousePosition);
                 }
                 else
                 {
@@ -110,6 +104,18 @@ public class UiDrag : MonoBehaviour
                 dragElement.gameObject.GetComponent<BoxCollider2D>().enabled = true;
                 //soundM.PlayError();
                 StartCoroutine(ReturnToInventory());
+
+                if (dragElement.gameObject.GetComponent<ItemScript>().canBeUsed == false)
+                {
+                    Debug.Log("wrong place");
+                    //Debug.Log("current object position " + dragElement.gameObject.transform.position);
+                    soundM.PlayError();
+                }
+                else 
+                {
+                    Debug.Log("right place");
+                }
+                
             }
             else 
             {
