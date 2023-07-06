@@ -16,6 +16,8 @@ public class PuzzlePieceScript : MonoBehaviour
 
     public float slotScale;
 
+    public SignifierIsColliding signifier;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,14 @@ public class PuzzlePieceScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (signifier.isColliding)
+        {
+            this.GetComponent<ItemScript>().canBeUsed = true;
+        }
+        else 
+        {
+            this.GetComponent<ItemScript>().canBeUsed = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

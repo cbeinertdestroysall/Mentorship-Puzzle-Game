@@ -561,6 +561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 56875181}
   - component: {fileID: 56875182}
+  - component: {fileID: 56875183}
   m_Layer: 5
   m_Name: SignifierCollider
   m_TagString: Item
@@ -614,6 +615,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 42.73206, y: 42.73206}
   m_EdgeRadius: 0
+--- !u!114 &56875183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56875180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908d6ebe96d3c2843a85b1775544b013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isColliding: 0
 --- !u!1 &62455616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,6 +1845,7 @@ MonoBehaviour:
   mainFunctionality: {fileID: 1766838210}
   inventoryScale: 0.51057
   slotScale: 0.51057
+  signifier: {fileID: 56875183}
 --- !u!1 &266351112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2367,6 +2382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 342244130}
   - component: {fileID: 342244131}
+  - component: {fileID: 342244132}
   m_Layer: 5
   m_Name: SignifierCollider
   m_TagString: Item
@@ -2420,6 +2436,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 42.73206, y: 42.73206}
   m_EdgeRadius: 0
+--- !u!114 &342244132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342244129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908d6ebe96d3c2843a85b1775544b013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isColliding: 0
 --- !u!1 &368590777
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,7 +3035,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8233bb334d4d9c04997c1419787889da, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.732
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3683,6 +3712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 574075635}
   - component: {fileID: 574075636}
+  - component: {fileID: 574075637}
   m_Layer: 5
   m_Name: SignifierCollider
   m_TagString: Item
@@ -3736,6 +3766,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 42.73206, y: 42.73206}
   m_EdgeRadius: 0
+--- !u!114 &574075637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574075634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908d6ebe96d3c2843a85b1775544b013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isColliding: 0
 --- !u!1 &649715638
 GameObject:
   m_ObjectHideFlags: 0
@@ -6983,6 +7026,7 @@ MonoBehaviour:
   mainFunctionality: {fileID: 1766838210}
   inventoryScale: 0.51057
   slotScale: 0.51057
+  signifier: {fileID: 1550275384}
 --- !u!95 &1301322830
 Animator:
   serializedVersion: 5
@@ -8818,6 +8862,7 @@ MonoBehaviour:
   mainFunctionality: {fileID: 1766838210}
   inventoryScale: 0.51057
   slotScale: 0.51057
+  signifier: {fileID: 342244132}
 --- !u!95 &1476364426
 Animator:
   serializedVersion: 5
@@ -9045,6 +9090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1550275382}
   - component: {fileID: 1550275383}
+  - component: {fileID: 1550275384}
   m_Layer: 5
   m_Name: SignifierCollider
   m_TagString: Item
@@ -9098,6 +9144,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 42.73206, y: 42.73206}
   m_EdgeRadius: 0
+--- !u!114 &1550275384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550275381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908d6ebe96d3c2843a85b1775544b013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isColliding: 0
 --- !u!1 &1706812932
 GameObject:
   m_ObjectHideFlags: 0
@@ -10630,6 +10689,7 @@ MonoBehaviour:
   mainFunctionality: {fileID: 1766838210}
   inventoryScale: 0.51057
   slotScale: 0.51057
+  signifier: {fileID: 574075637}
 --- !u!1 &1915861251
 GameObject:
   m_ObjectHideFlags: 0
