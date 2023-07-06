@@ -109,7 +109,7 @@ public class UiDrag : MonoBehaviour
                 {
                     Debug.Log("wrong place");
                     //Debug.Log("current object position " + dragElement.gameObject.transform.position);
-                    soundM.PlayError();
+                    //soundM.PlayError();
                 }
                 else 
                 {

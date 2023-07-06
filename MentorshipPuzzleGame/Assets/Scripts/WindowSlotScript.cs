@@ -94,7 +94,7 @@ public class WindowSlotScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Item") //if an object tagged "item" enters a slot 
         {
-            collision.gameObject.GetComponent<ItemScript>().canBeUsed = true;
+            
             if (pieceInSlot == true) //an a piece can be found in that slot 
             {
                 pieceAlreadyInSlot = true; //then a piece is already in the slot and end the method early
@@ -104,6 +104,7 @@ public class WindowSlotScript : MonoBehaviour
             else //but if a piece isn't in a slot
             {
                 pieceAlreadyInSlot = false; //then a piece isn't already in the slot
+                
             }
         
         }
@@ -118,7 +119,7 @@ public class WindowSlotScript : MonoBehaviour
             {
                 pieceInSlot = true;
                 pieceAlreadyInSlot = false;
-
+                
 
                 if (this.GetComponent<RotateObject>() != null)
                 {
@@ -134,6 +135,7 @@ public class WindowSlotScript : MonoBehaviour
                 return;
             }
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)

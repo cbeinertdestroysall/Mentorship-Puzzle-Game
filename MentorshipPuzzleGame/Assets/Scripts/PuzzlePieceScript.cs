@@ -60,6 +60,7 @@ public class PuzzlePieceScript : MonoBehaviour
             //where the problem seems to be happening
             this.transform.SetParent(collision.transform.parent, true);
             this.transform.localScale = new Vector3(slotScale, slotScale, slotScale);
+            this.gameObject.GetComponent<ItemScript>().canBeUsed = true;
         }
     }
 
