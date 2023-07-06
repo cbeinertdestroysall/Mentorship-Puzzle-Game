@@ -776,6 +776,139 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: -0.00002861, y: 458.19}
+--- !u!1 &179342275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179342277}
+  - component: {fileID: 179342276}
+  m_Layer: 5
+  m_Name: NoiseMaker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &179342276
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179342275}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e59130cfdcb198d478eece4f8f654689, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!224 &179342277
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179342275}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487035732}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &190305442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,6 +2032,7 @@ MonoBehaviour:
   altRotationMin: 45098
   pieceAlreadyInSlot: 0
   windowScript: {fileID: 487035735}
+  noiseMaker: {fileID: 179342275}
 --- !u!114 &339511199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2873,6 +3007,7 @@ RectTransform:
   - {fileID: 339511195}
   - {fileID: 2054213162}
   - {fileID: 1319393894}
+  - {fileID: 179342277}
   m_Father: {fileID: 1361949739}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2943,6 +3078,7 @@ MonoBehaviour:
   wrongCode: {fileID: 2054213161}
   rightCode: {fileID: 1319393893}
   flashlight: {fileID: 1383379684}
+  noiseMaker: {fileID: 179342275}
 --- !u!82 &487035736
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4858,6 +4994,7 @@ MonoBehaviour:
   altRotationMin: 45098
   pieceAlreadyInSlot: 0
   windowScript: {fileID: 487035735}
+  noiseMaker: {fileID: 179342275}
 --- !u!114 &809660013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6502,7 +6639,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 48.49, y: 48.49}
+  m_Size: {x: 26.42166, y: 26.42166}
   m_EdgeRadius: 0
 --- !u!114 &1019152396
 MonoBehaviour:
@@ -6661,6 +6798,7 @@ MonoBehaviour:
   altRotationMin: 359
   pieceAlreadyInSlot: 0
   windowScript: {fileID: 487035735}
+  noiseMaker: {fileID: 179342275}
 --- !u!82 &1119557653
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7904,7 +8042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1449357912
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8194,6 +8332,7 @@ MonoBehaviour:
   altRotationMin: 45098
   pieceAlreadyInSlot: 0
   windowScript: {fileID: 487035735}
+  noiseMaker: {fileID: 179342275}
 --- !u!114 &1563860271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9481,7 +9620,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 48.49, y: 48.49}
+  m_Size: {x: 26.42166, y: 26.42166}
   m_EdgeRadius: 0
 --- !u!114 &1736297583
 MonoBehaviour:
@@ -9639,7 +9778,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 48.49, y: 48.49}
+  m_Size: {x: 26.42166, y: 26.42166}
   m_EdgeRadius: 0
 --- !u!114 &1745428000
 MonoBehaviour:
@@ -9882,6 +10021,18 @@ MonoBehaviour:
       - m_Target: {fileID: 371544070}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySwitch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 487035735}
+        m_TargetAssemblyTypeName: WindowScript, Assembly-CSharp
+        m_MethodName: SuppressAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11370,7 +11521,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000024795532, y: -0.000011444092}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -11381,7 +11532,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 48.49, y: 48.49}
+  m_Size: {x: 26.42166, y: 26.421658}
   m_EdgeRadius: 0
 --- !u!114 &2096858438
 MonoBehaviour:
