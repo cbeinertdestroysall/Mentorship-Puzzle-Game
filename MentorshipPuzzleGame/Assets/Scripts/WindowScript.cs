@@ -20,12 +20,20 @@ public class WindowScript : MonoBehaviour
 
     public GameObject flashlight;
 
+    public GameObject noiseMaker;
+
     //public AudioSource audioSource;
 
     IEnumerator WrongCode()
     {
         yield return new WaitForSeconds(1f);
         wrongCode.SetActive(false);
+    }
+
+    IEnumerator ReactivateAudio()
+    {
+        yield return new WaitForSeconds(0.5f);
+        noiseMaker.SetActive(true);
     }
 
     // Start is called before the first frame update
@@ -89,5 +97,11 @@ public class WindowScript : MonoBehaviour
     {
         if (puzzleSolved)
         audioS.Play();
+    }
+
+    public void SuppressAudio()
+    {
+        noiseMaker.SetActive(false);
+        StartCoroutine(ReactivateAudio());
     }
 }
