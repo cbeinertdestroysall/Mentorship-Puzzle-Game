@@ -2158,6 +2158,7 @@ GameObject:
   - component: {fileID: 371544071}
   - component: {fileID: 371544072}
   - component: {fileID: 371544073}
+  - component: {fileID: 371544074}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -2389,7 +2390,7 @@ MonoBehaviour:
   lockSwitch: {fileID: 371544072}
   draggingSound: {fileID: 0}
   charge: {fileID: 371544073}
-  error: {fileID: 0}
+  error: {fileID: 371544074}
 --- !u!82 &371544071
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2595,6 +2596,102 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: d2fbfb53417991e4c92e3ddb4cce166a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.649
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &371544074
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371544066}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8233bb334d4d9c04997c1419787889da, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.672
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3271,6 +3368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 507430822}
   - component: {fileID: 507430823}
+  - component: {fileID: 507430824}
   m_Layer: 5
   m_Name: ObjectCollider
   m_TagString: Item
@@ -3324,6 +3422,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 26.5, y: 26.5}
   m_EdgeRadius: 0
+--- !u!114 &507430824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507430821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908d6ebe96d3c2843a85b1775544b013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isColliding: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3418,6 +3529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 532011151}
   - component: {fileID: 532011152}
+  - component: {fileID: 532011153}
   m_Layer: 5
   m_Name: ObjectCollider
   m_TagString: Item
@@ -3471,6 +3583,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 26.5, y: 26.5}
   m_EdgeRadius: 0
+--- !u!114 &532011153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532011150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908d6ebe96d3c2843a85b1775544b013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isColliding: 0
 --- !u!1 &601344820
 GameObject:
   m_ObjectHideFlags: 0
@@ -6615,6 +6740,7 @@ MonoBehaviour:
   mainFunctionality: {fileID: 1766838210}
   inventoryScale: 0.51057
   slotScale: 1.6
+  signifier: {fileID: 532011153}
 --- !u!61 &1019152395
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6919,6 +7045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1147361923}
   - component: {fileID: 1147361924}
+  - component: {fileID: 1147361925}
   m_Layer: 5
   m_Name: ObjectCollider
   m_TagString: Item
@@ -6972,6 +7099,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 26.5, y: 26.5}
   m_EdgeRadius: 0
+--- !u!114 &1147361925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147361922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908d6ebe96d3c2843a85b1775544b013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isColliding: 0
 --- !u!1 &1154288922
 GameObject:
   m_ObjectHideFlags: 0
@@ -8189,6 +8329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1486632609}
   - component: {fileID: 1486632610}
+  - component: {fileID: 1486632611}
   m_Layer: 5
   m_Name: ObjectCollider
   m_TagString: Item
@@ -8242,6 +8383,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 26.5, y: 26.5}
   m_EdgeRadius: 0
+--- !u!114 &1486632611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486632608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908d6ebe96d3c2843a85b1775544b013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isColliding: 0
 --- !u!1 &1563860267
 GameObject:
   m_ObjectHideFlags: 0
@@ -9638,6 +9792,7 @@ MonoBehaviour:
   mainFunctionality: {fileID: 1766838210}
   inventoryScale: 0.51057
   slotScale: 1.6
+  signifier: {fileID: 1147361925}
 --- !u!50 &1736297584
 Rigidbody2D:
   serializedVersion: 4
@@ -9754,6 +9909,7 @@ MonoBehaviour:
   mainFunctionality: {fileID: 1766838210}
   inventoryScale: 0.51057
   slotScale: 1.6
+  signifier: {fileID: 1486632611}
 --- !u!61 &1745427999
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10167,7 +10323,7 @@ MonoBehaviour:
   uiCanvas: {fileID: 964268177}
   noiseMaker: {fileID: 0}
   dragging: 0
-  soundM: {fileID: 0}
+  soundM: {fileID: 371544070}
 --- !u!114 &1766838215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11508,6 +11664,7 @@ MonoBehaviour:
   mainFunctionality: {fileID: 1766838210}
   inventoryScale: 0.51057
   slotScale: 1.6
+  signifier: {fileID: 507430824}
 --- !u!61 &2096858437
 BoxCollider2D:
   m_ObjectHideFlags: 0
