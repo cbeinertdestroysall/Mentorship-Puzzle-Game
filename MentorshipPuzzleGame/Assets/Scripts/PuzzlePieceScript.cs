@@ -47,8 +47,8 @@ public class PuzzlePieceScript : MonoBehaviour
             this.transform.SetParent(collision.transform.parent, true);
 
             this.transform.localScale = new Vector3(slotScale, slotScale, slotScale);
-            
-            
+
+
         }
         else if (collision.gameObject.tag == "Inventory")
         {
@@ -60,6 +60,7 @@ public class PuzzlePieceScript : MonoBehaviour
                 this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
             }
         }
+       
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -79,13 +80,14 @@ public class PuzzlePieceScript : MonoBehaviour
         {
             mainFunctionality.GetComponent<InventoryReSystem>().DecreaseSlotNumber();
             collision.GetComponent<FillSlot>().slotIsFilled = false;
-            this.transform.SetParent(collision.transform.parent, true);
-            this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
+            //this.transform.SetParent(collision.transform.parent, true);
+            //this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
         }
         else if (collision.gameObject.tag == "Slot")
         {
-            this.transform.SetParent(collision.transform.parent, true);
-            this.transform.localScale = new Vector3(slotScale, slotScale, slotScale);
+            //this.transform.SetParent(collision.transform.parent, true);
+            //this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
+            collision.GetComponent<WindowSlotScript>().pieceInSlot = false;
         }
     }
 

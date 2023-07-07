@@ -12,6 +12,7 @@ TagManager:
   - Slot
   - Inventory
   - Flashlight
+  - Window
   layers:
   - Default
   - TransparentFX
