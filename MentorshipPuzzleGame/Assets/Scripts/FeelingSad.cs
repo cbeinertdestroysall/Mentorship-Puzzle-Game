@@ -33,6 +33,8 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     private void Update()
     {
+        //offset = new Vector3(81.69f, 13.01f, 0);
+
         if (this == null)
         {
             Destroy(signifierText);
@@ -56,6 +58,27 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         {
             //signifierText.transform.position = this.transform.position;
             signifierText.SetActive(false);
+        }
+
+        if (this.GetComponent<InventoryPosition>() != null)
+        {
+            if (this.GetComponent<ItemScript>().draggable == true)
+            {
+                if (isHovering && keyDown == false)
+                {
+                    signifierText.transform.position = Input.mousePosition + offset;
+                    signifierText.SetActive(true);
+                }
+                else if (isHovering && keyDown)
+                {
+                    //signifierText.transform.position = this.transform.position;
+                    signifierText.SetActive(false);
+                }
+            }
+            else 
+            {
+                signifierText.SetActive(false);
+            }
         }
     }
 }
