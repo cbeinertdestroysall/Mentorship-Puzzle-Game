@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class UiDrag : MonoBehaviour
+public class UiDrag : MonoBehaviour//, IPointerEnterHandler, IPointerEnterHandler
 {
     public GameObject uiCanvas;
     GraphicRaycaster uiRaycaster;
@@ -23,6 +23,9 @@ public class UiDrag : MonoBehaviour
     Vector3 previousMousePosition;
 
     public SoundManager soundM;
+
+    Ray ray;
+    RaycastHit hit;
 
     IEnumerator ReturnToInventory()
     {
@@ -44,6 +47,17 @@ public class UiDrag : MonoBehaviour
     {
         MouseDragUI();
     }
+
+    /*private void FixedUpdate()
+    {
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+            print(hit.collider.name);
+        }
+    }*/
+
+    
 
     void MouseDragUI()
     {
