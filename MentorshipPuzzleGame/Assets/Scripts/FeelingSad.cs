@@ -10,6 +10,7 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public GameObject signifierText;
 
     public bool isHovering = false;
+    public bool keyDown = false;
 
     public Vector3 offset;
 
@@ -37,13 +38,24 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             Destroy(signifierText);
         }
 
-        if (isHovering)
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            keyDown = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            keyDown = false;
+        }
+
+        if (isHovering && keyDown == false)
         {
             signifierText.transform.position = Input.mousePosition + offset;
+            signifierText.SetActive(true);
         }
-        else
+        else if (isHovering && keyDown)
         {
-            signifierText.transform.position = this.transform.position;
+            //signifierText.transform.position = this.transform.position;
+            signifierText.SetActive(false);
         }
     }
 }
