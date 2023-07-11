@@ -145,7 +145,9 @@ public class WindowSlotScript : MonoBehaviour
             if (pieceAlreadyInSlot == true) //and if a piece is already in the slot
             {
                 pieceInSlot = true; //a piece is still in the slot
-                pieceAlreadyInSlot = false; //but a piece isn't "already" in the slot (which is meant to prevent objects from being unable to enter slots when they're empty)
+                StartCoroutine(SetToFalse());
+                Debug.Log("piece is already in the slot");
+                //pieceAlreadyInSlot = false; //but a piece isn't "already" in the slot (which is meant to prevent objects from being unable to enter slots when they're empty)
                 return;
             }
             else if (pieceAlreadyInSlot == false)
@@ -160,7 +162,7 @@ public class WindowSlotScript : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "Puzzle Piece")
+        /*if (collision.gameObject.tag == "Puzzle Piece")
         {
             if (pieceAlreadyInSlot == true)
             {
@@ -183,7 +185,7 @@ public class WindowSlotScript : MonoBehaviour
 
                 Debug.Log("piece isn't in a slot");
             }
-        }
+        }*/
     }
 
     public void UpdateRotationData()
