@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class ButtonShift : MonoBehaviour, ISelectHandler
 {
+    public bool buttonSelected;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,9 @@ public class ButtonShift : MonoBehaviour, ISelectHandler
     public void OnSelect(BaseEventData eventData)
     {
         Debug.Log(this.gameObject.name + " was selected");
+        buttonSelected = true;
     }
+
+    
 
 }
