@@ -8,6 +8,8 @@ public class KeyScript : MonoBehaviour
     public AudioSource aus;
     public AudioClip audioClip;
 
+    public bool isCollidingWithInventory;
+
     public Animator anim;
 
     // Start is called before the first frame update
@@ -24,6 +26,7 @@ public class KeyScript : MonoBehaviour
 
     IEnumerator Destroy()
     {
+        //this.GetComponent<ItemScript>().canBeUsed = false;
         yield return new WaitForSeconds(1);
         Destroy(this.gameObject);
     }
@@ -32,11 +35,16 @@ public class KeyScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Lock" && this.GetComponent<ItemScript>().canBeUsed)
         {
-           // Debug.Log("key entered lock");
+            // Debug.Log("key entered lock");
             this.GetComponent<InventoryPosition>().inventoryPos = this.transform.position;
             //this.GetComponent<ItemScript>().isUsed = true;
             //aus.clip = audioClip;
             //aus.Play();
+        }
+
+        else if (collision.gameObject.tag == "Inventory")
+        {
+            isCollidingWithInventory = true;
         }
     }
 
@@ -58,5 +66,9 @@ public class KeyScript : MonoBehaviour
         {
             this.GetComponent<ItemScript>().isUsed = false;
         }
+        /*else if (collision.gameObject.tag == "Inventory")
+        {
+            this.GetComponent<ItemScript>().canBeUsed = false;
+        }*/
     }
 }

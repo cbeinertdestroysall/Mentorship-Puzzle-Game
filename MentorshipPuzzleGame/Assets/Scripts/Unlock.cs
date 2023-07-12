@@ -17,6 +17,9 @@ public class Unlock : MonoBehaviour
     public GameObject lockButton;
     public GameObject doorButton;
 
+    public GameObject use;
+    public GameObject investigate;
+
     public GameObject highlight;
 
     public float gravity;
@@ -81,6 +84,8 @@ public class Unlock : MonoBehaviour
                 doorButton.gameObject.SetActive(true);
 
                 Destroy(highlight.gameObject);
+                Destroy(use.gameObject);
+                Destroy(investigate.gameObject);
 
                 this.GetComponent<Rigidbody2D>().gravityScale = gravity;
                 this.GetComponent<BoxCollider2D>().isTrigger = false;

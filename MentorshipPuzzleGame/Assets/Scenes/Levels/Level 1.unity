@@ -707,6 +707,8 @@ MonoBehaviour:
   uiDrag: {fileID: 1766838214}
   lockButton: {fileID: 1201068097}
   doorButton: {fileID: 1743396754}
+  use: {fileID: 2097137046}
+  investigate: {fileID: 1452678787}
   highlight: {fileID: 821986412}
   gravity: 30
 --- !u!82 &257599564
@@ -4628,7 +4630,7 @@ GameObject:
   - component: {fileID: 930320944}
   m_Layer: 5
   m_Name: Slot2
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5693,6 +5695,7 @@ MonoBehaviour:
   uiDrag: {fileID: 1766838214}
   aus: {fileID: 1123715510}
   audioClip: {fileID: 8300000, guid: 3a530134a178df54aa868fb8e8eeb370, type: 3}
+  isCollidingWithInventory: 0
   anim: {fileID: 1123715511}
 --- !u!61 &1123715508
 BoxCollider2D:
@@ -5975,7 +5978,7 @@ GameObject:
   - component: {fileID: 1173373432}
   m_Layer: 5
   m_Name: Slot3
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6876,7 +6879,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.71160346, g: 0.9622642, b: 0.48567107, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -6911,6 +6914,18 @@ MonoBehaviour:
       - m_Target: {fileID: 371544070}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySwitch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1334241013}
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: CancelInvoke
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7199,6 +7214,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1452678787}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1392813220
 MonoBehaviour:
@@ -10825,7 +10852,7 @@ GameObject:
   - component: {fileID: 2030278178}
   m_Layer: 5
   m_Name: Slot1
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
