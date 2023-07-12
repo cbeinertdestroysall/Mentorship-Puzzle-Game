@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class ButtonShift : MonoBehaviour
+public class ButtonShift : MonoBehaviour, ISelectHandler
 {
     // Start is called before the first frame update
     void Start()
@@ -21,4 +22,10 @@ public class ButtonShift : MonoBehaviour
     {
         //this.GetComponent<Button>().spriteState.disabledSprite;
     }
+
+    public void OnSelect(BaseEventData eventData)
+    {
+        Debug.Log(this.gameObject.name + " was selected");
+    }
+
 }
