@@ -60,7 +60,7 @@ public class WindowSlotScript : MonoBehaviour
                 pieceInSlot = true; //then a piece is in the slot
                 pieceAlreadyInSlot = false; //but a piece isn't "already" in the slot
                 puzzlePiece = collision.gameObject;
-                
+
 
                 noiseMaker.GetComponent<AudioSource>().Play();
 
@@ -78,7 +78,7 @@ public class WindowSlotScript : MonoBehaviour
                 {
                     UpdateRotationData();
                 }
-                else 
+                else
                 {
                     return;
                 }
@@ -105,6 +105,7 @@ public class WindowSlotScript : MonoBehaviour
             {
                 pieceAlreadyInSlot = false; //then a piece isn't already in the slot
                 
+
             }
         
         }
@@ -115,10 +116,10 @@ public class WindowSlotScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Puzzle Piece")
         {
-            if (pieceInSlot == false)
-            {
-                pieceInSlot = true;
-                pieceAlreadyInSlot = false;
+            //if (pieceInSlot == false)
+          //  {
+             //   pieceInSlot = true;
+             //   pieceAlreadyInSlot = false;
                 
 
                 if (this.GetComponent<RotateObject>() != null)
@@ -130,23 +131,26 @@ public class WindowSlotScript : MonoBehaviour
                     return;
                 }
             }
-            else 
-            {
-                return;
-            }
-        }
+        //    else 
+         //   {
+         //       return;
+          //  }
+        
 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+
         if (collision.gameObject.tag == "Item") //if an object tagged "item" has exited
         {
             if (pieceAlreadyInSlot == true) //and if a piece is already in the slot
             {
                 pieceInSlot = true; //a piece is still in the slot
                 StartCoroutine(SetToFalse());
-                Debug.Log("piece is already in the slot");
+                if (this.slotNumber == 1)
+                    Debug.Log("piece is already in the slot");
+
                 //pieceAlreadyInSlot = false; //but a piece isn't "already" in the slot (which is meant to prevent objects from being unable to enter slots when they're empty)
                 return;
             }
@@ -158,7 +162,8 @@ public class WindowSlotScript : MonoBehaviour
 
                 puzzlePiece = null;
 
-                Debug.Log("piece isn't in a slot");
+                if (this.slotNumber == 1)
+                    Debug.Log("piece isn't in a slot");
             }
         }
 
