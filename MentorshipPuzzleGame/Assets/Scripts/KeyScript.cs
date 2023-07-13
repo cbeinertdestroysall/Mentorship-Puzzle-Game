@@ -10,6 +10,8 @@ public class KeyScript : MonoBehaviour
 
     public bool isCollidingWithInventory;
 
+    public GameObject use;
+
     public Animator anim;
 
     // Start is called before the first frame update
@@ -37,6 +39,7 @@ public class KeyScript : MonoBehaviour
         {
             // Debug.Log("key entered lock");
             this.GetComponent<InventoryPosition>().inventoryPos = this.transform.position;
+            use.gameObject.SetActive(true);
             //this.GetComponent<ItemScript>().isUsed = true;
             //aus.clip = audioClip;
             //aus.Play();
@@ -54,6 +57,7 @@ public class KeyScript : MonoBehaviour
         {
             //Debug.Log("key has disappeared");
             anim.SetBool("Used", true);
+            use.gameObject.SetActive(false);
             //this.GetComponent<InventoryPosition>().inventoryPos = this.transform.position;
             //AudioSource.PlayClipAtPoint(audioClip, transform.position, 1f);
             StartCoroutine(Destroy());
@@ -65,6 +69,7 @@ public class KeyScript : MonoBehaviour
         if (collision.gameObject.tag == "Lock")
         {
             this.GetComponent<ItemScript>().isUsed = false;
+            use.gameObject.SetActive(false);
         }
         /*else if (collision.gameObject.tag == "Inventory")
         {
