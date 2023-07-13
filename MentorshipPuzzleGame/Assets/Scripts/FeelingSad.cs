@@ -15,29 +15,28 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public bool isHovering = false;
     public bool keyDown = false;
 
+    public bool awayFromInventory;
+
     public Vector3 offset;
 
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-       //if (leftButton.GetComponent<ButtonShift>().buttonSelected == true || leftButton.GetComponent<ButtonShift>().buttonSelected == false || rightButton.GetComponent<ButtonShift>().buttonSelected == true || rightButton.GetComponent<ButtonShift>().buttonSelected == false)
-        //{
-            //Output to console the GameObject's name and the following message
+     
             Debug.Log("Cursor Entering " + name + " GameObject");
-            signifierText.SetActive(true);
+            
             isHovering = true;
-            //signifierText.transform.position = Input.mousePosition;
-       // }
+           
     }
 
     public void OnPointerExit(PointerEventData pointerEventData)
     {
-        //if (leftButton.GetComponent<ButtonShift>().buttonSelected == true || leftButton.GetComponent<ButtonShift>().buttonSelected == false || rightButton.GetComponent<ButtonShift>().buttonSelected == true || rightButton.GetComponent<ButtonShift>().buttonSelected == false)
-       // {
-            //Output the following message with the GameObject's name
+        if (signifierText != null)
+        {
             Debug.Log("Cursor Exiting " + name + " GameObject");
             signifierText.SetActive(false);
             isHovering = false;
-        //}
+        }
+        
     }
 
     void OnDisable()
@@ -65,7 +64,7 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         {
             keyDown = false;
         }
-
+        if (signifierText != null) { 
         if (isHovering && keyDown == false)
         {
             signifierText.transform.position = Input.mousePosition + offset;
@@ -77,25 +76,67 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             signifierText.SetActive(false);
         }
 
-        if (this.GetComponent<InventoryPosition>() != null)
-        {
-            if (this.GetComponent<ItemScript>().draggable == true)
+
+
+            if (this.GetComponent<InventoryPosition>() != null)
             {
-                if (isHovering && keyDown == false)
+                if (this.GetComponent<ItemScript>().draggable == true)
                 {
-                    signifierText.transform.position = Input.mousePosition + offset;
-                    signifierText.SetActive(true);
+                    if (isHovering && keyDown == false)
+                    {
+                        signifierText.transform.position = Input.mousePosition + offset;
+                        signifierText.SetActive(true);
+                    }
+                    else if (isHovering && keyDown)
+                    {
+                        //signifierText.transform.position = this.transform.position;
+                        signifierText.SetActive(false);
+                    }
                 }
-                else if (isHovering && keyDown)
+                else
                 {
-                    //signifierText.transform.position = this.transform.position;
+                    signifierText.SetActive(false);
+                }
+
+                /*if (this.transform.position != this.GetComponent<InventoryPosition>().inventoryPos)
+                {
+                    awayFromInventory = true;
+                }
+                else
+                {
+                    awayFromInventory = false;
+                }*/
+
+                if (this.GetComponent<ItemScript>().draggable == true && awayFromInventory == true)
+                {
+                    signifierText.SetActive(false);
+                }
+                else if (this.GetComponent<ItemScript>().draggable == false)
+                {
                     signifierText.SetActive(false);
                 }
             }
-            else 
-            {
-                signifierText.SetActive(false);
-            }
+
+        }
+
+        
+
+        
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Inventory" && this.GetComponent<InventoryPosition>() != null)
+        {
+            awayFromInventory = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Inventory" && this.GetComponent<InventoryPosition>() != null)
+        {
+            awayFromInventory = true;
         }
     }
 }
