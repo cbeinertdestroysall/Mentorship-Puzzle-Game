@@ -9,8 +9,8 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 {
     public GameObject signifierText;
 
-    public GameObject leftButton;
-    public GameObject rightButton;
+    //public GameObject leftButton;
+   // public GameObject rightButton;
 
     public bool isHovering = false;
     public bool keyDown = false;
@@ -19,26 +19,34 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-        if (leftButton.GetComponent<ButtonShift>().buttonSelected == true || leftButton.GetComponent<ButtonShift>().buttonSelected == false || rightButton.GetComponent<ButtonShift>().buttonSelected == true || rightButton.GetComponent<ButtonShift>().buttonSelected == false)
-        {
+       //if (leftButton.GetComponent<ButtonShift>().buttonSelected == true || leftButton.GetComponent<ButtonShift>().buttonSelected == false || rightButton.GetComponent<ButtonShift>().buttonSelected == true || rightButton.GetComponent<ButtonShift>().buttonSelected == false)
+        //{
             //Output to console the GameObject's name and the following message
             Debug.Log("Cursor Entering " + name + " GameObject");
             signifierText.SetActive(true);
             isHovering = true;
             //signifierText.transform.position = Input.mousePosition;
-        }
+       // }
     }
 
     public void OnPointerExit(PointerEventData pointerEventData)
     {
-        if (leftButton.GetComponent<ButtonShift>().buttonSelected == true || leftButton.GetComponent<ButtonShift>().buttonSelected == false || rightButton.GetComponent<ButtonShift>().buttonSelected == true || rightButton.GetComponent<ButtonShift>().buttonSelected == false)
-        {
+        //if (leftButton.GetComponent<ButtonShift>().buttonSelected == true || leftButton.GetComponent<ButtonShift>().buttonSelected == false || rightButton.GetComponent<ButtonShift>().buttonSelected == true || rightButton.GetComponent<ButtonShift>().buttonSelected == false)
+       // {
             //Output the following message with the GameObject's name
             Debug.Log("Cursor Exiting " + name + " GameObject");
             signifierText.SetActive(false);
             isHovering = false;
-        }
+        //}
     }
+
+    void OnDisable()
+    {
+        isHovering = false;
+        keyDown = false;
+    }
+
+    
 
     private void Update()
     {
