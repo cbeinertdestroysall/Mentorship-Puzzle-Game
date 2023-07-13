@@ -15,7 +15,7 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public bool isHovering = false;
     public bool keyDown = false;
 
-    public bool awayFromInventory;
+    public bool awayFromInventory = true;
 
     public Vector3 offset;
 
@@ -118,11 +118,6 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             }
 
         }
-
-        
-
-        
-        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

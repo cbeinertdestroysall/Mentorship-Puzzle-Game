@@ -2440,10 +2440,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signifierText: {fileID: 1907171548}
-  leftButton: {fileID: 720380318}
-  rightButton: {fileID: 1334241011}
   isHovering: 0
   keyDown: 0
+  awayFromInventory: 0
   offset: {x: 81.69, y: 13.01, z: 0}
 --- !u!1 &471602808
 GameObject:
@@ -3671,10 +3670,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signifierText: {fileID: 368403367}
-  leftButton: {fileID: 720380318}
-  rightButton: {fileID: 1334241011}
   isHovering: 0
   keyDown: 0
+  awayFromInventory: 0
   offset: {x: 81.69, y: 13.01, z: 0}
 --- !u!1 &720380318
 GameObject:
@@ -5904,10 +5902,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signifierText: {fileID: 2097137046}
-  leftButton: {fileID: 720380318}
-  rightButton: {fileID: 1334241011}
   isHovering: 0
   keyDown: 0
+  awayFromInventory: 1
   offset: {x: 81.69, y: 13.01, z: 0}
 --- !u!1 &1126572958
 GameObject:
@@ -6235,10 +6232,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signifierText: {fileID: 1452678787}
-  leftButton: {fileID: 720380318}
-  rightButton: {fileID: 1334241011}
   isHovering: 0
   keyDown: 0
+  awayFromInventory: 0
   offset: {x: 110.3, y: 13.01, z: 0}
 --- !u!1 &1206315501
 GameObject:
@@ -7877,10 +7873,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signifierText: {fileID: 1678820027}
-  leftButton: {fileID: 720380318}
-  rightButton: {fileID: 1334241011}
   isHovering: 0
   keyDown: 0
+  awayFromInventory: 0
   offset: {x: 81.69, y: 13.01, z: 0}
 --- !u!1 &1504297109
 GameObject:
@@ -9338,10 +9333,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signifierText: {fileID: 1075192043}
-  leftButton: {fileID: 720380318}
-  rightButton: {fileID: 1334241011}
   isHovering: 0
   keyDown: 0
+  awayFromInventory: 0
   offset: {x: 81.69, y: 13.01, z: 0}
 --- !u!1 &1766838210
 GameObject:
@@ -9655,10 +9649,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signifierText: {fileID: 773003819}
-  leftButton: {fileID: 720380318}
-  rightButton: {fileID: 1334241011}
   isHovering: 0
   keyDown: 0
+  awayFromInventory: 0
   offset: {x: 81.69, y: 13.01, z: 0}
 --- !u!1 &1851059382
 GameObject:
@@ -11142,7 +11135,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294959872
-  m_fontColor: {r: 0, g: 0.15956345, b: 0.1792453, a: 1}
+  m_fontColor: {r: 0, g: 0.78431374, b: 0.028585546, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11165,7 +11158,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
