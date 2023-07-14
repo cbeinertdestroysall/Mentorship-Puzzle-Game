@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -18,6 +19,21 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public bool awayFromInventory = true;
 
     public Vector3 offset;
+
+    Vector3 originalScale;
+
+    Vector3 slotScale;
+
+    //Scene currentScene = SceneManager.GetActiveScene();
+
+    private void Start()
+    {
+        originalScale = this.transform.localScale * 3;
+
+        slotScale = originalScale / 3;
+    }
+
+
 
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
@@ -124,6 +140,14 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         if (collision.gameObject.tag == "Inventory" && this.GetComponent<InventoryPosition>() != null)
         {
             awayFromInventory = false;
+            if (SceneManager.GetActiveScene() != (SceneManager.GetSceneByName("Level 1")))
+                signifierText.transform.localScale = originalScale;
+        }
+        else if (collision.gameObject.tag == "Slot" && this.GetComponent<InventoryPosition>() != null)
+        {
+            awayFromInventory = false;
+            if (SceneManager.GetActiveScene() != (SceneManager.GetSceneByName("Level 1")))
+                signifierText.transform.localScale = slotScale;
         }
     }
 
@@ -132,6 +156,12 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         if (collision.gameObject.tag == "Inventory" && this.GetComponent<InventoryPosition>() != null)
         {
             awayFromInventory = true;
+            
+        }
+        else if (collision.gameObject.tag == "Slot" && this.GetComponent<InventoryPosition>() != null)
+        {
+            awayFromInventory = true;
+            
         }
     }
 }
