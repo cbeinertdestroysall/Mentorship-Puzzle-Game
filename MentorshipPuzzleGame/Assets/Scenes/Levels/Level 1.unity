@@ -7188,6 +7188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aKey: {fileID: 2066122234}
   timeToShow: 3
+  canShow: 1
 --- !u!1 &1389010101
 GameObject:
   m_ObjectHideFlags: 0

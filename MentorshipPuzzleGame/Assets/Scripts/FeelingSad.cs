@@ -20,6 +20,8 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public Vector3 offset;
 
+    public Vector3 inventoryOffset;
+
     Vector3 originalScale;
 
     Vector3 slotScale;
@@ -85,6 +87,7 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         {
             signifierText.transform.position = Input.mousePosition + offset;
             signifierText.SetActive(true);
+                
         }
         else if (isHovering && keyDown)
         {
@@ -100,7 +103,7 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
                 {
                     if (isHovering && keyDown == false)
                     {
-                        signifierText.transform.position = Input.mousePosition + offset;
+                        signifierText.transform.position = this.transform.position - inventoryOffset;
                         signifierText.SetActive(true);
                     }
                     else if (isHovering && keyDown)
@@ -161,7 +164,6 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         else if (collision.gameObject.tag == "Slot" && this.GetComponent<InventoryPosition>() != null)
         {
             awayFromInventory = true;
-            
         }
     }
 }

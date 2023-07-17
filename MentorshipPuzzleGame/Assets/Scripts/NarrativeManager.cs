@@ -7,6 +7,8 @@ public class NarrativeManager : MonoBehaviour
     public GameObject aKey;
     public float timeToShow;
 
+    public bool canShow;
+
     IEnumerator DisableAKey()
     {
         yield return new WaitForSeconds(timeToShow);
@@ -27,7 +29,11 @@ public class NarrativeManager : MonoBehaviour
 
     public void AKey()
     {
-        aKey.gameObject.SetActive(true);
-        StartCoroutine(DisableAKey());
+        if (canShow == true)
+        {
+            aKey.gameObject.SetActive(true);
+            canShow = false;
+            StartCoroutine(DisableAKey());
+        }
     }
 }
