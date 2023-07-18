@@ -6,7 +6,6 @@ public class RotateObject : MonoBehaviour
 {
     public GameObject testObject;
     public AudioSource audioS;
-
     
 
     // Start is called before the first frame update
@@ -21,11 +20,16 @@ public class RotateObject : MonoBehaviour
         
     }
 
+    [System.Obsolete]
     public void RotateObject90Degrees()
     {
         if (this.GetComponent<WindowSlotScript>().pieceInSlot)
         {
             testObject.transform.Rotate(0, 0, 90f);
+            GameObject uiText = testObject.transform.FindChild(n: "Drag").gameObject;
+
+            uiText.transform.Rotate(0, 0, -90f);
+            Debug.Log("child is " + uiText);
             Debug.Log("rotation of object:" + testObject.transform.rotation.eulerAngles.z);
             audioS.Play();
             this.GetComponent<WindowSlotScript>().UpdateRotationData();
