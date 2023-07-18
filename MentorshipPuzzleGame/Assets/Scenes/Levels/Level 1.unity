@@ -2579,6 +2579,7 @@ MonoBehaviour:
   keyDown: 0
   awayFromInventory: 0
   offset: {x: 81.69, y: 13.01, z: 0}
+  inventoryOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &471602808
 GameObject:
   m_ObjectHideFlags: 0
@@ -3809,6 +3810,7 @@ MonoBehaviour:
   keyDown: 0
   awayFromInventory: 0
   offset: {x: 81.69, y: 13.01, z: 0}
+  inventoryOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &720380318
 GameObject:
   m_ObjectHideFlags: 0
@@ -6043,6 +6045,7 @@ MonoBehaviour:
   keyDown: 0
   awayFromInventory: 1
   offset: {x: 81.69, y: 13.01, z: 0}
+  inventoryOffset: {x: 0, y: 80, z: 0}
 --- !u!1 &1126572958
 GameObject:
   m_ObjectHideFlags: 0
@@ -6373,6 +6376,7 @@ MonoBehaviour:
   keyDown: 0
   awayFromInventory: 0
   offset: {x: 110.3, y: 13.01, z: 0}
+  inventoryOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1206315501
 GameObject:
   m_ObjectHideFlags: 0
@@ -8015,6 +8019,7 @@ MonoBehaviour:
   keyDown: 0
   awayFromInventory: 0
   offset: {x: 81.69, y: 13.01, z: 0}
+  inventoryOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1504297109
 GameObject:
   m_ObjectHideFlags: 0
@@ -9475,6 +9480,7 @@ MonoBehaviour:
   keyDown: 0
   awayFromInventory: 0
   offset: {x: 81.69, y: 13.01, z: 0}
+  inventoryOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1766838210
 GameObject:
   m_ObjectHideFlags: 0
@@ -9791,6 +9797,7 @@ MonoBehaviour:
   keyDown: 0
   awayFromInventory: 0
   offset: {x: 81.69, y: 13.01, z: 0}
+  inventoryOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1851059382
 GameObject:
   m_ObjectHideFlags: 0
