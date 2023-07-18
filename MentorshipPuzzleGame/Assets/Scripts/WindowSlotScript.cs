@@ -147,7 +147,8 @@ public class WindowSlotScript : MonoBehaviour
             if (pieceAlreadyInSlot == true) //and if a piece is already in the slot
             {
                 pieceInSlot = true; //a piece is still in the slot
-                StartCoroutine(SetToFalse());
+                //StartCoroutine(SetToFalse());
+                pieceAlreadyInSlot = false;
                 if (this.slotNumber == 1)
                     Debug.Log("piece is already in the slot");
 

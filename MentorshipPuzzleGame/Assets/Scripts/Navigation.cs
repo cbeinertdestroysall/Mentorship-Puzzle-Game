@@ -5,16 +5,20 @@ using UnityEngine.UI;
 
 public class Navigation : MonoBehaviour
 {
-    public GameObject background1;
+    /*public GameObject background1;
     public GameObject background2;
     public GameObject background3;
-    public GameObject background4;
+    public GameObject background4;*/
 
     public GameObject[] backgrounds;
 
     public int currentBackgroundView;
 
     public GameObject flashlight;
+
+    public GameObject meltCollider;
+
+    public GameObject[] flashlightComponents;
 
     // Start is called before the first frame update
     void Start()
@@ -73,11 +77,24 @@ public class Navigation : MonoBehaviour
         {
             if (currentBackgroundView == 2)
             {
-                flashlight.SetActive(false);
+                meltCollider.GetComponent<PowerLevels>().powerLevel = 1;
+
+                foreach (GameObject flashlight in flashlightComponents)
+                {
+                    flashlight.GetComponent<Image>().enabled = false;
+                }
+                //flashlight.SetActive(false);
+
             }
             else
             {
-                flashlight.SetActive(true);
+                //meltCollider.GetComponent<PowerLevels>().powerLevel = 1;
+
+                foreach (GameObject flashlight in flashlightComponents)
+                {
+                    flashlight.GetComponent<Image>().enabled = true;
+                }
+                //flashlight.SetActive(true);
             }
         }
     }
@@ -109,11 +126,24 @@ public class Navigation : MonoBehaviour
         {
             if (currentBackgroundView == 2)
             {
-                flashlight.SetActive(false);
+                meltCollider.GetComponent<PowerLevels>().powerLevel = 1;
+
+                foreach (GameObject flashlight in flashlightComponents)
+                {
+                    flashlight.GetComponent<Image>().enabled = false;
+                }
+                //flashlight.SetActive(false);
+                
             }
             else
             {
-                flashlight.SetActive(true);
+                //meltCollider.GetComponent<PowerLevels>().powerLevel = 1;
+
+                foreach (GameObject flashlight in flashlightComponents)
+                {
+                    flashlight.GetComponent<Image>().enabled = true;
+                }
+                //flashlight.SetActive(true);
             }
         }
     }
