@@ -55,16 +55,30 @@ public class MeltableObject : MonoBehaviour
     {
         if (collision.gameObject.tag == "Flashlight")
         {
+            if (Input.GetKey(KeyCode.Alpha2))
+            {
+                if (collision.GetComponent<PowerLevels>().currentHealth <= 0)
+                {
+                    anim.speed = 0;
+                    //noiseMaker.SetActive(false);
+                }
+                else if (collision.GetComponent<PowerLevels>().currentHealth > 0)
+                {
+                    anim.speed = 1;
+                }
+            }
+
             if (collision.GetComponent<PowerLevels>().powerLevel > 1)
             {
                 countdownToDestruction += 1 * Time.deltaTime;
                 anim.speed = 1;
             }
-            else if (collision.GetComponent<PowerLevels>().powerLevel == 1)
+            else if (collision.GetComponent<PowerLevels>().powerLevel <= 1)
             {
                 countdownToDestruction += 0;
                 anim.speed = 0;
             }
+
         }
     }
 

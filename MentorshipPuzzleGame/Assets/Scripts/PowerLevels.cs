@@ -63,11 +63,11 @@ public class PowerLevels : MonoBehaviour
         {
             if (currentHealth <= 0)
             {
-                foreach (GameObject meltable in meltables)
+                /*foreach (GameObject meltable in meltables)
                 {
                     if (meltable != null)
                     meltable.GetComponent<Animator>().speed = 0;
-                }
+                }*/
                 powerLevel = 1;
                 //noiseMaker.SetActive(false);
             }
