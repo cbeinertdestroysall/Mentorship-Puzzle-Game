@@ -10,6 +10,8 @@ public class MeltableObject : MonoBehaviour
 
     public float countdownToDestruction;
 
+    public bool canAnimate = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,14 +21,14 @@ public class MeltableObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        /*if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             anim.speed = 0;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             anim.speed = 1;
-        }
+        }*/
 
         if (countdownToDestruction >= 0.9f)
         {
@@ -60,11 +62,13 @@ public class MeltableObject : MonoBehaviour
                 if (collision.GetComponent<PowerLevels>().currentHealth <= 0)
                 {
                     anim.speed = 0;
+                    canAnimate = false;
                     //noiseMaker.SetActive(false);
                 }
                 else if (collision.GetComponent<PowerLevels>().currentHealth > 0)
                 {
                     anim.speed = 1;
+                    canAnimate = true;
                 }
             }
 
