@@ -33,7 +33,7 @@ public class NarrativeManager : MonoBehaviour
         {
             aKey.gameObject.SetActive(true);
             canShow = false;
-            StartCoroutine(DisableAKey());
+            //StartCoroutine(DisableAKey());
         }
     }
 }
