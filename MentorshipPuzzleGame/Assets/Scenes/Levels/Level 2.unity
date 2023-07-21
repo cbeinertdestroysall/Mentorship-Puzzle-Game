@@ -2435,8 +2435,7 @@ MonoBehaviour:
   inventoryScale: 0.51057
   slotScale: 0.51057
   signifier: {fileID: 56875183}
-  UIText: {fileID: 0}
-  textScale: {x: 0, y: 0, z: 0}
+  UIText: {fileID: 1996647546}
 --- !u!114 &255158522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8795,7 +8794,6 @@ MonoBehaviour:
   slotScale: 0.51057
   signifier: {fileID: 1550275384}
   UIText: {fileID: 0}
-  textScale: {x: 0, y: 0, z: 0}
 --- !u!95 &1301322830
 Animator:
   serializedVersion: 5
@@ -10840,7 +10838,6 @@ MonoBehaviour:
   slotScale: 0.51057
   signifier: {fileID: 342244132}
   UIText: {fileID: 1673809169}
-  textScale: {x: 0.4040709, y: 0.4040709, z: 0.4040709}
 --- !u!95 &1476364426
 Animator:
   serializedVersion: 5
@@ -13614,7 +13611,6 @@ MonoBehaviour:
   slotScale: 0.51057
   signifier: {fileID: 574075637}
   UIText: {fileID: 0}
-  textScale: {x: 0, y: 0, z: 0}
 --- !u!114 &1914061076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14296,7 +14292,7 @@ RectTransform:
   m_GameObject: {fileID: 1996647546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.81438, y: 0.81438, z: 0.81438}
+  m_LocalScale: {x: 0.4040709, y: 0.4040709, z: 0.4040709}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1696417798}
