@@ -18,10 +18,16 @@ public class PuzzlePieceScript : MonoBehaviour
 
     public SignifierIsColliding signifier;
 
+    public GameObject UIText;
+
+    Vector3 textScale;
+
     // Start is called before the first frame update
     void Start()
     {
         //transform.rotation.eulerAngles = Quaternion.Euler(0, 0, 0);
+
+        textScale = UIText.transform.lossyScale;
     }
 
     // Update is called once per frame
@@ -48,6 +54,8 @@ public class PuzzlePieceScript : MonoBehaviour
 
             this.transform.localScale = new Vector3(slotScale, slotScale, slotScale);
 
+            UIText.transform.localScale = textScale;
+
 
         }
         else if (collision.gameObject.tag == "Inventory")
@@ -58,6 +66,7 @@ public class PuzzlePieceScript : MonoBehaviour
                 collision.GetComponent<FillSlot>().slotIsFilled = true;
                 this.transform.SetParent(collision.transform.parent, true);
                 this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
+                UIText.transform.localScale = textScale;
             }
         }
        
@@ -71,6 +80,7 @@ public class PuzzlePieceScript : MonoBehaviour
             this.transform.SetParent(collision.transform.parent, true);
             this.transform.localScale = new Vector3(slotScale, slotScale, slotScale);
             this.gameObject.GetComponent<ItemScript>().canBeUsed = true;
+            UIText.transform.localScale = textScale;
         }
     }
 
@@ -82,12 +92,14 @@ public class PuzzlePieceScript : MonoBehaviour
             collision.GetComponent<FillSlot>().slotIsFilled = false;
             //this.transform.SetParent(collision.transform.parent, true);
             //this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
+            UIText.transform.localScale = textScale;
         }
         else if (collision.gameObject.tag == "Slot")
         {
             //this.transform.SetParent(collision.transform.parent, true);
             //this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
             collision.GetComponent<WindowSlotScript>().pieceInSlot = false;
+            UIText.transform.localScale = textScale;
         }
     }
 
