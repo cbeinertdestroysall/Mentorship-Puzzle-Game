@@ -57,8 +57,16 @@ public class MeltableObject : MonoBehaviour
     {
         if (collision.gameObject.tag == "Flashlight")
         {
-            if (Input.GetKey(KeyCode.Alpha2))
+            if (Input.GetKey(KeyCode.Alpha1))
             {
+                Debug.Log("1 was pressed");
+                anim.speed = 0;
+                canAnimate = false;
+            }
+            else if (Input.GetKey(KeyCode.Alpha2))
+            {
+                
+
                 if (collision.GetComponent<PowerLevels>().currentHealth <= 0)
                 {
                     anim.speed = 0;
@@ -71,6 +79,8 @@ public class MeltableObject : MonoBehaviour
                     canAnimate = true;
                 }
             }
+            
+           
 
             if (collision.GetComponent<PowerLevels>().powerLevel > 1)
             {
