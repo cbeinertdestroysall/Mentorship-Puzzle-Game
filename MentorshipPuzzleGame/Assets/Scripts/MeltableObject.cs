@@ -47,6 +47,10 @@ public class MeltableObject : MonoBehaviour
                 anim.SetBool("CanMelt", true);
                 
                 audioS.Play();
+
+                anim.speed = 1;
+
+                countdownToDestruction += 1 * Time.deltaTime;
             }
 
         }
@@ -55,8 +59,10 @@ public class MeltableObject : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        
         if (collision.gameObject.tag == "Flashlight")
         {
+            Debug.Log("flashlight colliding");
             if (Input.GetKey(KeyCode.Alpha1))
             {
                 Debug.Log("1 was pressed");
@@ -65,8 +71,6 @@ public class MeltableObject : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.Alpha2))
             {
-                
-
                 if (collision.GetComponent<PowerLevels>().currentHealth <= 0)
                 {
                     anim.speed = 0;
@@ -80,8 +84,6 @@ public class MeltableObject : MonoBehaviour
                 }
             }
             
-           
-
             if (collision.GetComponent<PowerLevels>().powerLevel > 1)
             {
                 countdownToDestruction += 1 * Time.deltaTime;

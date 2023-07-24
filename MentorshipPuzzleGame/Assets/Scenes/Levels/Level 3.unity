@@ -336,6 +336,7 @@ MonoBehaviour:
   anim: {fileID: 72563864}
   audioS: {fileID: 72563865}
   countdownToDestruction: 0
+  canAnimate: 0
 --- !u!50 &72563863
 Rigidbody2D:
   serializedVersion: 4
@@ -1342,6 +1343,7 @@ MonoBehaviour:
   anim: {fileID: 222765766}
   audioS: {fileID: 222765765}
   countdownToDestruction: 0
+  canAnimate: 0
 --- !u!61 &222765769
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4594,6 +4596,7 @@ MonoBehaviour:
   anim: {fileID: 689515731}
   audioS: {fileID: 689515730}
   countdownToDestruction: 0
+  canAnimate: 0
 --- !u!61 &689515734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7362,6 +7365,8 @@ MonoBehaviour:
   inventoryScale: 0.51057
   slotScale: 1.6
   signifier: {fileID: 532011153}
+  UIText: {fileID: 0}
+  textScale: {x: 0, y: 0, z: 0}
 --- !u!61 &1019152395
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10773,6 +10778,7 @@ MonoBehaviour:
   anim: {fileID: 1724187574}
   audioS: {fileID: 1724187573}
   countdownToDestruction: 0
+  canAnimate: 0
 --- !u!61 &1724187577
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10994,6 +11000,8 @@ MonoBehaviour:
   inventoryScale: 0.51057
   slotScale: 1.6
   signifier: {fileID: 1147361925}
+  UIText: {fileID: 0}
+  textScale: {x: 0, y: 0, z: 0}
 --- !u!50 &1736297584
 Rigidbody2D:
   serializedVersion: 4
@@ -11266,6 +11274,8 @@ MonoBehaviour:
   inventoryScale: 0.51057
   slotScale: 1.6
   signifier: {fileID: 1486632611}
+  UIText: {fileID: 0}
+  textScale: {x: 0, y: 0, z: 0}
 --- !u!61 &1745427999
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13199,6 +13209,8 @@ MonoBehaviour:
   inventoryScale: 0.51057
   slotScale: 1.6
   signifier: {fileID: 507430824}
+  UIText: {fileID: 0}
+  textScale: {x: 0, y: 0, z: 0}
 --- !u!61 &2096858437
 BoxCollider2D:
   m_ObjectHideFlags: 0
