@@ -66,7 +66,7 @@ public class PuzzlePieceScript : MonoBehaviour
                 collision.GetComponent<FillSlot>().slotIsFilled = true;
                 this.transform.SetParent(collision.transform.parent, true);
                 this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
-               // UIText.transform.localScale = UIText.transform.parent.InverseTransformVector(textScale);
+                UIText.transform.localScale = UIText.transform.parent.TransformVector(textScale);
             }
         }
        

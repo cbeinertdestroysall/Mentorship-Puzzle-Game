@@ -16738,6 +16738,7 @@ MonoBehaviour:
   draggingSound: {fileID: 0}
   charge: {fileID: 0}
   error: {fileID: 0}
+  door: {fileID: 0}
 --- !u!1 &1535311755
 GameObject:
   m_ObjectHideFlags: 0
@@ -17678,7 +17679,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1701137989}
         m_TargetAssemblyTypeName: QuitGame, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
