@@ -62,7 +62,7 @@ public class MeltableObject : MonoBehaviour
         
         if (collision.gameObject.tag == "Flashlight")
         {
-            Debug.Log("flashlight colliding");
+            //Debug.Log("flashlight colliding");
             if (Input.GetKey(KeyCode.Alpha1))
             {
                 Debug.Log("1 was pressed");
