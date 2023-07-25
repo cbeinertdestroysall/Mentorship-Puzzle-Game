@@ -94,13 +94,13 @@ public class PuzzlePieceScript : MonoBehaviour
             //this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
            // UIText.transform.localScale = UIText.transform.parent.InverseTransformVector(textScale);
         }
-        else if (collision.gameObject.tag == "Slot")
+        /*else if (collision.gameObject.tag == "Slot")
         {
             //this.transform.SetParent(collision.transform.parent, true);
             //this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
             collision.GetComponent<WindowSlotScript>().pieceInSlot = false;
            // UIText.transform.localScale = UIText.transform.parent.InverseTransformVector(textScale);
-        }
+        }*/
     }
 
 }
