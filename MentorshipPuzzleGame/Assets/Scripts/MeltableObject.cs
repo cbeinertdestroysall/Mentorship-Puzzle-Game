@@ -107,7 +107,13 @@ public class MeltableObject : MonoBehaviour
                 countdownToDestruction += 0;
                 anim.speed = 0;
             }
+            else if (collision.GetComponent<PowerLevels>().powerLevel == 1)
+            {
+                countdownToDestruction += 0;
+                anim.speed = 0;
+            }
         }
+        
     }
 
     public void ResetAnimation()
