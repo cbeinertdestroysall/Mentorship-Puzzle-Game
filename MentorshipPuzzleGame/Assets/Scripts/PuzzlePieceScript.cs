@@ -63,20 +63,20 @@ public class PuzzlePieceScript : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Inventory")
         {
-            //if (collision.GetComponent<FillSlot>().slotIsFilled == false)
-            //{
-                /*this.GetComponent<InventoryPosition>().inventoryPos = collision.gameObject.GetComponent<BoxCollider2D>().transform.position;
-                collision.GetComponent<FillSlot>().slotIsFilled = true;*/
+            if (collision.GetComponent<FillSlot>().slotIsFilled == false)
+            {
+                this.GetComponent<InventoryPosition>().inventoryPos = collision.gameObject.GetComponent<BoxCollider2D>().transform.position;
+                collision.GetComponent<FillSlot>().slotIsFilled = true;
                 this.transform.SetParent(collision.transform.parent, true);
                 this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
                 //UIText.transform.localScale = UIText.transform.parent.TransformVector(textScale);
                 //collision.GetComponent<FillSlot>().pieceAlreadyInSlot = false;
-            //}
-            //else 
-            //{
-                //collision.GetComponent<FillSlot>().slotIsFilled = true;
-                //collision.GetComponent<FillSlot>().pieceAlreadyInSlot = true;
-            //}
+            }
+            else 
+            {
+                collision.GetComponent<FillSlot>().slotIsFilled = true;
+                collision.GetComponent<FillSlot>().pieceAlreadyInSlot = true;
+            }
             /*else if (collision.GetComponent<FillSlot>().slotIsFilled == true)
             {
                 collision.GetComponent<FillSlot>().slotIsFilled = true;
@@ -102,16 +102,16 @@ public class PuzzlePieceScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Inventory")
         {
-            //if (collision.GetComponent<FillSlot>().pieceAlreadyInSlot == false)
-          //  {
+            if (collision.GetComponent<FillSlot>().pieceAlreadyInSlot == false)
+            {
                 mainFunctionality.GetComponent<InventoryReSystem>().DecreaseSlotNumber();
-               // collision.GetComponent<FillSlot>().slotIsFilled = false;
-           // }
-           // else 
-           // {
-             //   collision.GetComponent<FillSlot>().slotIsFilled = true;
-             //   collision.GetComponent<FillSlot>().pieceAlreadyInSlot = false;
-           // }
+                collision.GetComponent<FillSlot>().slotIsFilled = false;
+            }
+            else 
+            {
+                collision.GetComponent<FillSlot>().slotIsFilled = true;
+                collision.GetComponent<FillSlot>().pieceAlreadyInSlot = false;
+            }
             //this.transform.SetParent(collision.transform.parent, true);
             //this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
            // UIText.transform.localScale = UIText.transform.parent.InverseTransformVector(textScale);

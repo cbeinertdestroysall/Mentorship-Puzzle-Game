@@ -6,8 +6,8 @@ public class FillSlot : MonoBehaviour
 {
     public bool slotIsFilled = false;
 
-    [SerializeField]
-    bool pieceAlreadyInSlot;
+    
+    public bool pieceAlreadyInSlot;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class FillSlot : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Item")
         {
@@ -54,5 +54,5 @@ public class FillSlot : MonoBehaviour
                 pieceAlreadyInSlot = false;
             }
         }
-    }
+    }*/
 }
