@@ -143,13 +143,13 @@ public class FeelingSad : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         if (collision.gameObject.tag == "Inventory" && this.GetComponent<InventoryPosition>() != null)
         {
             awayFromInventory = false;
-            if (SceneManager.GetActiveScene() != (SceneManager.GetSceneByName("Level 1")))
+            if (SceneManager.GetActiveScene() != (SceneManager.GetSceneByName("Level 1")) || SceneManager.GetActiveScene() != (SceneManager.GetSceneByName("Level 4")))
                 signifierText.transform.localScale = originalScale;
         }
         else if (collision.gameObject.tag == "Slot" && this.GetComponent<InventoryPosition>() != null)
         {
             awayFromInventory = false;
-            if (SceneManager.GetActiveScene() != (SceneManager.GetSceneByName("Level 1")))
+            if (SceneManager.GetActiveScene() != (SceneManager.GetSceneByName("Level 1")) || SceneManager.GetActiveScene() != (SceneManager.GetSceneByName("Level 4")))
                 signifierText.transform.localScale = slotScale;
         }
     }
