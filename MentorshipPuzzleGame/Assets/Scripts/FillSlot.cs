@@ -9,6 +9,8 @@ public class FillSlot : MonoBehaviour
     
     public bool pieceAlreadyInSlot;
 
+    public GameObject mainFunctionality;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,16 +23,14 @@ public class FillSlot : MonoBehaviour
         
     }
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+   /* private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Item")
         {
             if (slotIsFilled == false)
             {
                 slotIsFilled = true;
-                collision.GetComponent<InventoryPosition>().inventoryPos = this.gameObject.GetComponent<BoxCollider2D>().transform.position;
                
-                //collision.transform.SetParent(collision.transform.parent, true);
             }
             else
             {
@@ -45,7 +45,7 @@ public class FillSlot : MonoBehaviour
         {
             if (pieceAlreadyInSlot == false)
             {
-                //mainFunctionality.GetComponent<InventoryReSystem>().DecreaseSlotNumber();
+                mainFunctionality.GetComponent<InventoryReSystem>().DecreaseSlotNumber();
                 slotIsFilled = false;
             }
             else

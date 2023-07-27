@@ -50,7 +50,6 @@ public class PuzzlePieceScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Slot" && collision.GetComponent<WindowSlotScript>().pieceInSlot == false)
         {
-
             this.GetComponent<InventoryPosition>().inventoryPos = collision.gameObject.GetComponent<BoxCollider2D>().transform.position;
 
             this.transform.SetParent(collision.transform.parent, true);
@@ -72,9 +71,9 @@ public class PuzzlePieceScript : MonoBehaviour
                 //UIText.transform.localScale = UIText.transform.parent.TransformVector(textScale);
                 //collision.GetComponent<FillSlot>().pieceAlreadyInSlot = false;
             }
-            else 
-            {
-                collision.GetComponent<FillSlot>().slotIsFilled = true;
+            else
+            { 
+                //collision.GetComponent<FillSlot>().slotIsFilled = true;
                 collision.GetComponent<FillSlot>().pieceAlreadyInSlot = true;
             }
             /*else if (collision.GetComponent<FillSlot>().slotIsFilled == true)

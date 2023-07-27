@@ -1636,6 +1636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIsFilled: 0
+  pieceAlreadyInSlot: 0
+  mainFunctionality: {fileID: 1766838210}
 --- !u!1 &132665673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3004,6 +3006,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIsFilled: 0
+  pieceAlreadyInSlot: 0
+  mainFunctionality: {fileID: 1766838210}
 --- !u!1 &327636761
 GameObject:
   m_ObjectHideFlags: 0
@@ -5852,6 +5856,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIsFilled: 0
+  pieceAlreadyInSlot: 0
+  mainFunctionality: {fileID: 1766838210}
 --- !u!1 &791621682
 GameObject:
   m_ObjectHideFlags: 0
@@ -8281,6 +8287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIsFilled: 0
+  pieceAlreadyInSlot: 0
+  mainFunctionality: {fileID: 1766838210}
 --- !u!1 &1275687606
 GameObject:
   m_ObjectHideFlags: 0
