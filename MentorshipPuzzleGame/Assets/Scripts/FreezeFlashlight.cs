@@ -37,45 +37,29 @@ public class FreezeFlashlight : MonoBehaviour
         {
             unfreeze.GetComponent<Image>().color = new Color(255, 0, 0);
             freeze.GetComponent<Image>().color = new Color(255, 255, 255);
-            //lens.GetComponent<Image>().color = new Color(255, 118, 96, 54);
+            lens.GetComponent<Image>().color = new Color(255, 118, 96, 54);
         }
         else 
         {
             unfreeze.GetComponent<Image>().color = new Color(255, 255, 255);
             freeze.GetComponent<Image>().color = new Color(255, 0, 0);
-            //lens.GetComponent<Image>().color = new Color(95, 240, 255, 54);
+            lens.GetComponent<Image>().color = new Color(95, 240, 255, 54);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "MovingObject" && freezeMode == false)
-        {
-            collision.gameObject.GetComponent<Animator>().speed = 1;
-        }
-        else if (collision.gameObject.tag == "MovingObject" && freezeMode == true)
+        if (collision.gameObject.tag == "MovingObject")
         {
             collision.gameObject.GetComponent<Animator>().speed = 0;
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "MovingObject" && freezeMode == false)
-        {
-            collision.gameObject.GetComponent<Animator>().speed = 1;
-        }
-        else if (collision.gameObject.tag == "MovingObject" && freezeMode == true)
-        {
-            collision.gameObject.GetComponent<Animator>().speed = 0;
-        }
-    }
-
-    /*private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "MovingObject")
         {
             collision.gameObject.GetComponent<Animator>().speed = 1;
         }
-    }*/
+    }
 }
