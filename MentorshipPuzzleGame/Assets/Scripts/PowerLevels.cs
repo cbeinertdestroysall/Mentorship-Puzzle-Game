@@ -84,7 +84,7 @@ public class PowerLevels : MonoBehaviour
             }
         }
         
-
+        
         foreach (GameObject background in backgrounds)
         {
             if (powerLevel == 1)

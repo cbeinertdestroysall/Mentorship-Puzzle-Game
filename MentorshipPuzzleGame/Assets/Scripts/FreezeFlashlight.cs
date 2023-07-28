@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class FreezeFlashlight : MonoBehaviour
 {
-    
+    public bool freezeMode;
+
+    public GameObject unfreeze;
+    public GameObject freeze;
+
+    public GameObject lens;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +23,28 @@ public class FreezeFlashlight : MonoBehaviour
     void Update()
     {
         this.transform.position = Input.mousePosition;
+
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            freezeMode = false;
+        }
+        else if (Input.GetKey(KeyCode.Alpha2))
+        {
+            freezeMode = true;
+        }
+
+        if (freezeMode == false)
+        {
+            unfreeze.GetComponent<Image>().color = new Color(255, 0, 0);
+            freeze.GetComponent<Image>().color = new Color(255, 255, 255);
+            lens.GetComponent<Image>().color = new Color(255, 118, 96, 54);
+        }
+        else 
+        {
+            unfreeze.GetComponent<Image>().color = new Color(255, 255, 255);
+            freeze.GetComponent<Image>().color = new Color(255, 0, 0);
+            lens.GetComponent<Image>().color = new Color(95, 240, 255, 54);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
