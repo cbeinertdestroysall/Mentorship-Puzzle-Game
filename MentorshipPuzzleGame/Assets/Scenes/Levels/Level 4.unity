@@ -3576,7 +3576,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1:4
+  m_text: 3:6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3585,8 +3585,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4294954395
+  m_fontColor: {r: 0.6084906, g: 0.804947, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5589,9 +5589,9 @@ MonoBehaviour:
   lockMiddle: {fileID: 344394118}
   lockBottom: {fileID: 701642475}
   key: {fileID: 1123715502}
-  correctLockNumberTop: 3
+  correctLockNumberTop: 1
   correctLockNumberMiddle: 6
-  correctLockNumberBottom: 1
+  correctLockNumberBottom: 5
   audioSource: {fileID: 1006317575}
   youDidItText: {fileID: 1898438438}
 --- !u!82 &1006317575
@@ -9687,7 +9687,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3:2
+  m_text: 1:2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
