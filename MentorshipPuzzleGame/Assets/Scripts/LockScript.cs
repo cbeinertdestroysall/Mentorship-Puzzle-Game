@@ -26,11 +26,11 @@ public class LockScript : MonoBehaviour
 
     public void IncreaseLockNumber()
     {
-        if (currentLockNumber < 8)
+        if (currentLockNumber < (lockNumbers.Length - 1))
         {
             currentLockNumber+= 1;
         }
-        else if (currentLockNumber >= 8)
+        else if (currentLockNumber >= (lockNumbers.Length - 1))
         {
             currentLockNumber = 0;
         }
@@ -56,7 +56,7 @@ public class LockScript : MonoBehaviour
         }
         else if (currentLockNumber <= 0)
         {
-            currentLockNumber = 8;
+            currentLockNumber = (lockNumbers.Length - 1);
         }
 
         for (int i = 0; i < lockNumbers.Length; i++)
