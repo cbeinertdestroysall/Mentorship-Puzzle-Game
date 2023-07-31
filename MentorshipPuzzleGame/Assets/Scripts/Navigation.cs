@@ -58,7 +58,7 @@ public class Navigation : MonoBehaviour
         }
         else if (currentBackgroundView == 0)
         {
-            currentBackgroundView = 3;
+            currentBackgroundView = backgrounds.Length - 1;
         }
 
         for (int i = 0; i < backgrounds.Length; i++)
@@ -101,11 +101,11 @@ public class Navigation : MonoBehaviour
 
     public void ShiftRight()
     {
-        if (currentBackgroundView < 3)
+        if (currentBackgroundView < backgrounds.Length - 1)
         {
             currentBackgroundView += 1;
         }
-        else if (currentBackgroundView == 3)
+        else if (currentBackgroundView >= (backgrounds.Length - 1))
         {
             currentBackgroundView = 0;
         }
