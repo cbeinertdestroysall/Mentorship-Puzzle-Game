@@ -35,6 +35,10 @@ public class PridePuzzle : MonoBehaviour
             {
                 puzzleSolved = true;
             }
+            else
+            {
+                puzzleSolved = false;
+            }
         }
     }
 }
