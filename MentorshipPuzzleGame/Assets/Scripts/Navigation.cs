@@ -11,8 +11,10 @@ public class Navigation : MonoBehaviour
     public GameObject background4;*/
 
     public GameObject[] backgrounds;
+    public GameObject[] backgrounds2;
 
     public int currentBackgroundView;
+    public int currentBackgroundView2;
 
     public GameObject flashlight;
 
@@ -23,8 +25,6 @@ public class Navigation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-
         for (int i = 0; i < backgrounds.Length; i++)
         {
             if (i == currentBackgroundView)
@@ -34,6 +34,21 @@ public class Navigation : MonoBehaviour
             else 
             {
                 backgrounds[i].SetActive(false);
+            }
+        }
+
+        if (backgrounds2 != null)
+        {
+            for (int i = 0; i < backgrounds2.Length; i++)
+            {
+                if (i == currentBackgroundView2)
+                {
+                    backgrounds2[i].SetActive(true);
+                }
+                else
+                {
+                    backgrounds2[i].SetActive(false);
+                }
             }
         }
     }
@@ -99,6 +114,30 @@ public class Navigation : MonoBehaviour
         }
     }
 
+    public void ShiftLeft2()
+    {
+        if (currentBackgroundView2 > 0)
+        {
+            currentBackgroundView2 -= 1;
+        }
+        else if (currentBackgroundView2 == 0)
+        {
+            currentBackgroundView2 = backgrounds2.Length - 1;
+        }
+
+        for (int i = 0; i < backgrounds2.Length; i++)
+        {
+            if (i == currentBackgroundView2)
+            {
+                backgrounds2[i].SetActive(true);
+            }
+            else
+            {
+                backgrounds2[i].SetActive(false);
+            }
+        }
+    }
+
     public void ShiftRight()
     {
         if (currentBackgroundView < backgrounds.Length - 1)
@@ -144,6 +183,30 @@ public class Navigation : MonoBehaviour
                     flashlight.GetComponent<Image>().enabled = true;
                 }
                 //flashlight.SetActive(true);
+            }
+        }
+    }
+
+    public void ShiftRight2()
+    {
+        if (currentBackgroundView2 < backgrounds2.Length - 1)
+        {
+            currentBackgroundView2 += 1;
+        }
+        else if (currentBackgroundView2 >= (backgrounds2.Length - 1))
+        {
+            currentBackgroundView2 = 0;
+        }
+
+        for (int i = 0; i < backgrounds2.Length; i++)
+        {
+            if (i == currentBackgroundView2)
+            {
+                backgrounds2[i].SetActive(true);
+            }
+            else
+            {
+                backgrounds2[i].SetActive(false);
             }
         }
     }
