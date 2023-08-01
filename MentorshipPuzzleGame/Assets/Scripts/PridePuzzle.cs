@@ -10,6 +10,8 @@ public class PridePuzzle : MonoBehaviour
 
     public GameObject door;
 
+    public AudioSource youDidIt;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +49,11 @@ public class PridePuzzle : MonoBehaviour
     public void ActivateDoor()
     {
         if (puzzleSolved)
-        door.SetActive(true);
+        {
+            door.SetActive(true);
+            youDidIt.Play();
+        }
     }
+
+
 }
