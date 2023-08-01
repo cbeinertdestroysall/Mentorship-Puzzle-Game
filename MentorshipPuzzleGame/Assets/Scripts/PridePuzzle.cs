@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PridePuzzle : MonoBehaviour
 {
+    public GameObject[] blocks;
+
+    public bool puzzleSolved = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +17,24 @@ public class PridePuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        /*for (int i = 0; i < blocks.Length; i++)
+        {
+            if (blocks[i].gameObject.GetComponent<LockScript>().currentLockNumber == blocks[i].gameObject.GetComponent<LockScript>().correctLockNumber)
+            {
+                puzzleSolved = true;
+            }
+            else
+            {
+                puzzleSolved = true;
+            }
+        }*/
+
+        foreach (GameObject block in blocks)
+        {
+            if (block.gameObject.GetComponent<LockScript>().currentLockNumber == block.gameObject.GetComponent<LockScript>().correctLockNumber)
+            {
+                puzzleSolved = true;
+            }
+        }
     }
 }

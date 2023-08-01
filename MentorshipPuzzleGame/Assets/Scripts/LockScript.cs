@@ -6,6 +6,8 @@ public class LockScript : MonoBehaviour
 {
     public GameObject[] lockNumbers;
     public int currentLockNumber = 0;
+
+    public int correctLockNumber;
    
 
     // Start is called before the first frame update

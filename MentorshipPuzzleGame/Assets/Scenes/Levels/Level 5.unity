@@ -185,6 +185,7 @@ MonoBehaviour:
   - {fileID: 1944772142}
   - {fileID: 37720473}
   currentLockNumber: 0
+  correctLockNumber: 0
 --- !u!1 &13335298
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +383,7 @@ MonoBehaviour:
   - {fileID: 729215767}
   - {fileID: 863241645}
   currentLockNumber: 0
+  correctLockNumber: 0
 --- !u!1 &22361178
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +840,7 @@ MonoBehaviour:
   - {fileID: 2110827372}
   - {fileID: 1123193392}
   currentLockNumber: 0
+  correctLockNumber: 0
 --- !u!1 &96359920
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +900,7 @@ MonoBehaviour:
   - {fileID: 790619243}
   - {fileID: 1857829236}
   currentLockNumber: 0
+  correctLockNumber: 2
 --- !u!1 &98120022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,6 +1565,7 @@ MonoBehaviour:
   - {fileID: 1102245014}
   - {fileID: 452626336}
   currentLockNumber: 0
+  correctLockNumber: 0
 --- !u!1 &180990632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,6 +1743,7 @@ MonoBehaviour:
   - {fileID: 1675728166}
   - {fileID: 543555129}
   currentLockNumber: 0
+  correctLockNumber: 1
 --- !u!1 &205433882
 GameObject:
   m_ObjectHideFlags: 0
@@ -5938,6 +5944,7 @@ MonoBehaviour:
   - {fileID: 1961915629}
   - {fileID: 322563731}
   currentLockNumber: 0
+  correctLockNumber: 0
 --- !u!1 &678951433
 GameObject:
   m_ObjectHideFlags: 0
@@ -5997,6 +6004,7 @@ MonoBehaviour:
   - {fileID: 1136694599}
   - {fileID: 1474415205}
   currentLockNumber: 0
+  correctLockNumber: 4
 --- !u!1 &688508187
 GameObject:
   m_ObjectHideFlags: 0
@@ -7311,6 +7319,7 @@ MonoBehaviour:
   - {fileID: 424170141}
   - {fileID: 399131071}
   currentLockNumber: 0
+  correctLockNumber: 0
 --- !u!1 &863241645
 GameObject:
   m_ObjectHideFlags: 0
@@ -8238,6 +8247,7 @@ MonoBehaviour:
   - {fileID: 1365914484}
   - {fileID: 1374461156}
   currentLockNumber: 0
+  correctLockNumber: 3
 --- !u!1 &998835673
 GameObject:
   m_ObjectHideFlags: 0
@@ -15634,6 +15644,7 @@ MonoBehaviour:
   - {fileID: 1230872272}
   - {fileID: 1821951860}
   currentLockNumber: 0
+  correctLockNumber: 5
 --- !u!1 &1807358451
 GameObject:
   m_ObjectHideFlags: 0
@@ -19648,6 +19659,7 @@ MonoBehaviour:
   - {fileID: 1499668975}
   - {fileID: 1339280201}
   currentLockNumber: 0
+  correctLockNumber: 0
 --- !u!1 &2137488684
 GameObject:
   m_ObjectHideFlags: 0
@@ -19659,6 +19671,7 @@ GameObject:
   - component: {fileID: 2137488685}
   - component: {fileID: 2137488689}
   - component: {fileID: 2137488688}
+  - component: {fileID: 2137488690}
   m_Layer: 5
   m_Name: BinoBg1
   m_TagString: Untagged
@@ -19728,6 +19741,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137488684}
   m_CullTransparentMesh: 1
+--- !u!114 &2137488690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137488684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f49b83d61adbf4986de81e7b996edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blocks:
+  - {fileID: 2126495156}
+  - {fileID: 678951433}
+  - {fileID: 994992724}
+  - {fileID: 96359920}
+  - {fileID: 192986692}
+  - {fileID: 1806361201}
+  puzzleSolved: 0
 --- !u!1 &2140879614
 GameObject:
   m_ObjectHideFlags: 0
