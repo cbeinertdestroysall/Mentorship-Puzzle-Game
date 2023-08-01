@@ -8,6 +8,8 @@ public class PridePuzzle : MonoBehaviour
 
     public bool puzzleSolved = false;
 
+    public GameObject door;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,5 +42,11 @@ public class PridePuzzle : MonoBehaviour
                 puzzleSolved = false;
             }
         }
+    }
+
+    public void ActivateDoor()
+    {
+        if (puzzleSolved)
+        door.SetActive(true);
     }
 }
