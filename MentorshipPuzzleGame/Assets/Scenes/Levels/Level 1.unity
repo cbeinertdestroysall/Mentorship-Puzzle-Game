@@ -1344,6 +1344,7 @@ MonoBehaviour:
   - {fileID: 282058305}
   - {fileID: 680047240}
   currentLockNumber: 0
+  correctLockNumber: 0
 --- !u!1 &368403367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2356,6 +2357,7 @@ MonoBehaviour:
   - {fileID: 1310447030}
   - {fileID: 2025344632}
   currentLockNumber: 0
+  correctLockNumber: 0
 --- !u!1 &382893139
 GameObject:
   m_ObjectHideFlags: 0
@@ -3796,6 +3798,7 @@ MonoBehaviour:
   - {fileID: 1621766192}
   - {fileID: 1126572958}
   currentLockNumber: 0
+  correctLockNumber: 0
 --- !u!1 &706651827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4920,6 +4923,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIsFilled: 0
+  pieceAlreadyInSlot: 0
+  mainFunctionality: {fileID: 0}
 --- !u!61 &930320945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6272,6 +6277,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIsFilled: 0
+  pieceAlreadyInSlot: 0
+  mainFunctionality: {fileID: 0}
 --- !u!61 &1173373433
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9598,7 +9605,9 @@ MonoBehaviour:
   - {fileID: 1449357911}
   - {fileID: 951973876}
   - {fileID: 1706812932}
+  backgrounds2: []
   currentBackgroundView: 0
+  currentBackgroundView2: 0
   flashlight: {fileID: 0}
   meltCollider: {fileID: 0}
   flashlightComponents: []
@@ -11131,6 +11140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIsFilled: 0
+  pieceAlreadyInSlot: 0
+  mainFunctionality: {fileID: 0}
 --- !u!61 &2030278179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11222,8 +11233,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 15.1
+  m_fontSizeBase: 15.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

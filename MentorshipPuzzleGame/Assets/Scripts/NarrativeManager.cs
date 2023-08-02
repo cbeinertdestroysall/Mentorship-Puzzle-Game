@@ -5,6 +5,8 @@ using UnityEngine;
 public class NarrativeManager : MonoBehaviour
 {
     public GameObject aKey;
+    
+
     public float timeToShow;
 
     public bool canShow;
@@ -36,4 +38,6 @@ public class NarrativeManager : MonoBehaviour
             //StartCoroutine(DisableAKey());
         }
     }
+
+    
 }

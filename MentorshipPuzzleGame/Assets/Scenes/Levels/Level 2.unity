@@ -12083,7 +12083,9 @@ MonoBehaviour:
   - {fileID: 1449357911}
   - {fileID: 951973876}
   - {fileID: 1706812932}
+  backgrounds2: []
   currentBackgroundView: 0
+  currentBackgroundView2: 0
   flashlight: {fileID: 0}
   meltCollider: {fileID: 0}
   flashlightComponents: []

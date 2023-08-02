@@ -12,6 +12,18 @@ public class PridePuzzle : MonoBehaviour
 
     public AudioSource youDidIt;
 
+    public GameObject wrongCode;
+
+    public GameObject rightCode;
+
+    public GameObject itFeelsNice;
+
+    IEnumerator DisableText()
+    {
+        yield return new WaitForSeconds(1);
+        wrongCode.SetActive(false);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +64,13 @@ public class PridePuzzle : MonoBehaviour
         {
             door.SetActive(true);
             youDidIt.Play();
+            rightCode.SetActive(true);
+            itFeelsNice.SetActive(true);
+        }
+        else 
+        {
+            wrongCode.SetActive(true);
+            StartCoroutine(DisableText());
         }
     }
 
