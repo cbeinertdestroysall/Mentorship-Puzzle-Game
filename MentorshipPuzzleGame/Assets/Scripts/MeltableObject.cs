@@ -42,15 +42,31 @@ public class MeltableObject : MonoBehaviour
     {
         if (collision.gameObject.tag == "Flashlight")
         {
-            if (collision.GetComponent<PowerLevels>().powerLevel > 1)
+            if (collision.GetComponent<PowerLevels>() != null)
             {
-                anim.SetBool("CanMelt", true);
-                
-                audioS.Play();
+                if (collision.GetComponent<PowerLevels>().powerLevel > 1)
+                {
+                    anim.SetBool("CanMelt", true);
 
-                anim.speed = 1;
+                    audioS.Play();
 
-                countdownToDestruction += 1 * Time.deltaTime;
+                    anim.speed = 1;
+
+                    countdownToDestruction += 1 * Time.deltaTime;
+                }
+            }
+            else if (collision.GetComponent<FreezeFlashlight>() != null)
+            {
+                if (collision.GetComponent<FreezeFlashlight>().freezeMode == false)
+                {
+                    anim.SetBool("CanMelt", true);
+
+                    audioS.Play();
+
+                    anim.speed = 1;
+
+                    countdownToDestruction += 1 * Time.deltaTime;
+                }
             }
 
         }
@@ -62,39 +78,70 @@ public class MeltableObject : MonoBehaviour
         
         if (collision.gameObject.tag == "Flashlight")
         {
-            //Debug.Log("flashlight colliding");
-            if (Input.GetKey(KeyCode.Alpha1))
+            if (collision.GetComponent<PowerLevels>() != null)
             {
-                Debug.Log("1 was pressed");
-                anim.speed = 0;
-                canAnimate = false;
-            }
-            else if (Input.GetKey(KeyCode.Alpha2))
-            {
-                if (collision.GetComponent<PowerLevels>().currentHealth <= 0)
+                //Debug.Log("flashlight colliding");
+                if (Input.GetKey(KeyCode.Alpha1))
                 {
+                    Debug.Log("1 was pressed");
                     anim.speed = 0;
                     canAnimate = false;
-                    //noiseMaker.SetActive(false);
                 }
-                else if (collision.GetComponent<PowerLevels>().currentHealth > 0)
+                else if (Input.GetKey(KeyCode.Alpha2))
+                {
+                    if (collision.GetComponent<PowerLevels>().currentHealth <= 0)
+                    {
+                        anim.speed = 0;
+                        canAnimate = false;
+                        //noiseMaker.SetActive(false);
+                    }
+                    else if (collision.GetComponent<PowerLevels>().currentHealth > 0)
+                    {
+                        anim.speed = 1;
+                        canAnimate = true;
+                    }
+                }
+
+                if (collision.GetComponent<PowerLevels>().powerLevel > 1)
+                {
+                    countdownToDestruction += 1 * Time.deltaTime;
+                    anim.speed = 1;
+                }
+                else if (collision.GetComponent<PowerLevels>().powerLevel <= 1)
+                {
+                    countdownToDestruction += 0;
+                    anim.speed = 0;
+                }
+            }
+            else if (collision.GetComponent<FreezeFlashlight>() != null)
+            {
+               
+                if (Input.GetKey(KeyCode.Alpha1))
+                {
+                    Debug.Log("1 was pressed");
+                    anim.speed = 0;
+                    canAnimate = false;
+                }
+                else if (Input.GetKey(KeyCode.Alpha2))
                 {
                     anim.speed = 1;
                     canAnimate = true;
                 }
-            }
-            
-            if (collision.GetComponent<PowerLevels>().powerLevel > 1)
-            {
-                countdownToDestruction += 1 * Time.deltaTime;
-                anim.speed = 1;
-            }
-            else if (collision.GetComponent<PowerLevels>().powerLevel <= 1)
-            {
-                countdownToDestruction += 0;
-                anim.speed = 0;
-            }
 
+                if (collision.GetComponent<FreezeFlashlight>().freezeMode == false)
+                {
+                    anim.SetBool("CanMelt", true);
+                    countdownToDestruction += 1 * Time.deltaTime;
+                    anim.speed = 1;
+
+                }
+                else if (collision.GetComponent<FreezeFlashlight>().freezeMode == true)
+                {
+                    
+                    countdownToDestruction += 0;
+                    anim.speed = 0;
+                }
+            }
         }
     }
 
@@ -102,15 +149,18 @@ public class MeltableObject : MonoBehaviour
     {
         if (collision.gameObject.tag == "Flashlight")
         {
-            if (collision.GetComponent<PowerLevels>().powerLevel > 1)
+            if (collision.GetComponent<PowerLevels>() != null)
             {
-                countdownToDestruction += 0;
-                anim.speed = 0;
-            }
-            else if (collision.GetComponent<PowerLevels>().powerLevel == 1)
-            {
-                countdownToDestruction += 0;
-                anim.speed = 0;
+                if (collision.GetComponent<PowerLevels>().powerLevel > 1 || collision.GetComponent<FreezeFlashlight>().freezeMode == false)
+                {
+                    countdownToDestruction += 0;
+                    anim.speed = 0;
+                }
+                else if (collision.GetComponent<PowerLevels>().powerLevel == 1 || collision.GetComponent<FreezeFlashlight>().freezeMode == true)
+                {
+                    countdownToDestruction += 0;
+                    anim.speed = 0;
+                }
             }
         }
         
