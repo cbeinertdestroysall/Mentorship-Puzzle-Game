@@ -148,19 +148,12 @@ public class MeltableObject : MonoBehaviour
     {
         if (collision.gameObject.tag == "Flashlight")
         {
-            if (collision.GetComponent<PowerLevels>() != null)
-            {
-                if (collision.GetComponent<PowerLevels>().powerLevel > 1 /*|| collision.GetComponent<FreezeFlashlight>().freezeMode == false*/)
-                {
+              
                     countdownToDestruction += 0;
                     anim.speed = 0;
-                }
-                else if (collision.GetComponent<PowerLevels>().powerLevel == 1 /*|| collision.GetComponent<FreezeFlashlight>().freezeMode == true*/)
-                {
-                    countdownToDestruction += 0;
-                    anim.speed = 0;
-                }
-            }
+              
+            
+            
         }
         
     }
