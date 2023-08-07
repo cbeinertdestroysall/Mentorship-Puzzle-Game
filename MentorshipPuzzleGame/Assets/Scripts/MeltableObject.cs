@@ -148,12 +148,8 @@ public class MeltableObject : MonoBehaviour
     {
         if (collision.gameObject.tag == "Flashlight")
         {
-              
-                    countdownToDestruction += 0;
-                    anim.speed = 0;
-              
-            
-            
+              countdownToDestruction += 0;
+              anim.speed = 0;
         }
         
     }
