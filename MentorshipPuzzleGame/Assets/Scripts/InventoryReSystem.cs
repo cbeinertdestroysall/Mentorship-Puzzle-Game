@@ -5,7 +5,8 @@ using UnityEngine;
 public class InventoryReSystem : MonoBehaviour
 {
     public int slotNumber = 0;
-    
+
+    public int slotMax;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class InventoryReSystem : MonoBehaviour
 
     public void IncreaseSlotNumber()
     {
-        if (slotNumber < 3)
+        if (slotNumber < slotMax)
         {
             slotNumber++;
             Debug.Log("slot number: " + slotNumber);

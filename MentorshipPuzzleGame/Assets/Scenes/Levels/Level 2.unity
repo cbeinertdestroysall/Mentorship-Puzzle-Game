@@ -12102,6 +12102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 0
+  slotMax: 3
 --- !u!114 &1766838214
 MonoBehaviour:
   m_ObjectHideFlags: 0

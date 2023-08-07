@@ -1692,6 +1692,7 @@ MonoBehaviour:
   - {fileID: 282058305}
   - {fileID: 680047240}
   currentLockNumber: 0
+  correctLockNumber: 0
 --- !u!1 &371544066
 GameObject:
   m_ObjectHideFlags: 0
@@ -2569,6 +2570,7 @@ MonoBehaviour:
   - {fileID: 1310447030}
   - {fileID: 2025344632}
   currentLockNumber: 0
+  correctLockNumber: 0
 --- !u!1 &382893139
 GameObject:
   m_ObjectHideFlags: 0
@@ -4031,6 +4033,7 @@ MonoBehaviour:
   - {fileID: 1621766192}
   - {fileID: 1126572958}
   currentLockNumber: 0
+  correctLockNumber: 0
 --- !u!1 &720380318
 GameObject:
   m_ObjectHideFlags: 0
@@ -10197,7 +10200,9 @@ MonoBehaviour:
   - {fileID: 1449357911}
   - {fileID: 951973876}
   - {fileID: 1706812932}
+  backgrounds2: []
   currentBackgroundView: 0
+  currentBackgroundView2: 0
   flashlight: {fileID: 0}
   meltCollider: {fileID: 0}
   flashlightComponents: []
@@ -10214,6 +10219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 0
+  slotMax: 3
 --- !u!114 &1766838214
 MonoBehaviour:
   m_ObjectHideFlags: 0
