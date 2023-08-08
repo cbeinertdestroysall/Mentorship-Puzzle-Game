@@ -62,20 +62,19 @@ public class PuzzlePieceScript : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Inventory")
         {
-            if (collision.GetComponent<FillSlot>().slotIsFilled == false)
+            if (collision.GetComponent<FillSlot>().pieceAlreadyInSlot == false)
             {
                 this.GetComponent<InventoryPosition>().inventoryPos = collision.gameObject.GetComponent<BoxCollider2D>().transform.position;
-                collision.GetComponent<FillSlot>().slotIsFilled = true;
+               // collision.GetComponent<FillSlot>().slotIsFilled = true;
                 this.transform.SetParent(collision.transform.parent, true);
                 this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
                 //UIText.transform.localScale = UIText.transform.parent.TransformVector(textScale);
                 //collision.GetComponent<FillSlot>().pieceAlreadyInSlot = false;
             }
-            else
-            { 
-                //collision.GetComponent<FillSlot>().slotIsFilled = true;
-                collision.GetComponent<FillSlot>().pieceAlreadyInSlot = true;
-            }
+           /*else
+           {
+                this.transform.position = this.GetComponent<InventoryPosition>().inventoryPos;
+           }*/
             /*else if (collision.GetComponent<FillSlot>().slotIsFilled == true)
             {
                 collision.GetComponent<FillSlot>().slotIsFilled = true;
@@ -95,11 +94,18 @@ public class PuzzlePieceScript : MonoBehaviour
             this.gameObject.GetComponent<ItemScript>().canBeUsed = true;
             //UIText.transform.localScale = UIText.transform.parent.InverseTransformVector(textScale);
         }
+        else if (collision.gameObject.tag == "Inventory")
+        {
+            if (collision.GetComponent<FillSlot>().pieceAlreadyInSlot && mainFunctionality.GetComponent<UiDrag>().dragging == false)
+            {
+                this.transform.position = this.GetComponent<InventoryPosition>().inventoryPos;
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Inventory")
+        /*if (collision.gameObject.tag == "Inventory")
         {
             if (collision.GetComponent<FillSlot>().pieceAlreadyInSlot == false)
             {
@@ -110,7 +116,7 @@ public class PuzzlePieceScript : MonoBehaviour
             {
                 collision.GetComponent<FillSlot>().slotIsFilled = true;
                 collision.GetComponent<FillSlot>().pieceAlreadyInSlot = false;
-            }
+            }*/
             //this.transform.SetParent(collision.transform.parent, true);
             //this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
            // UIText.transform.localScale = UIText.transform.parent.InverseTransformVector(textScale);
@@ -124,4 +130,4 @@ public class PuzzlePieceScript : MonoBehaviour
         }*/
     }
 
-}
+

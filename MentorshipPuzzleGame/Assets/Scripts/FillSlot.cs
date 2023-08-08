@@ -23,10 +23,11 @@ public class FillSlot : MonoBehaviour
         
     }
 
-   /* private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Item")
         {
+            Debug.Log("item has entered inventory");
             if (slotIsFilled == false)
             {
                 slotIsFilled = true;
@@ -35,6 +36,7 @@ public class FillSlot : MonoBehaviour
             else
             {
                 pieceAlreadyInSlot = true;
+                //collision.transform.position = collision.GetComponent<InventoryPosition>().inventoryPos;
             }
         }
     }
@@ -43,6 +45,7 @@ public class FillSlot : MonoBehaviour
     {
         if (collision.gameObject.tag == "Item")
         {
+            Debug.Log("item has left inventory");
             if (pieceAlreadyInSlot == false)
             {
                 mainFunctionality.GetComponent<InventoryReSystem>().DecreaseSlotNumber();
@@ -54,5 +57,5 @@ public class FillSlot : MonoBehaviour
                 pieceAlreadyInSlot = false;
             }
         }
-    }*/
+    }
 }
