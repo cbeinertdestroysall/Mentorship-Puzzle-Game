@@ -168,30 +168,7 @@ public class WindowSlotScript : MonoBehaviour
             }
         }
 
-        /*if (collision.gameObject.tag == "Puzzle Piece")
-        {
-            if (pieceAlreadyInSlot == true)
-            {
-                pieceInSlot = true;
-
-                StartCoroutine(SetToFalse());
-
-                Debug.Log("piece is already in the slot!");
-
-                return;
-            }
-            else if (pieceAlreadyInSlot == false)
-            {
-                pieceInCorrectSlot = false;
-                pieceInSlot = false;
-                correctRotation = false;
-                collision.gameObject.GetComponent<ItemScript>().canBeUsed = false;
-
-                puzzlePiece = null;
-
-                Debug.Log("piece isn't in a slot");
-            }
-        }*/
+        
     }
 
     public void UpdateRotationData()

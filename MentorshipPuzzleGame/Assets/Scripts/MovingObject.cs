@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MovingObject : MonoBehaviour
 {
     public Sprite frozen;
+    public AudioSource freeze;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,15 @@ public class MovingObject : MonoBehaviour
         else 
         {
             this.GetComponent<Image>().sprite = frozen;
+            //freeze.Play();
         }
     }
+
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Flashlight" && collision.GetComponent<FreezeFlashlight>().freezeMode)
+        {
+            freeze.Play();
+        }
+    }*/
 }
