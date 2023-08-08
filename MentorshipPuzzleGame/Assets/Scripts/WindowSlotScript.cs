@@ -92,7 +92,7 @@ public class WindowSlotScript : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "Item") //if an object tagged "item" enters a slot 
+        /*if (collision.gameObject.tag == "Item") //if an object tagged "item" enters a slot 
         {
             
             if (pieceInSlot == true) //an a piece can be found in that slot 
@@ -108,7 +108,7 @@ public class WindowSlotScript : MonoBehaviour
 
             }
         
-        }
+        }*/
                 
     }
 
@@ -142,7 +142,7 @@ public class WindowSlotScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
 
-        if (collision.gameObject.tag == "Item") //if an object tagged "item" has exited
+        if (collision.gameObject.tag == "Puzzle Piece") //if an object tagged "item" has exited
         {
             if (pieceAlreadyInSlot == true) //and if a piece is already in the slot
             {

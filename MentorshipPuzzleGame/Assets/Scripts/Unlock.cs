@@ -54,17 +54,6 @@ public class Unlock : MonoBehaviour
             return;
         }
 
-        //if (uiDrag.clickedElements == this.gameObject)
-
-        /*if (soundCanPlay)
-        {
-            audioS.PlayOneShot(audioC);
-            soundCanPlay = false;
-        }
-        else 
-        {
-            audioS.Stop();
-        }*/
 
         
     }
@@ -76,8 +65,8 @@ public class Unlock : MonoBehaviour
             if (key != null)
             {
                 Debug.Log("key entered lock");
-                key.GetComponent<InventoryPosition>().inventoryPos = key.transform.position;
-                key.GetComponent<ItemScript>().isUsed = true;
+                //key.GetComponent<InventoryPosition>().inventoryPos = key.transform.position;
+                //key.GetComponent<ItemScript>().isUsed = true;
                 this.GetComponent<Image>().sprite = unlocked;
 
                 lockButton.gameObject.SetActive(false);
