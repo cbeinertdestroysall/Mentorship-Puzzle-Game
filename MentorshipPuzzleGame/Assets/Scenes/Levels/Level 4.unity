@@ -493,6 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frozen: {fileID: 21300000, guid: 798fb167f5b9ed24887276adc4fdde2d, type: 3}
+  freeze: {fileID: 0}
 --- !u!1 &152087274
 GameObject:
   m_ObjectHideFlags: 0
@@ -4879,6 +4880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frozen: {fileID: 21300000, guid: 798fb167f5b9ed24887276adc4fdde2d, type: 3}
+  freeze: {fileID: 0}
 --- !u!1 &846539025
 GameObject:
   m_ObjectHideFlags: 0
@@ -8228,6 +8230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frozen: {fileID: 21300000, guid: 798fb167f5b9ed24887276adc4fdde2d, type: 3}
+  freeze: {fileID: 0}
 --- !u!1 &1487614372
 GameObject:
   m_ObjectHideFlags: 0
@@ -10044,8 +10047,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.14901961}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.31764707}
+    m_HighlightedColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0.14901961}
+    m_PressedColor: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 0.31764707}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.09411765}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -10144,7 +10147,7 @@ MonoBehaviour:
   isHovering: 0
   keyDown: 0
   awayFromInventory: 0
-  offset: {x: 81.69, y: 13.01, z: 0}
+  offset: {x: 0, y: 16.63, z: 0}
   inventoryOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1766838210
 GameObject:

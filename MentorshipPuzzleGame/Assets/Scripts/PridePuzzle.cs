@@ -45,7 +45,7 @@ public class PridePuzzle : MonoBehaviour
             }
         }*/
 
-        foreach (GameObject block in blocks)
+        /*foreach (GameObject block in blocks)
         {
             if (block.gameObject.GetComponent<LockScript>().currentLockNumber == block.gameObject.GetComponent<LockScript>().correctLockNumber)
             {
@@ -55,7 +55,20 @@ public class PridePuzzle : MonoBehaviour
             {
                 puzzleSolved = false;
             }
+        }*/
+
+        for (int i = 0; i < blocks.Length; i++)
+        {
+            if (blocks[i].GetComponent<LockScript>().currentLockNumber == blocks[i].gameObject.GetComponent<LockScript>().correctLockNumber)
+            {
+                puzzleSolved = true;
+            }
+            else
+            {
+                puzzleSolved = false;
+            }
         }
+        
     }
 
     public void ActivateDoor()
