@@ -6,7 +6,7 @@ public class PridePuzzle : MonoBehaviour
 {
     public GameObject[] blocks;
 
-    public bool puzzleSolved = false;
+    public bool puzzleSolved = true;
 
     public GameObject door;
 
@@ -59,13 +59,19 @@ public class PridePuzzle : MonoBehaviour
 
         for (int i = 0; i < blocks.Length; i++)
         {
-            if (blocks[i].GetComponent<LockScript>().currentLockNumber == blocks[i].gameObject.GetComponent<LockScript>().correctLockNumber)
+            /*if (blocks[i].GetComponent<LockScript>().currentLockNumber == blocks[i].gameObject.GetComponent<LockScript>().correctLockNumber)
             {
                 puzzleSolved = true;
-            }
-            else
+            }*/
+
+            if (blocks[i].GetComponent<LockScript>().currentLockNumber != blocks[i].gameObject.GetComponent<LockScript>().correctLockNumber)
             {
                 puzzleSolved = false;
+                break;
+            }
+            else if (blocks[i].GetComponent<LockScript>().currentLockNumber == blocks[i].gameObject.GetComponent<LockScript>().correctLockNumber)
+            {
+                puzzleSolved = true;
             }
         }
         

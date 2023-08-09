@@ -20312,7 +20312,7 @@ MonoBehaviour:
   - {fileID: 96359920}
   - {fileID: 192986692}
   - {fileID: 1806361201}
-  puzzleSolved: 0
+  puzzleSolved: 1
   door: {fileID: 392290862}
   youDidIt: {fileID: 2137488691}
   wrongCode: {fileID: 1214945436}
