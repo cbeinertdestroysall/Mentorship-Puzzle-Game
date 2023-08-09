@@ -31,7 +31,8 @@ public class FillSlot : MonoBehaviour
             if (slotIsFilled == false)
             {
                 slotIsFilled = true;
-               
+                pieceAlreadyInSlot = false;
+                //mainFunctionality.GetComponent<InventoryReSystem>().IncreaseSlotNumber();
             }
             else
             {

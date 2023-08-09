@@ -64,7 +64,7 @@ public class PuzzlePieceScript : MonoBehaviour
         {
             if (collision.GetComponent<FillSlot>().pieceAlreadyInSlot == false)
             {
-                this.GetComponent<InventoryPosition>().inventoryPos = collision.gameObject.GetComponent<BoxCollider2D>().transform.position;
+                ///this.GetComponent<InventoryPosition>().inventoryPos = collision.gameObject.GetComponent<BoxCollider2D>().transform.position;
                // collision.GetComponent<FillSlot>().slotIsFilled = true;
                 this.transform.SetParent(collision.transform.parent, true);
                 this.transform.localScale = new Vector3(inventoryScale, inventoryScale, inventoryScale);
@@ -98,6 +98,12 @@ public class PuzzlePieceScript : MonoBehaviour
         {
             if (collision.GetComponent<FillSlot>().pieceAlreadyInSlot && mainFunctionality.GetComponent<UiDrag>().dragging == false)
             {
+
+                this.transform.position = this.GetComponent<InventoryPosition>().inventoryPos;
+            }
+            else if (collision.GetComponent<FillSlot>().pieceAlreadyInSlot == false && mainFunctionality.GetComponent<UiDrag>().dragging == false)
+            {
+                this.GetComponent<InventoryPosition>().inventoryPos = collision.gameObject.GetComponent<BoxCollider2D>().transform.position;
                 this.transform.position = this.GetComponent<InventoryPosition>().inventoryPos;
             }
         }
