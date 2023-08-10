@@ -8,7 +8,9 @@ public class WindowScript : MonoBehaviour
 
     public GameObject[] slots;
 
-    public AudioSource audioS;
+    public AudioSource audioSWin;
+
+    public AudioSource audioSLose;
 
     public GameObject window;
 
@@ -96,7 +98,10 @@ public class WindowScript : MonoBehaviour
     public void PlayPuzzleSolve()
     {
         if (puzzleSolved)
-        audioS.Play();
+            audioSWin.Play();
+        else
+            audioSLose.Play();
+            
     }
 
     public void SuppressAudio()

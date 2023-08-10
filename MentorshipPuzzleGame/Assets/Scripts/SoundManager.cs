@@ -64,4 +64,9 @@ public class SoundManager : MonoBehaviour
     {
         door.Play();
     }
+
+    public void PlayExit()
+    {
+        exit.Play();
+    }
 }
