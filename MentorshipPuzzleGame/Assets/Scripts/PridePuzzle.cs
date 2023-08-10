@@ -12,6 +12,8 @@ public class PridePuzzle : MonoBehaviour
 
     public AudioSource youDidIt;
 
+    public AudioSource error;
+
     public GameObject wrongCode;
 
     public GameObject rightCode;
@@ -90,6 +92,7 @@ public class PridePuzzle : MonoBehaviour
         {
             wrongCode.SetActive(true);
             StartCoroutine(DisableText());
+            error.Play();
         }
     }
 
