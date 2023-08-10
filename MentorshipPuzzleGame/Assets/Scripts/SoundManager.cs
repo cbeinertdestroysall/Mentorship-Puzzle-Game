@@ -11,6 +11,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource charge;
     public AudioSource error;
     public AudioSource door;
+    public AudioSource exit;
 
     // Start is called before the first frame update
     void Start()

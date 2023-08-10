@@ -55,18 +55,17 @@ public class MeltableObject : MonoBehaviour
                     countdownToDestruction += 1 * Time.deltaTime;
                 }
             }
-            else if (collision.GetComponent<FreezeFlashlight>() != null)
+            else if (collision.GetComponent<FreezeMode>() != null)
             {
-                if (collision.GetComponent<FreezeFlashlight>().freezeMode == false)
+                if (collision.GetComponent<FreezeMode>().modeNumber == 1)
                 {
-                    anim.SetBool("CanMelt", true);
+                   
 
                     audioS.Play();
 
-                    anim.speed = 1;
-
-                    countdownToDestruction += 1 * Time.deltaTime;
+                    
                 }
+                
             }
 
         }
@@ -112,33 +111,23 @@ public class MeltableObject : MonoBehaviour
                     anim.speed = 0;
                 }
             }
-            else if (collision.GetComponent<FreezeFlashlight>() != null)
+            else if (collision.GetComponent<FreezeMode>() != null)
             {
-               
-                if (Input.GetKey(KeyCode.Alpha1))
-                {
-                    Debug.Log("1 was pressed");
-                    anim.speed = 0;
-                    canAnimate = false;
-                }
-                else if (Input.GetKey(KeyCode.Alpha2))
-                {
-                    anim.speed = 1;
-                    canAnimate = true;
-                }
-
-                if (collision.GetComponent<FreezeFlashlight>().freezeMode == false)
+                if (collision.GetComponent<FreezeMode>().modeNumber == 1)
                 {
                     anim.SetBool("CanMelt", true);
-                    countdownToDestruction += 1 * Time.deltaTime;
+
+                    //audioS.Play();
+
                     anim.speed = 1;
 
+                    countdownToDestruction += 1 * Time.deltaTime;
                 }
-                else if (collision.GetComponent<FreezeFlashlight>().freezeMode == true)
+                else if (collision.GetComponent<FreezeMode>().modeNumber == 1)
                 {
-                    
-                    countdownToDestruction += 0;
+                    //anim.SetBool("CanMelt", false);
                     anim.speed = 0;
+                    countdownToDestruction += 0 * Time.deltaTime;
                 }
             }
         }

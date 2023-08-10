@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class MovingObject : MonoBehaviour
 {
     public Sprite frozen;
+
     public AudioSource freeze;
+    public AudioSource melt;
 
     // Start is called before the first frame update
     void Start()
@@ -28,11 +30,20 @@ public class MovingObject : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Flashlight" && collision.GetComponent<FreezeFlashlight>().freezeMode)
+        if (collision.tag == "Flashlight")
         {
-            freeze.Play();
+            if (collision.GetComponent<FreezeMode>().modeNumber == 2 && this.GetComponent<Animator>().speed > 0)
+            {
+                this.GetComponent<Animator>().speed = 0;
+                freeze.Play();
+            }
+            else if (collision.GetComponent<FreezeMode>().modeNumber == 1 && this.GetComponent<Animator>().speed == 0)
+            {
+                this.GetComponent<Animator>().speed = 1;
+                melt.Play();
+            }
         }
-    }*/
+    }
 }
