@@ -21116,7 +21116,7 @@ MonoBehaviour:
   door: {fileID: 1002258908}
   wrongCode: {fileID: 131091921}
   rightCode: {fileID: 485233037}
-  flashlight: {fileID: 0}
+  flashlight: {fileID: 1398893874}
   noiseMaker: {fileID: 601311487}
 --- !u!82 &2034421656
 AudioSource:

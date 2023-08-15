@@ -27,14 +27,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Level 4.unity
     guid: 08602a198e1f4c04abc9f2516663d383
   - enabled: 1
-    path: Assets/Scenes/Cutscenes/Interlude5.unity
-    guid: c4e2698079a0ef846ad03cfe83058c65
-  - enabled: 1
     path: Assets/Scenes/Levels/Level 5.unity
     guid: 2ba1b42d40f9ed24d972e11174102312
-  - enabled: 1
-    path: Assets/Scenes/Cutscenes/Interlude6.unity
-    guid: 467989997fed75744ab3126642027177
   - enabled: 1
     path: Assets/Scenes/Levels/Level 6.unity
     guid: a1646130c0df0cd41abb714f3de24657
