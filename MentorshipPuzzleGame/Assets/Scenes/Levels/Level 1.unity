@@ -547,7 +547,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use
+  m_text: Drag
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1730,6 +1730,7 @@ MonoBehaviour:
   charge: {fileID: 0}
   error: {fileID: 371544074}
   door: {fileID: 371544075}
+  exit: {fileID: 0}
 --- !u!82 &371544071
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9624,6 +9625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotNumber: 0
+  slotMax: 0
 --- !u!114 &1766838214
 MonoBehaviour:
   m_ObjectHideFlags: 0
